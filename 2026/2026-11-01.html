@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 1 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 1 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期日 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：MEV 治理正在从“事后补救”转向共识层、区块构建与应用机制的协同设计；ZK 证明系统则加速贴近真实硬件与整数计算。</p>
+
+<p style="margin:0 0 18px;">本期最值得关注的不是某条链又提升了多少 TPS，而是五项互相补充的进展：</p>
+<ul style="margin:0 0 18px;padding-left:22px;">
+<li>Isotaxis 在完全异步网络下实现了最优的顺序公平 BFT。</li>
+<li>Max Resnick 等人的 SoK 系统梳理了多并发提议者（MCP）架构，并指出<b>增加提议者本身并不能保证交易被打包</b>。</li>
+<li>Elaine Shi 团队给出了公平排序下 AMM 机制设计的紧刻画。</li>
+<li>Uniswap v4 Hook 实证研究发现<b>近四分之一 Hook 具备收取隐藏费用的能力</b>。</li>
+<li>Nenya 让 zkSNARK 首次原生支持 Z/2<sup>k</sup> 整数环运算。</li>
+</ul>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Uniswap v4 / PancakeSwap Hook</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">7,873 个</div>
+<div style="font-size:12px;color:#6b7280;">覆盖 2.96 亿条池事件</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Hook 隐藏收费能力</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">24.30%</div>
+<div style="font-size:12px;color:#6b7280;">71.37% 可直接改写结算</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">MCP 协议对比</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">39 种配置</div>
+<div style="font-size:12px;color:#6b7280;">归纳为 4 大类 MCP 族</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表为 <b>2026 年 10 月 30 日（星期五）</b>，10 月 31 日和 11 月 1 日是周末，没有新的常规批次。IACR ePrint 取近 7 天更新的论文，共 125 条记录，其中包含旧论文的修订版。最近 1–3 天的新增论文不足，所以检索范围放宽到 7 天。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">10月30日新投稿</th><th style="text-align:right;padding:8px 4px;">全部记录（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR</td><td style="text-align:right;padding:8px 4px;">63</td><td style="text-align:right;padding:8px 4px;">117</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC</td><td style="text-align:right;padding:8px 4px;">23</td><td style="text-align:right;padding:8px 4px;">50</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT</td><td style="text-align:right;padding:8px 4px;">10</td><td style="text-align:right;padding:8px 4px;">29</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">16</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">125</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 8 篇推荐论文都在 <b>10 月 26—29 日</b> 首次提交，属于新公开的论文，但不全是严格意义上过去 24 小时内首次提交的。</p>
+<p style="margin:0 0 26px;">去重说明：这是新版式的第一期，以后每期会对照往期日报，不重复展开已经推荐过的论文。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. SoK: Multiple Concurrent Proposer Blockchains</div>
+<div style="color:#6b7280;font-size:13px;">Benjamin Marsh, Alejandro Ranchal-Pedrosa, Max Resnick ｜ IACR ePrint 2026/2684 ｜ <a href="https://eprint.iacr.org/2026/2684" style="color:#2563eb;">eprint.iacr.org/2026/2684</a></div>
+<p style="margin:6px 0 0;">本文把 MCP 协议拆成从收交易到状态最终性的通用流程，归出固定提案向量、选择性提案集合、持续提案流、因果提案 DAG 四类，并在 39 种配置上比较了抗审查、交易隐藏、排序、吞吐和延迟。结论是<b>只增加提议者并不能保证交易被打包</b>，交易隐藏也解决不了“谁最后出手”的问题。以太坊和 Solana 社区正在讨论 MCP，本文可作为设计这类方案的参考框架。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Isotaxis: Optimal Asynchronous Byzantine Consensus with Ordering Linearizability</div>
+<div style="color:#6b7280;font-size:13px;">Vincent Gramoli, Zhenliang Lu, Qiang Tang, Pouriya Zarbafian, Xinrui Zhang ｜ IACR ePrint 2026/2645 ｜ <a href="https://eprint.iacr.org/2026/2645" style="color:#2563eb;">eprint.iacr.org/2026/2645</a></div>
+<p style="margin:6px 0 0;">Aequitas、Themis、SpeedyFair 等顺序公平协议存在性能差或容错弱的问题，Pompē 的排序线性化（OL）又只在网络条件好时才成立。Isotaxis 在<b>完全异步网络</b>下实现了带 OL 保证、容错与复杂度最优的 BFT 状态机复制，即使有网络延迟和拜占庭节点，也能防止交易顺序被操纵。这一结果直接针对 MEV 在共识层的根源。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Tight Characterizations of AMM Mechanism Design under Weak Efficiency</div>
+<div style="color:#6b7280;font-size:13px;">Chengkai Zhang, Lirong Xia, Elaine Shi, Mengqian Zhang, Qishen Han, Yuhao Li ｜ arXiv 2610.36635 (cs.GT) ｜ <a href="https://arxiv.org/abs/2610.36635" style="color:#2563eb;">arxiv.org/abs/2610.36635</a></div>
+<p style="margin:6px 0 0;">本文延续“共识辅助的机制设计”思路：共识层提供公平排序，AMM 机制在此基础上抵御 MEV。作者解决了前人留下的核心开放问题，给出了激励相容（IC）与弱局部效率（wLE）下可实现范围的<b>紧刻画</b>。同一团队的 ePrint 2026/2674 还证明了广义自适应 clinching 拍卖可以抵御女巫攻击。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. An Empirical Study of Undisclosed Charges in Hook-Based Decentralized Exchanges</div>
+<div style="color:#6b7280;font-size:13px;">Kai Ma, Tianle Sun, Shun Zhou, Boyao Yang, Ningyu He, Haoyu Wang ｜ arXiv 2610.36682 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.36682" style="color:#2563eb;">arxiv.org/abs/2610.36682</a></div>
+<p style="margin:6px 0 0;">这是对 Uniswap v4 和 PancakeSwap Infinity Hook 生态的首次大规模实证研究，覆盖以太坊与 BSC 上 7,873 个 Hook、50,011 个池子和 2.96 亿条池事件。作者用字节码分析还原 Hook 对结算的改动，发现 71.37% 的 Hook 支持直接改写结算，<b>24.30% 能收取标准费率之外的隐藏费用</b>。可编程 AMM 正在成为新的 DeFi 攻击面。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Nenya: Efficient zkSNARKs for Integer Rings Z/2<sup>k</sup>Z via Reverse Multiplication-Friendly Embeddings</div>
+<div style="color:#6b7280;font-size:13px;">Tianyu Zhang, Nikita Borisov, Yupeng Zhang ｜ IACR ePrint 2026/2672 ｜ <a href="https://eprint.iacr.org/2026/2672" style="color:#2563eb;">eprint.iacr.org/2026/2672</a></div>
+<p style="margin:6px 0 0;">主流 zkSNARK 只在大素数域上原生支持运算，而 CPU 指令和 zkVM 用的是 32/64 位整数，转换开销很大。Nenya 号称是<b>第一个实用的、原生支持 Z/2<sup>k</sup>Z 运算的 SNARK</b>，它借助逆乘法友好嵌入（RMFE）把 R1CS 约束归约到 Galois 环上。这对降低 zkVM 和 zkRollup 的证明开销有直接意义。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Improving Code Rate and Query Complexity for the Ligero-IOP System</div>
+<div style="color:#6b7280;font-size:13px;">Ignacio Cascudo, Carmit Hazay, Muthu Venkitasubramaniam ｜ IACR ePrint 2026/2681 ｜ <a href="https://eprint.iacr.org/2026/2681" style="color:#2563eb;">eprint.iacr.org/2026/2681</a></div>
+<p style="margin:6px 0 0;">作者在列表解码区间重新分析了 Ligero IOP，证明只需“互相关一致性”就能提升可靠性、降低查询复杂度，协议本身不用修改。新变体加入域外采样，使 <b>Reed–Solomon 码率可以超过 1/2</b>，同时保持常数轮和完美诚实验证者零知识。这能让透明、后量子友好的 ZK 证明更小、更快。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. UniPCH: A Unified Framework for Cross-Chain Payments via Payment Channel Hubs</div>
+<div style="color:#6b7280;font-size:13px;">Yuanming Shao, Yuming Feng, Weizhe Zhang, Bin Xiao, Song Guo, Zejun Wang ｜ arXiv 2610.36866 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.36866" style="color:#2563eb;">arxiv.org/abs/2610.36866</a></div>
+<p style="margin:6px 0 0;">现有支付通道枢纽（PCH）协议和具体链的交易表示方式绑得很紧，难以扩展到异构链。UniPCH 采用两层设计：下层统一了通道的状态转移，并支持 UTXO 与智能合约账户两种账本；上层用新的选择性重签名盲条件签名（S-RBCS）协调多个枢纽之间的条件授权，从而实现<b>可扩展、保护隐私的跨链支付</b>。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Strongly Adaptive Asynchronous Byzantine Agreement with Linear Communication and Almost-Everywhere Termination</div>
+<div style="color:#6b7280;font-size:13px;">Renas Bacho, Simon Holmgaard Kamp, Julian Loss, Jesper Buus Nielsen, Maciej Obremski ｜ IACR ePrint 2026/2627 ｜ <a href="https://eprint.iacr.org/2026/2627" style="color:#2563eb;">eprint.iacr.org/2026/2627</a></div>
+<p style="margin:6px 0 0;">面对强自适应敌手，拜占庭协议有 Ω(t²) 的消息下界。本文放宽终止条件，只要求至少 (1−ν) 比例的诚实节点终止，从而绕开这一下界。协议在异步网络中做到<b>期望 O(1) 轮、O(nκ²) 比特的总通信</b>，每个诚实决定还附带可转移的证明。这为大规模共识系统提供了新的复杂度权衡思路。</p></div>
+
+<h2 style="font-size:20px;margin:18px 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>MEV 与排序公平性</b>是本期最突出的主线，相关工作分布在三个层面：</p>
+<ul style="margin:0 0 14px;padding-left:22px;">
+<li>共识层：Isotaxis 的异步顺序公平 BFT。</li>
+<li>区块构建：多并发提议者 SoK。</li>
+<li>应用层：Elaine Shi 团队的 AMM 机制设计。</li>
+</ul>
+<p style="margin:0 0 10px;"><b>ZK 证明系统</b>集中优化证明开销：</p>
+<ul style="margin:0 0 14px;padding-left:22px;">
+<li>Nenya 原生支持 Z/2<sup>k</sup> 整数环运算。</li>
+<li>Mikros（ePrint 2026/2646）提出按位宽优化的 SNARK。</li>
+<li>Ligero 的码率改进。</li>
+<li>zkDuel（arXiv 2610.37710）在 GPU 上对 SumCheck 证明内核做了基准测试。</li>
+</ul>
+<p style="margin:0 0 10px;">这些工作都面向 zkVM 和 zkRollup 的实际开销。</p>
+<p style="margin:0;"><b>DeFi 安全</b>方面，Hook 隐藏收费研究提醒：可编程 AMM 正在带来新的攻击面。</p>
+
+</div></body></html>
