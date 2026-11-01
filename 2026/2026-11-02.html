@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 2 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 2 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期一 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：后量子迁移正从“换一个签名算法”深入到共识协议结构本身；与此同时，链上反洗钱追踪、合约安全评测和 ZK 电路审计都在走向可自动化、可复现的工具链。</p>
+
+<p style="margin:0 0 18px;">本期有两篇论文都在回答同一个问题：BLS 聚合签名在量子时代失效后，共识怎么办。Quantum Cadence 的做法是<b>完全不用法定人数证书</b>，由每个验证者自己统计收到的投票；SILMARILS-MV 则用信息论安全签名替代 ML-DSA，在 100 个验证者的 HotStuff 原型中<b>吞吐提升 2.8 倍</b>。安全工具方面，FPTracer 跨 DeFi、跨链桥和混币器追踪洗钱资金，<b>发现 30 处此前未被报告的跨链桥使用</b>；ConstraintDial 用“协议变异”生成大模型 Agent 无法靠照抄公开答案通过的合约安全题目。密码学基础方面，Bulletproofs++ 的系统复现<b>纠正了原论文两处公式</b>，同时给出比 Bulletproofs 快 7.8 倍的实现。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Bulletproofs++ 证明速度</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">7.8×</div>
+<div style="font-size:12px;color:#6b7280;">相对 Bulletproofs；验证快 4.5×</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">FPTracer 洗钱地址召回率</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">98.6%</div>
+<div style="font-size:12px;color:#6b7280;">20 个真实案例；去向召回 94.2%</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">SILMARILS-MV vs ML-DSA-44</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">2.8×</div>
+<div style="font-size:12px;color:#6b7280;">HotStuff 100 节点 TPS；密码 CPU 降 67×</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表仍为 <b>2026 年 10 月 30 日（星期五）</b>：10 月 31 日、11 月 1 日为周末，没有新批次；周一（11 月 2 日）批次在北京时间上午 9 点前后才公布，本期生成时还没有出来。10 月 30 日批次里与区块链相关的论文已在上一期覆盖，所以本期回溯 arXiv 近一周（10 月 23—30 日公布）的列表。IACR ePrint 取近 7 天（10 月 26 日—11 月 1 日）有更新的论文。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（10月30日批次）</td><td style="text-align:right;padding:8px 4px;">63</td><td style="text-align:right;padding:8px 4px;">117</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（10月30日批次）</td><td style="text-align:right;padding:8px 4px;">23</td><td style="text-align:right;padding:8px 4px;">50</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（10月30日批次）</td><td style="text-align:right;padding:8px 4px;">10</td><td style="text-align:right;padding:8px 4px;">29</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（10月30日批次）</td><td style="text-align:right;padding:8px 4px;">9</td><td style="text-align:right;padding:8px 4px;">18</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（10月30日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">16</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR 近一周（10月23—30日，5 个批次）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">300</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天）</td><td style="text-align:right;padding:8px 4px;">41（2026/2645—2685）</td><td style="text-align:right;padding:8px 4px;">100</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文中，6 篇首次提交于 <b>10 月 22—26 日</b>；另外 2 篇是 ePrint 上较早论文的新修订版（2026/872 首次提交于 5 月 5 日，11 月 1 日更新；2026/1852 首次提交于 9 月 1 日，10 月 26 日更新），文中已分别注明。</p>
+<p style="margin:0 0 26px;">去重说明：上一期（11 月 1 日）已展开的 8 篇论文本期不再重复。上一期顺带提到的 Mikros（ePrint 2026/2646）和自适应 clinching 抗女巫攻击（ePrint 2026/2674）也不再单独展开。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Quantum Cadence: Post-Quantum Consensus with Multiple Concurrent Proposers</div>
+<div style="color:#6b7280;font-size:13px;">Mohammad Mussadiq Jalalzai, Tobias Klenze, Jovan Komatovic ｜ arXiv 2610.32803 (cs.DC) ｜ <a href="https://arxiv.org/abs/2610.32803" style="color:#2563eb;">arxiv.org/abs/2610.32803</a></div>
+<p style="margin:6px 0 0;">高性能链的共识依赖 BLS 聚合签名把一个法定人数压成一张小证书，而目前还没有聚合效果相当的后量子签名。本文提出 Quantum Cadence，<b>完全不使用证书</b>，每个验证者只统计自己收到的投票；协议的安全性和活性甚至不依赖签名，签名只用来追责。快路径保持“广播 + 两轮投票”的最优延迟，失败时转入无签名的多提议者拜占庭协议 Coda。在 200 个验证者的仿真中，它的延迟与原版相当，提议者增多时扩展性更好。这为 MCP 架构的后量子化给出了一条可行路线。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. SILMARILS-MV: Information-Theoretically Secure Multi-Verifier Signatures with Dealer-Free Key Issuance and Linear Aggregation for Permissioned Blockchains</div>
+<div style="color:#6b7280;font-size:13px;">Khadijeh Bagheri, Hassan Khodaiemehr, Chen Feng ｜ arXiv 2610.31814 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.31814" style="color:#2563eb;">arxiv.org/abs/2610.31814</a></div>
+<p style="margin:6px 0 0;">在许可链中直接换用后量子签名，会让共识流量成数量级膨胀。本文提出多验证者的无条件安全签名：密钥由验证者在 t&lt;n/3 下通过完美安全 MPC 生成，<b>不需要可信分发者</b>；签名可线性聚合，可无限次转发，终局证书大小恒定。在 100 个验证者的 Rust HotStuff 原型中，它的吞吐是 ML-DSA-44 的 2.8 倍，密码学 CPU 开销降为 1/67；单张证书验证只需 2.4 微秒。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Tracing Money Laundering Across DeFi, Bridges, and Mixers on Ethereum</div>
+<div style="color:#6b7280;font-size:13px;">Huan Xing, Gaohe Jin, Bang Fu, Yue Li, Baoning Niu, Xing Fan ｜ arXiv 2610.32210 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.32210" style="color:#2563eb;">arxiv.org/abs/2610.32210</a></div>
+<p style="margin:6px 0 0;">FPTracer 用“上下文感知转账树”还原单笔复杂交易内部的资金路径，用分类器识别带跨链意图的交易（不需要预先收集跨链桥名单），并分析资金离开混币器之后的去向。在 20 个真实洗钱案例上，已知洗钱地址召回率 98.6%，去向召回率 94.2%，<b>额外发现 30 处此前未被报告的跨链桥使用</b>；在 18 个使用 Tornado Cash 的案例中还能识别提币侧活动。多阶段、跨协议的链上取证开始有了系统方法。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Beyond Copying: Lifelong Smart Contract Security Task Construction via Protocol Mutation</div>
+<div style="color:#6b7280;font-size:13px;">Zifan Peng, Peng Huang, Jingyi Zheng, Yingjie Xue, Xuechao Wang, Xinlei He, Xia Hu, Dongrui Liu ｜ arXiv 2610.32453 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.32453" style="color:#2563eb;">arxiv.org/abs/2610.32453</a></div>
+<p style="margin:6px 0 0;">用真实攻击事件评测 AI Agent 的合约安全能力时，Agent 可能直接从链上交易里抄出攻击代码。ConstraintDial 自动重建合约，并对协议做“变异”：原攻击失效，但漏洞、安全目标和正常功能都保留。作者从 203 个公开案例构造了 <b>3,045 个检测、利用、修补任务</b>，靠照抄公开答案能解决的任务比例下降 9.3 个百分点。这为合约安全 Agent 提供了不易被污染、可持续更新的基准。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Notes on BulletProofs++ Range Proofs</div>
+<div style="color:#6b7280;font-size:13px;">Philipp Jovanovic, Arnab Roy ｜ IACR ePrint 2026/2648 ｜ <a href="https://eprint.iacr.org/2026/2648" style="color:#2563eb;">eprint.iacr.org/2026/2648</a></div>
+<p style="margin:6px 0 0;">Bulletproofs++ 用基于 16 进制数位的倒数集合成员论证，替代 Bulletproofs 的逐位分解，是机密交易范围证明的重要升级。本文给出 64 位范围证明及批量版本的完整规范，证明了诚实验证者零知识和知识可靠性，并<b>纠正了原论文中的两处公式错误</b>。基于 Ristretto255 的 Rust 实现证明快 7.8 倍、验证快 4.5 倍。对准备部署 BP++ 的隐私链和钱包，这是一份可以直接参考的规范。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Privacy Coins Under Viewing Key Compromise</div>
+<div style="color:#6b7280;font-size:13px;">Adrian Cinal ｜ IACR ePrint 2026/872（2026-05-05 首次提交，2026-11-01 修订） ｜ <a href="https://eprint.iacr.org/2026/872" style="color:#2563eb;">eprint.iacr.org/2026/872</a></div>
+<p style="margin:6px 0 0;">监管机构希望通过“查看密钥”（viewing key）在 Zcash、Monero、Firo 等隐私币上实现可监管的隐私。本文首次给出 Zcash 与 Firo 在传入查看密钥泄露后仍成立的可证明匿名性，但也指出：<b>恶意用户即使交出全部查看密钥，仍能高效规避金融监控</b>。作者还发现 Monero 现有安全论证存在若干缺陷。这对“合规隐私”方案的设计有直接警示意义。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Jacobian Diagnostics for Under-Constrained Zero-Knowledge Circuits</div>
+<div style="color:#6b7280;font-size:13px;">Vijaykumar Singh ｜ IACR ePrint 2026/1852（2026-09-01 首次提交，2026-10-26 修订） ｜ <a href="https://eprint.iacr.org/2026/1852" style="color:#2563eb;">eprint.iacr.org/2026/1852</a></div>
+<p style="margin:6px 0 0;">约束不足是 ZK 应用可靠性漏洞的常见来源：公开输入固定后，恶意证明者仍可能给关键导线赋不同的值。本文在满足约束的赋值处计算约束雅可比矩阵的核，以此判断目标导线是否还有自由度。在适当条件下，这一检测还可以升级为可靠的“非唯一性证书”。实现对最多 6.6 万约束的基准电路每个实例不超过 1 秒，并已在 6k—60k 约束的工业级 gnark 电路上试用。它可以作为 zkVM 和 zkRollup 电路审计中可扩展的初筛工具。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Temporal Liquidity Crossing for Blockchains: An EIP-1559 Extension for Admission Below the Base Fee</div>
+<div style="color:#6b7280;font-size:13px;">Duanyang Dan Guo ｜ arXiv 2610.30595 (cs.GT) ｜ <a href="https://arxiv.org/abs/2610.30595" style="color:#2563eb;">arxiv.org/abs/2610.30595</a></div>
+<p style="margin:6px 0 0;">在 EIP-1559 下，费用出价并不能换来可强制执行的靠前位置，基础费也是硬性准入门槛。本文提出“时间流动性市场”（TLM）：想靠前执行的交易出资，补贴愿意排在后面的交易，后者因此可以<b>以低于基础费的价格上链</b>。这部分补贴 gas 不计入 EIP-1559 控制器，所以普通交易的分配不受影响。作者在有策略性发送者和构建者的敌手模型下证明了 8 条性质，包括构建者无法靠插入虚假出价获利。这是把交易排序偏好显式定价、纳入协议的一次尝试。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>后量子共识</b>是本期最明确的新信号。Quantum Cadence 和 SILMARILS-MV 都认为“BLS 聚合 + 证书广播”的范式难以直接后量子化，前者改协议结构绕开证书，后者改用信息论安全签名。结合上期的 MCP SoK 来看，多提议者与后量子正在成为下一代共识设计同时要考虑的两个约束。</p>
+<p style="margin:0 0 10px;"><b>安全工具链走向自动化、可复现：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>链上取证：FPTracer 跨协议追踪洗钱资金。</li>
+<li>合约安全评测：ConstraintDial 提供防污染的 Agent 基准。</li>
+<li>ZK 电路审计：雅可比方法检测约束不足。</li>
+<li>密码规范：BP++ 复现并勘误原论文。</li>
+</ul>
+<p style="margin:0;"><b>隐私与监管、费用市场与排序</b>仍是机制层的主线：查看密钥并不足以支撑可靠的监管，TLM 则尝试把排序偏好显式纳入 EIP-1559。</p>
+</div>
+
+</div>
+</body></html>
