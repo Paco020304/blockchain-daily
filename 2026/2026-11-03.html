@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 3 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 3 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期二 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：协议升级本身正在成为最大的新攻击面——EIP-7702 上线十个月就积累了数百万恶意委托；与此同时，面向稳定币与 AI 代理的“少共识 / 可委托”支付设计快速升温，但签名层的安全证明仍需格外审慎。</p>
+
+<p style="margin:0 0 18px;">本期最值得关注的是一篇以太坊实证研究：EIP-7702 允许普通账户把执行权委托给合约，攻击者借此把受害者委托到“清扫合约”，自动转走所有转入的 ETH，作者在主网上<b>识别出 466.8 万个恶意委托，约 70% 的委托指向清扫合约</b>。支付协议方面，一篇工作证明 FastPay 类证书支付系统在共享余额场景下<b>除非验证者能看到证书形成过程，否则不存在安全的解锁规则</b>，并给出只在冲突时才启动共识的混合协议；FC 2026 论文提出代理适配器签名，让 AI 代理在比特币上代为完成公平交换。签名层面出现一个警示：一篇优化 FROST 消息容量的论文在 11 月 2 日更新中声明，作者<b>借助 AI 工具找到了非平凡的 ROS 攻击，原方案可被伪造</b>。ZK 方面，LCH 基上的 FRI 运算让后量子 zkSNARK 证明者提速 2.80 倍。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">EIP-7702 恶意委托</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">4,668,209</div>
+<div style="font-size:12px;color:#6b7280;">上线前十个月；超 60 万账户未及时撤销</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">LCH 基后量子 zkSNARK 证明者</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">2.80×</div>
+<div style="font-size:12px;color:#6b7280;">对比 libiop（Aurora，2<sup>19</sup> 约束）</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">CEX 地址识别 macro PR-AUC</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">0.959</div>
+<div style="font-size:12px;color:#6b7280;">留一交易所评估；基于储备金证明标签</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表为 <b>2026 年 11 月 2 日（星期一）批次</b>；11 月 3 日批次要到北京时间上午 9 点前后才公布，本期生成时还没有出来。IACR ePrint 自上期以来<b>没有新编号</b>（最新仍为 2026/2685），因此 ePrint 部分取近 7 天内有修订的论文，并逐篇注明首次提交与修订日期。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月2日批次）</td><td style="text-align:right;padding:8px 4px;">37</td><td style="text-align:right;padding:8px 4px;">64</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月2日批次）</td><td style="text-align:right;padding:8px 4px;">13</td><td style="text-align:right;padding:8px 4px;">28</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月2日批次）</td><td style="text-align:right;padding:8px 4px;">6</td><td style="text-align:right;padding:8px 4px;">16</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月2日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">11</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月2日批次）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">4</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天，10月27日—11月2日）</td><td style="text-align:right;padding:8px 4px;">0（自上期起）</td><td style="text-align:right;padding:8px 4px;">95</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文中，4 篇 arXiv 论文首次提交于 <b>10 月 29—30 日</b>，ePrint 2026/2659 首次提交于 10 月 27 日；另 3 篇是 ePrint 较早论文的新修订版（2026/395：2 月 26 日首次提交、10 月 29 日修订；2026/563：3 月 20 日首次提交、11 月 2 日修订；2026/1784：8 月 23 日首次提交、10 月 27 日修订），文中已分别注明。</p>
+<p style="margin:0 0 26px;">去重说明：11 月 1 日、11 月 2 日两期已展开的 16 篇论文（以及顺带提到的 ePrint 2026/2646、2026/2674）本期不再重复，其中包括近 7 天内又有修订的 2026/2684、2026/2681、2026/872。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Who Swept My ETH? Uncovering EIP-7702-Based Ether Redirection Attacks on Ethereum</div>
+<div style="color:#6b7280;font-size:13px;">Ziwei Li, Tianwei Chen, Jiajing Wu, Zigui Jiang, Yuhong Nan, Yaobo Huang, Bowen Song, Zibin Zheng ｜ arXiv 2610.41153 (cs.CR) ｜ <a href="https://arxiv.org/abs/2610.41153" style="color:#2563eb;">arxiv.org/abs/2610.41153</a></div>
+<p style="margin:6px 0 0;">EIP-7702 让外部账户（EOA）可以把执行逻辑临时委托给任意合约，这也催生了新的攻击：一旦受害者被委托到恶意“清扫合约”，之后转入的 ETH 会被自动转给攻击者。本文首次形式化这一攻击模型（EERA），并提出基于交易分析的检测框架 SweeperHunter。在主网上线后十个月的数据中，作者识别出 <b>4,668,209 个恶意委托、20,443 笔攻击交易和 508 个清扫合约</b>；约 70% 的委托指向清扫合约，且超过 60 万个账户没有及时撤销。这是账户抽象升级带来安全副作用的第一份大规模实证。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Resource Locks and Fast Unlock for Shared Balances in Certificate-Based Payment Systems</div>
+<div style="color:#6b7280;font-size:13px;">Lingkang Shangguan ｜ arXiv 2610.41207 (cs.DC) ｜ <a href="https://arxiv.org/abs/2610.41207" style="color:#2563eb;">arxiv.org/abs/2610.41207</a></div>
+<p style="margin:6px 0 0;">FastPay 类证书支付系统只需一轮法定人数签名、无需全局排序，但前提是每个账户只有一个写者。稳定币场景中的金库、商户池、授权额度和订阅都需要多个账户扣同一笔余额，此时诚实账户也会竞争、锁必须被解开。作者证明：<b>除非验证者能看到证书的形成过程，否则不存在安全的解锁规则</b>。据此提出混合协议：个人账户保持原有路径；共享资源用 ECHO/READY 两阶段广播认证，无冲突时不需要共识，出现票数分裂时只对该资源版本运行一次共识。文中证明了一致性、不透支、终局性与活性。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. How To Make Delegated Payments on Bitcoin: A Question for the AI Agentic Future</div>
+<div style="color:#6b7280;font-size:13px;">Jay Taylor, Paul Gerhart, Sri AravindaKrishnan Thyagarajan ｜ IACR ePrint 2026/395（FC 2026；2026-02-26 首次提交，2026-10-29 修订） ｜ <a href="https://eprint.iacr.org/2026/395" style="color:#2563eb;">eprint.iacr.org/2026/395</a></div>
+<p style="margin:6px 0 0;">AI 代理和托管服务越来越多地代表机构完成交易，但 Google AP2 等协议只规范了“如何授权”，没有解决公平交换：买家拿到资产当且仅当卖家收到付款。本文提出新原语<b>代理适配器签名（PAS）</b>：无状态的买家只发一次请求，由多个代理与卖家完成交换，代理始终不知道交换的秘密，可容忍最多 t−1 个代理合谋。构造只用标准原语，兼容比特币、Cardano 和以太坊；Rust 实现支持 30 个代理，买卖双方计算在微秒级，链上成本与一笔普通交易相同。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Optimizing FROST for Message Capacity</div>
+<div style="color:#6b7280;font-size:13px;">Philipp Jovanovic, Ben Riva, Arnab Roy ｜ IACR ePrint 2026/563（2026-03-20 首次提交，2026-11-02 修订） ｜ <a href="https://eprint.iacr.org/2026/563" style="color:#2563eb;">eprint.iacr.org/2026/563</a></div>
+<p style="margin:6px 0 0;">FROST 门限 Schnorr 签名每签一条消息要消耗两个预签名，而预签名需要昂贵的分布式密钥生成。原文证明“k 个预签名签 k 条消息”会被扩展 ROS 攻击伪造，并声称“k+1 个签 k 条”在 GGM+ROM 下安全，可把消息容量从 50% 提到 k/(k+1)。<b>但 11 月 2 日的更新声明：作者借助 AI 工具找到了针对该方案的非平凡 ROS 攻击，当前论文中的方案可被伪造</b>，修复方案将另行发表。这对钱包、跨链桥等依赖门限签名的系统是一条重要警示：门限 Schnorr 的“效率优化”需要格外谨慎，AI 辅助密码分析也开始产出实际结果。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Alg{Ossa}: Decentralized Secure Aggregation with Rotating Committees and Eventual Delivery</div>
+<div style="color:#6b7280;font-size:13px;">Xiangyu Su, Yuma Tamagawa, Mario Larangeira, Zengpeng Li, Keisuke Tanaka ｜ IACR ePrint 2026/2659（2026-10-27 首次提交） ｜ <a href="https://eprint.iacr.org/2026/2659" style="color:#2563eb;">eprint.iacr.org/2026/2659</a></div>
+<p style="margin:6px 0 0;">安全聚合让客户端只公开私有数据的总和，常用于隐私感知和联邦学习。本文先给出通用构造 Ossa（沿用 CRYPTO'25 中 OPA 和 Willow 的“单服务器 + 委员会辅助”模型），再把它嵌入 <b>Algorand 式共识</b>：每轮用密码学抽签选出新的候选领导者和验证委员会，并在关键纪元从已终局的链状态刷新解密委员会。作者给出所选服务器诚实概率的显式下界，从而证明每轮输出非空聚合的概率有常数下界，即“最终交付”。核心构造同时支持经典与后量子实例化。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Faster Post-Quantum zkSNARK Provers Using the LCH Polynomial Basis</div>
+<div style="color:#6b7280;font-size:13px;">Mohammadtaghi Badakhshan, Susanta Samanta, Guang Gong ｜ IACR ePrint 2026/1784（2026-08-23 首次提交，2026-10-27 修订） ｜ <a href="https://eprint.iacr.org/2026/1784" style="color:#2563eb;">eprint.iacr.org/2026/1784</a></div>
+<p style="margin:6px 0 0;">基于二元扩域、以 FRI 做低度测试的 zkSNARK 被认为可抗量子，但现有证明者在单项式基下做多项式运算，需要反复做加法 FFT 和基转换。本文直接在 LCH 多项式基下完成除以子空间消失多项式等运算，并给出<b>无需域求逆</b>的 FRI 折叠，输出与经典折叠逐字相同。在不改变证明和验证者的前提下集成进 Aurora：2<sup>19</sup> 约束、F<sub>2<sup>256</sup></sub> 上，证明者比 libiop 快 2.80 倍，比使用 LCH FFT 的 Cantor 基证明者快 1.24 倍（若基线使用拉格朗日折叠，分别为 3.63 倍和 2.05 倍）。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. An Incentive-Aligned Trust-Centric Coordination Layer for Heterogeneous Blockchain Interoperability</div>
+<div style="color:#6b7280;font-size:13px;">Saeed Moradi, Sara Rouhani ｜ arXiv 2610.41032 (cs.CR, cs.DC) ｜ <a href="https://arxiv.org/abs/2610.41032" style="color:#2563eb;">arxiv.org/abs/2610.41032</a></div>
+<p style="margin:6px 0 0;">许可链与公链之间的互操作，受制于双方在隐私、信任和治理上的不对称假设。本文提出一个协调层，把跨域信任管理和隐私保护从底层链协议中解耦，<b>不需要修改任何链的协议</b>：用密码学不可链接机制保护隐私，用“质押权重 + 时间累积声誉”选择中继者，使经济承诺与长期行为正确性挂钩。作者形式化了敌手模型，论证其能抵御女巫渗透、合谋和策略性质押集中，并通过仿真分析法定人数阈值、声誉记忆长度与匿名参数之间的权衡。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. On-Chain Behavioral Signatures for Classifying Centralized Exchange Addresses on Ethereum Using Proof-of-Reserves</div>
+<div style="color:#6b7280;font-size:13px;">Seongchan Park, Hyunho Jeon, Byungsoo Kang, Gaeun Kim, Minseob So, Seongyong Kim ｜ arXiv 2610.41888 (cs.CY，交叉至 cs.CR) ｜ <a href="https://arxiv.org/abs/2610.41888" style="color:#2563eb;">arxiv.org/abs/2610.41888</a></div>
+<p style="margin:6px 0 0;">识别中心化交易所的链上地址，过去多依赖不透明的商业标签。本文改用交易所公开的<b>储备金证明（PoR）</b>作为标签来源，构建了覆盖 15 家交易所和 5 类非交易所、共 3,033,857 个以太坊地址的数据集，提取 58 个链上行为特征。在“留一交易所”评估下，LightGBM 用 17 个特征在 730 天窗口达到 macro PR-AUC 0.9594（逻辑回归为 0.7697）；gas 行为、ERC-20 活动和内部交易是最关键的信号。特征数据集已公开，可用于合规监测研究的复现。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>协议演进带来的安全副作用</b>是本期最明确的信号：EIP-7702 的大规模清扫攻击说明，账户抽象一类升级会改变钱包和用户的威胁模型，需要配套的检测和撤销机制。</p>
+<p style="margin:0 0 10px;"><b>支付层在“去共识化”与“可委托化”：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>证书支付：共享余额只在冲突时才启动共识（FastPay 扩展）。</li>
+<li>代理支付：代理适配器签名让 AI 代理在比特币上完成公平交换。</li>
+<li>跨链：不改底层协议的激励兼容中继协调层。</li>
+</ul>
+<p style="margin:0;"><b>密码学基础仍需审慎：</b>FROST 优化方案被 AI 辅助发现的 ROS 攻击推翻，提示门限签名的效率改进必须经过严格分析；后量子 zkSNARK 证明者则在底层多项式运算上继续挖掘常数级加速。</p>
+</div>
+
+</div>
+</body></html>
