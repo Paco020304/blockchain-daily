@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 4 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 4 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期三 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：链上安全研究正从“盯价格、盯单个漏洞”转向系统刻画“被破坏的是哪条信任边界、哪种经济状态”——现有检测工具只能覆盖约一半真实攻击；与此同时，共识层和执行层都在为更强的对手模型和更高并发重新设计。</p>
+
+<p style="margin:0 0 18px;">本期两篇 DeFi/跨链实证研究方向一致：一篇基于 276 起真实攻击指出，“价格操纵”只是表象，背后是协议内部账本、AMM 状态和执行时约束被破坏，<b>7 种代表性检测方法中最好的也只识别出 50.4% 的真实攻击</b>；另一篇梳理 2022 年 1 月—2026 年 8 月的 48 起跨链桥事件，发现<b>证明伪造与凭证夺取两类模式占全部损失的 86.2%</b>。共识方面，Abraham、Roughgarden 等人提出多领导者固定视图 Simplex（ML-FVS），<b>让共识在“可移动崩溃”攻击者面前仍保持活性</b>；Starfish 首次给无证书 DAG BFT（Mysticeti 一类）补上严格的活性证明。执行层的 RegionFence 在 64 核上把以太坊主网区块执行<b>提速 9.2 倍</b>。密码学方面，beholder signatures（CRYPTO 2026）可用于构造无需临时密钥的托管证明，secp256k1/BLS 曲线的完备加法公式则十年来首次降到 11 次乘法。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">跨链桥事件总损失</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">$26.76 亿</div>
+<div style="font-size:12px;color:#6b7280;">48 起事件；前 10 起占 92.4%</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">DeFi 经济状态操纵最佳检出率</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">50.4%</div>
+<div style="font-size:12px;color:#6b7280;">7 种检测方法 × 276 起真实攻击</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">RegionFence 并行执行加速</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">9.2×</div>
+<div style="font-size:12px;color:#6b7280;">64 核 vs 单核；以太坊主网区块</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表为 <b>2026 年 11 月 3 日（星期二）批次</b>；11 月 4 日批次要到北京时间上午 9 点前后才公布，本期生成时还没有出来。IACR ePrint 自上期以来只新增 1 个编号（2026/2686，隐藏数问题，与区块链无关），因此 ePrint 部分同时选取近 7 天内有修订的论文，并逐篇注明首次提交与修订日期。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月3日批次）</td><td style="text-align:right;padding:8px 4px;">65</td><td style="text-align:right;padding:8px 4px;">139</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月3日批次）</td><td style="text-align:right;padding:8px 4px;">31</td><td style="text-align:right;padding:8px 4px;">82</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月3日批次）</td><td style="text-align:right;padding:8px 4px;">1</td><td style="text-align:right;padding:8px 4px;">20</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月3日批次）</td><td style="text-align:right;padding:8px 4px;">15</td><td style="text-align:right;padding:8px 4px;">27</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天，10月28日—11月3日）</td><td style="text-align:right;padding:8px 4px;">1（自上期起）</td><td style="text-align:right;padding:8px 4px;">91</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文中，5 篇 arXiv 论文首次提交于 <b>10 月 31 日—11 月 1 日</b>，ePrint 2026/2667 首次提交于 10 月 28 日；另 2 篇是 ePrint 较早论文的新修订版（2025/567：2025 年 3 月 28 日首次提交、2026 年 11 月 3 日第 4 次修订；2025/1900：2025 年 10 月 11 日首次提交、2026 年 11 月 3 日修订，为 CRYPTO 2026 论文的大修版），文中已分别注明。</p>
+<p style="margin:0 0 26px;">去重说明：最近 7 天内（11 月 1—3 日三期）已展开的 24 篇论文本期不再重复，其中包括近 7 天内又有修订的 ePrint 2026/2684、2026/2681、2026/563、2026/395、2026/2672，以及再次出现在交叉列表中的 arXiv 2610.30595。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Price is Only the Symptom: Understanding and Analyzing Economic-State Manipulation Vulnerabilities in DeFi</div>
+<div style="color:#6b7280;font-size:13px;">Hao Wu, Haijun Wang, Xiapu Luo, Ming Fan, Ting Liu ｜ arXiv 2611.00587 (cs.CR) ｜ <a href="https://arxiv.org/abs/2611.00587" style="color:#2563eb;">arxiv.org/abs/2611.00587</a></div>
+<p style="margin:6px 0 0;">作者整理了 276 起真实攻击和 91 条 Code4rena 审计发现，提出“经济状态操纵（ESM）”的成因分类（4 大类、11 子类），指出这类漏洞远不止价格操纵，常涉及协议内部记账、AMM 状态一致性和执行时约束被破坏。对 7 种代表性检测方法的系统评测显示，<b>最好的方法也只能识别 50.4% 的真实攻击</b>，根源在于依赖预定义攻击模式、缺乏对经济语义的推理以及可利用性验证不完整。这为下一代 DeFi 漏洞检测工具指明了改进方向。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Attack Patterns in Cross-chain Bridges: A Trust-based Empirical Analysis</div>
+<div style="color:#6b7280;font-size:13px;">Ishraq Samiha, Yasir Rahman, Rahma Mukta ｜ arXiv 2611.01587 (cs.CR) ｜ <a href="https://arxiv.org/abs/2611.01587" style="color:#2563eb;">arxiv.org/abs/2611.01587</a></div>
+<p style="margin:6px 0 0;">基于 2022 年 1 月至 2026 年 8 月间 48 起有证据支撑的跨链桥事件，本文按“攻击者破坏了哪条信任假设”定义 6 类攻击模式（证明伪造、逻辑利用、事件注入、经济状态操纵、凭证夺取、基础设施劫持），并映射到存款、中继、验证、执行、治理与运维 5 个功能域。事件合计损失 26.76 亿美元，<b>证明伪造与凭证夺取占 86.2%，验证域和治理运维域占 93.9%</b>，换用其他损失口径后结论依然成立。数据集已在 Zenodo 公开，可直接用于跨链桥威胁建模。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Beyond Leaderless: Randomized Consensus Against Mobile Crashes</div>
+<div style="color:#6b7280;font-size:13px;">Ittai Abraham, Kaya Alpturer, Pranav Garimidi, Joachim Neu, Tim Roughgarden, Ertem Nusret Tas ｜ arXiv 2611.01323 (cs.DC) ｜ <a href="https://arxiv.org/abs/2611.01323" style="color:#2563eb;">arxiv.org/abs/2611.01323</a></div>
+<p style="margin:6px 0 0;">许多共识协议面对能在副本之间“移动”、反复让某个副本崩溃的攻击者时，即使在同步网络下也无法终止。本文提出多领导者固定视图 Simplex（ML-FVS）：每个视图有多个领导者各自提案，副本在截止时间对所见提案集合投票，投票之后才揭示的隐藏门限信标给出领导者优先级，从而确定最终提案。在“永久自适应拜占庭故障 + 可移动崩溃”模型下，常数崩溃预算时可达 O(Δ) 期望延迟，立即腐化时仍保持活性；实验还显示，即便理性领导者为多拿奖励而推迟提案，多领导者也能减少视图失败。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Making Uncertified DAG BFT Provably Live with Linear Payload and Quadratic Metadata Communication</div>
+<div style="color:#6b7280;font-size:13px;">Nikita Polyanskii, Sebastian Mueller, Ilya Vorobyev ｜ IACR ePrint 2025/567（2025-03-28 首次提交，2026-11-03 第 4 次修订）｜ <a href="https://eprint.iacr.org/2025/567" style="color:#2563eb;">eprint.iacr.org/2025/567</a></div>
+<p style="margin:6px 0 0;">Mysticeti 一类无证书 DAG BFT 延迟最低，但缺乏严格的活性证明，生产实现靠“拉取”缺失祖先块，导致请求放大、长尾延迟和拜占庭选择性传播问题。本文提出 Starfish：用新的 Push 起搏器给出无证书 DAG 的<b>首个严格活性证明</b>，并把载荷与区块头分离——推送区块头和 Reed-Solomon 分片、在 DAG 上直接形成数据可用性证书，使最坏情况载荷通信降为线性。100 个验证者的模拟广域网实验中，Starfish 无故障吞吐约 25.7 万 tx/s（Mysticeti 约 19 万），且在选择性传播攻击下不会出现 Pull 方案高达数十秒的延迟。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. RegionFence: Adaptive Concurrency Control for Blockchain Parallel Transaction Execution</div>
+<div style="color:#6b7280;font-size:13px;">Jiaying Feng, Linpeng Jia, Yi Sun ｜ arXiv 2611.02164 (cs.DC；已投 VLDB 2027) ｜ <a href="https://arxiv.org/abs/2611.02164" style="color:#2563eb;">arxiv.org/abs/2611.02164</a></div>
+<p style="margin:6px 0 0;">现有区块链并行执行引擎通常在区块内统一采用乐观（OCC）或悲观（PCC）并发控制，冲突时要重执行或推迟整笔交易。RegionFence 把控制粒度从整笔交易细化到触及热点键的“区域”，用运行时“栅栏”决定每个区域如何处理冲突，并通过区块内与跨区块的在线学习预判冲突，同时保证结果与共识顺序串行执行一致。在 go-ethereum 中实现、用过去五年不同时期的以太坊主网区块评测，<b>64 核上相对单核提速 9.2 倍</b>，加速比比 OCC 高 2.9–5.4 倍、比 PCC 高 3.9–9.4 倍。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Beholder Signatures</div>
+<div style="color:#6b7280;font-size:13px;">Stefan Dziembowski, Sebastian Faust, Paweł Kędzior, Marcin Mielniczuk, Susil Kumar Mohanty, Krzysztof Pietrzak ｜ IACR ePrint 2025/1900（CRYPTO 2026 论文大修版；2025-10-11 首次提交，2026-11-03 修订）｜ <a href="https://eprint.iacr.org/2025/1900" style="color:#2563eb;">eprint.iacr.org/2025/1900</a></div>
+<p style="margin:6px 0 0;">本文提出一种与盲签名“相反”的新原语：对一条（可能很长的）消息承诺签名，签名本身证明参与签名、掌握私钥的各方<b>共同知道完整的被承诺消息</b>，即使对手用 MPC 分布式生成签名也成立。构造基于随机预言模型下的“完全知识证明”和 Fischlin 变换，以 Schnorr 为底层 sigma 协议给出了概念验证实现。主要应用在区块链：构造无需临时密钥、非交互的托管证明（proofs of custody），并可用于数据分发、数据可用性和复制证明。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Faster complete formulas and their application to curves with efficient endomorphisms</div>
+<div style="color:#6b7280;font-size:13px;">Diego F. Aranha, Paulo L. Barreto ｜ IACR ePrint 2026/2667（2026-10-28 首次提交）｜ <a href="https://eprint.iacr.org/2026/2667" style="color:#2563eb;">eprint.iacr.org/2026/2667</a></div>
+<p style="margin:6px 0 0;">针对 y² = x³ + b 曲线族（包括比特币/以太坊使用的 secp256k1，以及 BN、BLS 配对曲线），作者把完备加法公式从 12 次乘法降到 11 次（混合坐标 10 次），这是<b>十年来首次改进</b>；在 libsecp256k1 中实现后，恒定时间固定基标量乘法提速 5.2%。结合新的完备三倍点公式和 τ-NAF 方法，在 RELIC 中对 BLS12-381 等曲线的 G₁ 标量乘法比 GLV 快 9–13%。这类底层改进会直接惠及签名验证、BLS 聚合签名和 zk 证明中的椭圆曲线运算。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Intent-Bound Authorization for Cryptocurrency Withdrawals Under Backend Compromise</div>
+<div style="color:#6b7280;font-size:13px;">Toqeer Ali Syed, Asadullah Abdullah Khan, Ali Akrama ｜ arXiv 2611.00839 (cs.CR) ｜ <a href="https://arxiv.org/abs/2611.00839" style="color:#2563eb;">arxiv.org/abs/2611.00839</a></div>
+<p style="margin:6px 0 0;">以 Binance 对其 2026 年 10 月遭受攻击的初步说明为背景，本文讨论：攻击者已控制一个“有权请求签名”的后台服务时，托管方如何阻止未授权提现。作者提出意图绑定提现授权协议（IWAP）：签名前由独立的执行层核验客户意图、交易的确切效果、新鲜的工作负载证据和一次性额度预留，管理操作走单独授权路径。Python 参考实现通过了 1,200 个负例和 3,000 个正例测试；即使意图授权方被攻破，独立预算仍能限制损失上限。作者明确说明只评测了规范化策略模型，未涉及真实托管平台。</p></div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>安全研究在换坐标系：</b>DeFi 与跨链桥两篇实证工作都放弃了“按漏洞表象分类”，改为按被破坏的经济状态或信任假设分类，并给出量化结论——损失高度集中在验证与运维环节，现有检测工具覆盖率约一半。托管侧的 IWAP 也是同一思路：假定后台已被攻破，再划清授权边界。</p>
+<p style="margin:0 0 10px;"><b>共识与执行同步升级：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>对手模型更强：ML-FVS 应对可移动崩溃，Starfish 防住拜占庭选择性传播。</li>
+<li>证明更严格：无证书 DAG BFT 首次有了完整的活性证明。</li>
+<li>执行更并行：RegionFence 用细粒度、自适应的并发控制压榨多核。</li>
+</ul>
+<p style="margin:0;"><b>密码学底座持续打磨：</b>beholder signatures 为托管证明和数据可用性提供新原语，secp256k1/BLS 曲线运算获得常数级提速。另值得留意的是 ePrint 2026/2665 的量子资源估算：在其假设下，求解 secp256k1 上的 ECDLP 至多需约 3 万个 cat qubit、约 1 小时——这再次提醒链上签名的后量子迁移需要提前规划。</p>
+</div>
+
+</div>
+</body></html>
