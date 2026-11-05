@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 6 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 6 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期五 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：共识层提供的保证正在被当作上层设计的“地基”来用——抗审查共识让 AMM 可以从机制上消除 MEV，拜占庭协议摆脱对门限签名的依赖；与此同时，比特币 L1 不改共识就能承载隐私转账和多方条件支付，执行层则开始找回被状态读取吃掉的并行度。</p>
+
+<p style="margin:0 0 18px;">本期最值得注意的是 Elaine Shi 等人修订的 Otter：在共识层抗审查、区块空间不拥堵的前提下，这个双资产批量 AMM <b>让用户和区块构建者如实报价都成为占优策略，构建者无法靠重排或注入女巫报价获利</b>；作者还证明，一旦允许构建者审查交易，这些性质就无法同时实现。比特币方向有两项新工作：Shielded Bitcoin 把 Zcash 式的加密 note、nullifier 和零知识证明搬到比特币 L1 上，<b>无需修改比特币共识，也不需要另一条共识链</b>；MuCPay 把 n 方、N 个结果的预言机条件支付从 Θ(Nn²) 份授权降到 Θ(Nn) 份链下签名份额，<b>结算只需一个标准的 64 字节 BIP340 签名</b>。执行层的 Weaver 用符号引用代替“先读状态再执行”，在真实以太坊区块上<b>比最先进的并行执行引擎吞吐高 41%–63%</b>。理论方面，Dufay 与 Wattenhofer 首次在只用普通签名、不用门限签名的条件下，以低于立方的通信量实现了 t&lt;n/2 的同步拜占庭协议。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Weaver 吞吐提升（对比最先进并行引擎）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">+41%–63%</div>
+<div style="font-size:12px;color:#6b7280;">最高达串行执行的 7.5 倍 · 真实以太坊区块</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">无门限签名 BA 的通信复杂度</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈ n<sup>2.303</sup></div>
+<div style="font-size:12px;color:#6b7280;">此前普通签名下最优韧性只有 O(n³) 方案</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">MuCPay 结算交易体积优势</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">281.5×</div>
+<div style="font-size:12px;color:#6b7280;">独立 DLC 部署所需 vbytes 倍数 · 结算仅 1 个 64 字节签名</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表为 <b>2026 年 11 月 5 日（星期四）批次</b>；11 月 6 日批次要到北京时间上午 9 点前后才公布，本期生成时还没有出来。本批次与区块链直接相关的新投稿不多，主要是 cs.DC 的 Weaver、次立方拜占庭协议和 cs.CR 的 GRIDSHIELD。IACR ePrint 自上期以来新公开了约 44 个编号（2026/2724—2026/2767，大多在 11 月 4—5 日获批上线），其中与区块链直接相关的有 2026/2749、2026/2732、2026/2755；另选 1 篇近 7 天内有修订的较早论文（2026/1877），并注明首次提交和修订日期。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月5日批次）</td><td style="text-align:right;padding:8px 4px;">28</td><td style="text-align:right;padding:8px 4px;">64</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月5日批次）</td><td style="text-align:right;padding:8px 4px;">13</td><td style="text-align:right;padding:8px 4px;">37</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月5日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">14</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月5日批次）</td><td style="text-align:right;padding:8px 4px;">5</td><td style="text-align:right;padding:8px 4px;">13</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月5日批次，辅助检索）</td><td style="text-align:right;padding:8px 4px;">14</td><td style="text-align:right;padding:8px 4px;">28</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天，10月30日—11月5日）</td><td style="text-align:right;padding:8px 4px;">约 44（自上期起）</td><td style="text-align:right;padding:8px 4px;">153</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 7 篇论文中，3 篇 arXiv 论文均首次提交于 <b>11 月 4 日（UTC）</b>；ePrint 2026/2749 与 2026/2732 于 11 月 3 日提交、2026/2755 于 11 月 4 日提交，三篇都在 11 月 5 日获批公开；另 1 篇是较早论文的新修订版（2026/1877：2026 年 9 月 3 日首次提交，11 月 5 日第 2 次修订），文中已注明。</p>
+<p style="margin:0 0 26px;">去重说明：最近 7 天内（11 月 1—5 日五期）已展开的论文本期不再重复，其中包括近 7 天内又有修订的 ePrint 2025/1851、2026/2204、2026/1378、2026/2681 等；上期在检索说明中提到的 2026/2702（拜占庭共识的认证复杂度）本期也不展开。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Otter: A Provably MEV-Resilient Automated Market Maker via Surplus Redistribution</div>
+<div style="color:#6b7280;font-size:13px;">Elaine Shi, Mengqian Zhang, Hao Chung, Yuhao Li ｜ IACR ePrint 2026/1877（2026-09-03 首次提交，2026-11-05 第 2 次修订）｜ <a href="https://eprint.iacr.org/2026/1877" style="color:#2563eb;">eprint.iacr.org/2026/1877</a></div>
+<p style="margin:6px 0 0;">Otter 是一个双资产批量 AMM，在共识层抗审查、区块空间不拥堵的前提下，<b>让用户和区块构建者如实行事都成为占优策略</b>：构建者重排报价、注入女巫报价都无利可图，即使构建者本身也是交易者，结论依然成立；作者还证明该机制在满足这些博弈性质的一类机制中社会福利最优。核心思路是“盈余再分配”：池子的输出不必全部分给本批用户，剩余部分可以转入社区治理的合约，再用于补贴手续费、奖励 LP 或回注资金池。论文还给出不可能性结果：<b>一旦构建者可以审查交易，这些保证就无法实现</b>，从形式上说明了共识层安全如何扩展应用层的能力边界。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Shielded Bitcoin: Private Transfers on the Bitcoin L1</div>
+<div style="color:#6b7280;font-size:13px;">Clara Shikhelman, Mikhail Komarov, Aleksei Moskvin ｜ IACR ePrint 2026/2749（2026-11-03 提交，11-05 公开）｜ <a href="https://eprint.iacr.org/2026/2749" style="color:#2563eb;">eprint.iacr.org/2026/2749</a></div>
+<p style="margin:6px 0 0;">本文提出直接在比特币 L1 上进行隐私转账的协议，<b>不需要修改比特币共识</b>。设计沿用 Zcash 一类的架构：价值存放在加密 note 中，花费以公开 nullifier 标记，有效性由零知识证明保证；但它没有独立的共识链，所有协议数据都发布在比特币上，转账有效性由 PIPEs v2 强制执行，隐私状态（note 树、nullifier 集合、区块级根历史）在链下按比特币顺序确定性重放得到，任意两个正确实现无需协调就能得到相同状态。转账不公开金额、发送方、接收方及其在交易图中的位置，且属于非托管设计，索引器和重放层都拿不到花费权限；peg-in/peg-out 不在本文范围内。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Weaver: Unlocking Blockchain Transaction Parallelism through State-Decoupled Symbolic Execution</div>
+<div style="color:#6b7280;font-size:13px;">Ru Cheng, Maofan Yin, Liangrong Chen, Lizan Zhou, Chenyuan Wu ｜ arXiv 2611.06462 (cs.DC) ｜ <a href="https://arxiv.org/abs/2611.06462" style="color:#2563eb;">arxiv.org/abs/2611.06462</a></div>
+<p style="margin:6px 0 0;">现有并行执行引擎仍被每笔交易关键路径上的慢速状态读取拖住，存在一种“隐形的并行度损失”。Weaver 把状态表示为轻量级符号引用，后续计算记录为符号表达式，具体值边执行边获取；遇到依赖状态的分支，用分层符号模式匹配预测最可能的方向，并按表达式粒度调度——某个表达式的依赖一旦就绪就立即求值，而不是等整笔交易的读集合齐。在真实以太坊区块和四类 dApp 合成负载上，<b>吞吐比最先进的并行执行引擎高 41%–63%，最高达串行执行的 7.5 倍</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Optimal Subcubic Byzantine Agreement with Plain PKI</div>
+<div style="color:#6b7280;font-size:13px;">Marc Dufay, Roger Wattenhofer ｜ arXiv 2611.06479 (cs.DC) ｜ <a href="https://arxiv.org/abs/2611.06479" style="color:#2563eb;">arxiv.org/abs/2611.06479</a></div>
+<p style="margin:6px 0 0;">在同步认证模型下，拜占庭协议可以容忍 t&lt;n/2 个恶意方，但已知达到最优比特复杂度的方案都依赖门限签名；只用普通签名时，最优韧性下只有立方复杂度的协议。作者证明立方并非必需：给出一个确定性协议，<b>在 t&lt;n/2 最优韧性、O(n) 轮的条件下，比特复杂度为 O(κ<sup>1.303</sup>n<sup>2.303</sup>)</b>（κ 为哈希或签名长度上界）。对于不想引入门限签名可信设置（DKG）或希望使用后量子普通签名的共识系统，这一结果缩小了理论差距。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. MuCPay: Breaking the Quadratic Bottleneck in Scriptless Multi-Party Oracle-Based Conditional Payments</div>
+<div style="color:#6b7280;font-size:13px;">Yaning Wang, Na Wang, Chuan Li, Yongda Zhang, Junsong Fu ｜ IACR ePrint 2026/2732（2026-11-03 提交，11-05 公开）｜ <a href="https://eprint.iacr.org/2026/2732" style="color:#2563eb;">eprint.iacr.org/2026/2732</a></div>
+<p style="margin:6px 0 0;">由现实事件触发的预言机条件支付（如 DLC）若用两两独立部署扩展到 n 方、N 个结果，需要 Θ(Nn²) 份结果授权和 Θ(n²) 个结算签名。MuCPay 提出哈希绑定的适配器多签（HB-AMS），把各方的条件授权聚合成一个紧凑的联合预签名，<b>只需 Θ(Nn) 份链下签名份额和一个链上结算签名</b>；与 EuroS&amp;P'26 的 Double-Layer AMS 不同，它输出聚合公钥下的标准 BIP340 签名，可直接走 Taproot key-path 结算。作者在代数随机预言模型下证明了并发不可伪造性与抗提前结算；结算只用一个 64 字节签名，<b>独立 DLC 部署所需交易体积是其 281.5 倍</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Blockchain-Anchored Proactive Refresh for Dynamic Threshold Services</div>
+<div style="color:#6b7280;font-size:13px;">Seunghyun Cho, Jaeyeon Lee, Myeongjun Kim, Hyunseok Jeong, Young-Sik Kim ｜ IACR ePrint 2026/2755（2026-11-04 提交，11-05 公开）｜ <a href="https://eprint.iacr.org/2026/2755" style="color:#2563eb;">eprint.iacr.org/2026/2755</a></div>
+<p style="margin:6px 0 0;">长期运行的门限服务需要给后加入者发份额、定期刷新以抵御移动攻击者，还要让刷新时离线的参与者补上更新。作者指出只按“已提交的 epoch”计算暴露量并不够：<b>一次中止的刷新若已公布候选更新令牌，即使没有哪个已提交 epoch 超出腐化预算，也可能泄露秘密</b>。为此他们按“已提交 epoch + 中止尝试”的细粒度状态计算安全预算，用只追加、中止时也不回滚的发布账本强制执行；固定的发牌委员会把加密更新记录锚定在区块链 blob 存储中，离线参与者无需联系发牌方即可非交互恢复，链上二分争议协议负责确定性地追责错误记录。Rust 实现在 EVM 链上测试了最多 1,280 个参与者的完整生命周期，组恢复在亚秒级完成，gas 成本可接受。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. GRIDSHIELD: Verifiable Grid Feasibility and Manipulation Resistance in Privacy-Preserving Peer-to-Peer Energy Trading</div>
+<div style="color:#6b7280;font-size:13px;">Abdullahil Kafi, Md Zahidul Islam, Alvi Ataur Khalil ｜ arXiv 2611.05816 (cs.CR) ｜ <a href="https://arxiv.org/abs/2611.05816" style="color:#2563eb;">arxiv.org/abs/2611.05816</a></div>
+<p style="margin:6px 0 0;">区块链 P2P 能源市场把不受约束的权力集中在出清运营方手里，而且已有设计要么在明文上满足电网约束，要么隐藏报价却放弃或无法审计约束，都没考虑运营方被攻破后靠重排交易获利的情况。GRIDSHIELD 用与顺序无关的批量程序出清密封报价，<b>消除被攻破的运营方通过重排能抽取的福利</b>（相当于能源市场里的 MEV），并利用 Pedersen 承诺的加法同态，把全馈线的电网可行性验证归约为对隐藏分配的一个聚合范围证明。在 Hyperledger Fabric 上对 240 节点真实负荷馈线的实验中，整轮可行性证明只有几 KB，无需可信设置，吞吐约 1064 tx/s，且能拒绝三种对比方案中两种会接受的不可行分配。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>共识层保证开始被当作上层设计的“输入”：</b>Otter 用一个不可能性结果说明，抗审查是 AMM 消除 MEV 的必要条件；Dufay–Wattenhofer 则把最优韧性拜占庭协议从门限签名中解放出来，这对后量子迁移和免 DKG 的验证者集合尤其有意义。GRIDSHIELD 把“运营方重排获利”这一 MEV 思路带到了能源交易场景。</p>
+<p style="margin:0 0 10px;"><b>比特币 L1 正在成为新的协议试验场：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>隐私：Shielded Bitcoin 以“链上发布 + 链下确定性重放”的元协议方式实现 Zcash 式隐私，不需要软分叉。</li>
+<li>多方合约：MuCPay 借助适配器多签把多方条件支付压缩成一个 Taproot key-path 签名。</li>
+<li>结合上期的 FlatMerkle/FlatCheck，比特币上的可验证计算与隐私工具链正在快速成形。</li>
+</ul>
+<p style="margin:0;"><b>值得持续关注：</b>同期 ePrint 还有 PoW 链后量子签名迁移的形式化分析（2026/952 第 5 次修订，给出“迁移活性”成立所需的量子攻击者能力阈值），以及面向 ZK 证明中多标量乘法的最优桶集合优化（2026/2750），后量子迁移与证明加速仍是持续的研究热点。</p>
+</div>
+
+</div>
+</body></html>
