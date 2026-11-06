@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 7 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 7 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期六 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：后量子与隐私方案正在进入“算细账”的阶段——在以太坊上，后量子签名的成本瓶颈是 calldata 下限而不是验证本身；FHE 能保住数据内容，却挡不住链上元数据；证明系统则在比特打包、增量更新和按权重分摊这些细节上继续降低成本。</p>
+
+<p style="margin:0 0 18px;">本期最实用的结论来自一篇以太坊后量子 IoT 认证的测量研究：在 EIP-7623 calldata 下限规则下，即使有 ML-DSA 预编译，逐条签名的成本仍是 ECDSA 的 <b>8.7 倍</b>；改成设备对 100 条记录的 Merkle 根签名后，<b>现在就能用的标准 LMS 验证器约为每条 3,350 gas，不需要任何协议改动</b>。隐私方面，基于 Zama fhEVM 的医疗问诊原型 ConfidentialCare 表明，<b>FHE 保护了问诊内容，但链上元数据仍会暴露“谁、何时、找了哪个专科的医生”</b>，而且在 fhEVM 里，“可以解密”就等于“可以转授”。证明系统方面有三项进展：Frigo 与 shelat 的 Sumcheck bit packing 只用线性约束就能把 m 个比特打包进一个 GF(2<sup>m</sup>) 元素；EUROCRYPT 2026 论文 Dynark 让 Groth16 证明在见证小幅变化时<b>以亚线性时间更新，而且与现有部署完全兼容</b>；CRYPTO 2026 论文给出首个<b>复杂度与权重无关</b>的加权门限 Schnorr 签名与门限加密黑盒构造，直接对应 PoS 场景中按质押加权的需求。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">逐条后量子签名 vs ECDSA 的上链成本</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">8.7×</div>
+<div style="font-size:12px;color:#6b7280;">即使有 ML-DSA 预编译；瓶颈在 calldata 下限</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Dynark 证明更新速度（对比 Groth16 重证）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">1433×</div>
+<div style="font-size:12px;color:#6b7280;">n=2<sup>20</sup>、d=1 时更新仅 3 ms · 证明仍为 192 字节</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Lantern 吞吐提升（对比 Aria）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">4.2×</div>
+<div style="font-size:12px;color:#6b7280;">ChainMaker 执行层吞吐至少提升 2.2 倍</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表为 <b>2026 年 11 月 6 日（星期五）批次</b>。今天是星期六，arXiv 周末不发布新批次，下一批是 11 月 9 日（星期一）批次。该批次中与区块链直接相关的新投稿只有 cs.DC 的以太坊后量子 IoT 认证研究；另有区块链执行层论文 Lantern 发布了 v2 修订版。IACR ePrint 自上期以来新公开了 8 个编号（2026/2762、2026/2768—2026/2774，均在 11 月 6 日前后获批上线），其中与本日报方向相关的有 2026/2770 和 2026/2771；另选 3 篇近 7 天内新公开或有修订、但此前未展开的论文（2026/2738、2026/273、2025/1897），文中注明了首次提交和修订日期。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">22</td><td style="text-align:right;padding:8px 4px;">58</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">15</td><td style="text-align:right;padding:8px 4px;">31</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">8</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">10</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月6日批次，辅助检索）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">21</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天，10月31日—11月6日）</td><td style="text-align:right;padding:8px 4px;">8（自上期起）</td><td style="text-align:right;padding:8px 4px;">146</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加。本期 7 篇论文的首次提交日期在 <b>2025 年 10 月 10 日—2026 年 11 月 5 日</b>之间：arXiv 2611.08108 于 11 月 5 日（UTC）提交；ePrint 2026/2770、2026/2771 于 11 月 4 日提交、11 月 6 日公开；2026/2738 于 11 月 3 日提交、11 月 5 日公开；另有 3 篇是较早论文的新修订版（2026/273、2025/1897 均在 11 月 6 日第 2 次修订；arXiv 2609.03315 于 11 月 5 日发布 v2），文中已注明。</p>
+<p style="margin:0 0 26px;">去重说明：最近 7 天内（11 月 1—6 日六期）已展开的论文本期不再重复，包括本批次中再次出现的 Otter（arXiv 2609.03474，即已推荐过的 ePrint 2026/1877）以及上期已提及的 2026/2702、2026/2750、2026/952。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Post-Quantum Authentication of IoT Data on Ethereum: Signatures, the Calldata Floor, and Device-Signed Merkle Roots</div>
+<div style="color:#6b7280;font-size:13px;">Ming-Fong Sie ｜ arXiv 2611.08108 (cs.DC，2026-11-05 提交) ｜ <a href="https://arxiv.org/abs/2611.08108" style="color:#2563eb;">arxiv.org/abs/2611.08108</a></div>
+<p style="margin:6px 0 0;">作者在当前以太坊执行规则（EIP-7623 calldata 下限、EIP-7825 交易上限）和 Glamsterdam 计划中的 calldata 重新定价下，完整测量了把 IoT 数据以后量子签名上链的成本，覆盖 ML-DSA、Falcon、SLH-DSA、LMS 和 XMSS，并实现了一个符合标准的 LMS/HSS 链上验证器。结论是：<b>逐条签名时，即使有 ML-DSA 预编译，成本也是 ECDSA 的 8.7 倍，瓶颈在 calldata 下限而不是验证</b>；改成设备对 100 条记录签一个 Merkle 根后，LMS 约为每条 3,350 gas（ECDSA 为 245 gas），而且不受重新定价影响（受下限约束的设计最多会贵 1.9 倍）；有预编译时 ML-DSA-44 降到每条 1,031 gas，ECDSA+ML-DSA 混合签名只多 2.5%。这说明后量子设备认证<b>无需协议改动即可在以太坊上部署</b>，前提是应用能接受批处理延迟以及所选变体的数据可用性性质。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Can Fully Homomorphic Encryption on Public Blockchains Protect Sensitive Medical Consultations? A Security and Privacy Assessment</div>
+<div style="color:#6b7280;font-size:13px;">Nizamuddeen Shahruddeen ｜ IACR ePrint 2026/2771（2026-11-04 提交，11-06 公开）｜ <a href="https://eprint.iacr.org/2026/2771" style="color:#2563eb;">eprint.iacr.org/2026/2771</a></div>
+<p style="margin:6px 0 0;">作者在 Zama fhEVM 与以太坊 Sepolia 测试网上搭建了医疗问诊原型 ConfidentialCare：症状在浏览器内加密，只有获授权的医生能解密；随后对三个版本做了元数据检查、访问控制测试和攻击实验。问诊内容在所有测试中都保持机密，但<b>链上公开元数据暴露了哪个钱包找了哪位医生、医生的专科、时间和消息的大致长度</b>；获授权的医生还能通过应用合约中的 confused-deputy 漏洞以及 fhEVM 自身的 ACL 转授数据，撤销授权或关闭问诊都无法收回。改用限时、可撤销的委托后，转授被阻止，6 次试验中撤销都在同一区块内生效。论文的结论很直接：<b>FHE 保护的是“说了什么”，而不是“去看了病”这一事实；在 fhEVM 里，解密权就等于分享权</b>。这对所有基于 FHE 的链上隐私应用都是一个重要提醒。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Sumcheck bit packing</div>
+<div style="color:#6b7280;font-size:13px;">Matteo Frigo, abhi shelat ｜ IACR ePrint 2026/2770（2026-11-04 提交，11-06 公开）｜ <a href="https://eprint.iacr.org/2026/2770" style="color:#2563eb;">eprint.iacr.org/2026/2770</a></div>
+<p style="margin:6px 0 0;">在大域上基于电路的零知识证明中，承诺单个比特会浪费掉一个域元素的大部分容量。本文研究如何把 m 个比特打包进一个 GF(2<sup>m</sup>) 元素，同时仍能验证关于各个比特的线性断言。已有方法要么只能打包 4 比特，要么需要张量结构的断言和额外的 sumcheck 轮次（可靠性误差更大），要么依赖 Frobenius 自同构。作者给出一个更简单的归约：只利用域迹的 GF(2) 线性，就能对任意比特线性断言达到 2<sup>−m</sup> 的可靠性误差；再借助迹为零元素的刻画，在任何隐藏型线性承诺上实现零知识，<b>只需线性约束，而此前的构造需要 O(m²) 或 O(m) 个二次约束</b>。这类基础改进会直接降低二进制域证明系统和哈希密集型 zk 电路的承诺成本。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Dynark: Making Groth16 Dynamic</div>
+<div style="color:#6b7280;font-size:13px;">Tianyu Zhang, Yupeng Ouyang, Yupeng Zhang ｜ IACR ePrint 2025/1897 · EUROCRYPT 2026（2025-10-10 首次提交，2026-11-06 第 2 次修订）｜ <a href="https://eprint.iacr.org/2025/1897" style="color:#2563eb;">eprint.iacr.org/2025/1897</a></div>
+<p style="margin:6px 0 0;">大多数 zkSNARK 在见证发生变化时都必须从头重新证明，哪怕只改了一点。Dynark 在 Groth16 的基础上实现了“动态”证明：在半动态设置下，对规模为 n 的 R1CS 做 O(n log n) 预处理后，见证改动距离为 d 时，只需 O(d) 次群运算即可更新证明，接近最优；全动态设置下更新时间为 O(d√(n log n))。证明大小和验证时间与 Groth16 完全相同，都是 O(1)。实验中 n=2<sup>20</sup> 时，一次 74.3 秒的预处理之后，d=1 的更新只需 3 ms（半动态）或 60 ms（全动态），<b>分别比 Groth16 重新证明快 1433 倍和 73 倍</b>，证明仍为 192 字节。最关键的一点是，它<b>不改变可信设置、证明格式和验证算法</b>，现有链上 Groth16 验证合约可以直接复用，适合状态逐步变化的 rollup 和链上状态证明场景。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Weighted Cryptography with Weight-Independent Complexity</div>
+<div style="color:#6b7280;font-size:13px;">Aarushi Goel, Swagata Sasmal, Mingyuan Wang ｜ IACR ePrint 2026/273 · CRYPTO 2026（2026-02-16 首次提交，2026-11-06 第 2 次修订，大幅修订版）｜ <a href="https://eprint.iacr.org/2026/273" style="color:#2563eb;">eprint.iacr.org/2026/273</a></div>
+<p style="margin:6px 0 0;">在 PoS 等场景中，门限密码需要的不是“t 个参与方”，而是“被腐化的总权重不超过阈值”。现有的加权 MPC 和加权门限加密，开销要么随总权重增长，要么必须非黑盒地使用密码学原语。本文在可信设置模型下给出<b>首批复杂度与权重无关的黑盒构造</b>：具有输出保证（GOD）的加权 MPC、半诚实加权门限加密和半诚实加权门限 Schnorr 签名。核心工具是一种新的、支持线性同态的加权门限简洁计算秘密分享，分别基于 DCR 和 LWE 给出实例化，并可推广到能用单调布尔电路高效表示的一般访问结构。对于按质押加权的门限签名、加密内存池和随机信标，这项工作给出了避免“按权重拆成虚拟节点”的理论路线。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. The Fairest of Them All: Best-of-Both-Worlds Fair Leader Election</div>
+<div style="color:#6b7280;font-size:13px;">Chen-Da Liu-Zhang, Elisaweta Masserova, Kelsey Melissaris, Lawrence Roy, Sophia Yakoubov ｜ IACR ePrint 2026/2738（2026-11-03 提交，11-05 公开）｜ <a href="https://eprint.iacr.org/2026/2738" style="color:#2563eb;">eprint.iacr.org/2026/2738</a></div>
+<p style="margin:6px 0 0;">公平领导者选举要从 n 方中无偏地随机选出一方。Cleve 的经典不可能性结果说明，在不诚实多数下无法做到完全无偏；已有工作退而求其次，只追求博弈论意义上的公平，但这样一来，哪怕只有一个腐化方也能让结果产生偏差。本文提出“两全其美”（BoBW）公平性：少量（t<sub>S</sub> 个）腐化方完全无法使结果产生偏差；更多（t<sub>GT</sub> 个）腐化方既不能提高自己当选的总概率（CSP 公平），也不能压低任何诚实方的当选概率（MM 公平）。作者给出满足 t<sub>S</sub>+t<sub>GT</sub>&lt;n 的协议，并<b>推广 Cleve 的不可能性结果，证明该协议最优</b>；在完美安全设置下也给出了最优构造。这为区块链出块者抽签、链上彩票等场景提供了更细粒度的安全目标。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Lantern: Finding Committable Transactions via Back-Propagation on DAGs</div>
+<div style="color:#6b7280;font-size:13px;">Denglong Li, Gerui Wang, Tian Guan, Mingchao Wan ｜ arXiv 2609.03315 (cs.DC，2026-09-03 首次提交，2026-11-05 发布 v2) ｜ <a href="https://arxiv.org/abs/2609.03315" style="color:#2563eb;">arxiv.org/abs/2609.03315</a></div>
+<p style="margin:6px 0 0;">现有并发控制协议要么引入不确定性，导致副本必须串行重放主节点的执行，要么要求事先知道交易的读写集，而这在实际中往往做不到。Lantern 是一种<b>不需要预知读写集的确定性并发控制协议</b>，核心观察是：在本地依赖图中，所有出度为零的交易顶点都可以按升序、以允许覆盖写的方式安全提交；“反向传播”机制再从汇点向源点迭代传递依赖状态，找出更多可提交的交易；针对读-改-写密集场景，作者还设计了无冲突批选择（CFBS）。集成到开源联盟链平台 ChainMaker 后，在 YCSB 和 SmallBank 上<b>吞吐比 Aria 最高提升 4.2 倍，ChainMaker 执行层吞吐至少提升 2.2 倍</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0 0 10px;"><b>后量子与隐私方案开始“算细账”：</b>以太坊上后量子签名的真正成本来自 calldata 定价而非验证计算，因此批量签 Merkle 根这类架构选择比换哪种签名算法影响更大；fhEVM 的案例则提醒我们，内容加密只是隐私的一半，链上元数据和授权语义同样要纳入威胁模型。</p>
+<p style="margin:0 0 10px;"><b>证明系统在细节层面继续降本：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>比特级：Sumcheck bit packing 只用线性约束就能把比特打包进二进制扩域；同期的 2026/2754 让 Diamond–Posen 环切换（ring switching）具备了零知识性。</li>
+<li>增量级：Dynark 让 Groth16 证明可以随见证局部更新，并与现有验证合约兼容。</li>
+<li>权重级：加权门限密码首次做到复杂度与权重无关，贴合 PoS 验证者集合按质押加权的需求。</li>
+</ul>
+<p style="margin:0;"><b>值得持续关注：</b>同期还有无需随机预言机、展示大小恒为 240 字节的门限匿名凭证 AirBB（ePrint 2026/2762），面向 GDPR 第 17 条“被遗忘权”的公链密码学删除 SoK（ePrint 2026/1109），以及容忍拜占庭副本、支持动态策略的去中心化访问控制 GUARDTs（arXiv 2611.08083），去中心化身份与合规正在成为区块链隐私研究的新落点。</p>
+</div>
+
+</div>
+</body></html>
