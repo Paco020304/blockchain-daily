@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿日报｜特别版：AI 时代的 Web3</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿日报｜特别版：AI 时代的 Web3</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">2026 年 11 月 7 日 · 星期六 · 北京时间 · 特别版 · 社区文章精选 · 非论文</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：社区对“AI 时代 Web3 该做什么”的讨论已经从口号走向可检验的数据——支付结算层是共识最集中的落点，但链上数据显示真正由 AI 代理发起的支付目前仍然很少；去中心化算力找到了推理、微调这类“碎片化、价格敏感”的真实需求，却仍难进入前沿训练；可验证推理第一次接近实用；与此同时，AI 自身正在成为链上安全威胁模型里增长最快的变量。</p>
+
+<p style="margin:0 0 18px;">本期不收录论文，而是精选 8 篇来自研究机构、投资机构、链上数据公司、AI 实验室和中文媒体的长文。乐观的一方以 a16z 为代表，认为 <b>x402、MPP 这类开放协议将成为“代理商业的 HTTP”</b>，稳定币的亚美分固定费用终于解决了 1997 年让微支付夭折的问题；TRM Labs 则用链上数据泼了冷水：自 2025 年 5 月以来经 x402 结算的约 5,270 万美元中，<b>剔除自付款、集中大额流和“少于 10 个买家”的卖家后只剩约一半</b>，其中 99.6% 以 USDC 结算，而代理每月实际转移的金额只有 5,000—11,000 美元量级。算力方面，Odaily 与 Galaxy 的两篇长文给出相近结论：去中心化 GPU 网络年化协议收入已超 2 亿美元，<b>但优势集中在推理、微调和 RL 后训练，前沿预训练仍属于超大规模中心化云</b>。可验证 AI 方面，Anthropic 发布的 FlashProve 让单块 H100 为 4000 亿参数 MoE 模型生成零知识推理证明的速度达到约 110 token/秒。安全方面，Anthropic 的 SCONE-bench 显示 <b>AI 代理的模拟攻击收益约每 1.3 个月翻一番</b>。Vitalik 的两篇文章则从另一个角度回答“Web3 的定位”：链上机制应当做“方向盘”而不是“引擎”，钱包要用“人 + LLM”的 2-of-2 确认来对抗 AI 代理带来的新攻击面。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">x402 结算额中通过风控筛选的“商业流量”</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈ 49%</div>
+<div style="font-size:12px;color:#6b7280;">5,268 万美元中约 2,562 万美元 · 99.6% 为 USDC（TRM Labs）</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">AI 代理智能合约攻击收益的翻倍周期</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">1.3 个月</div>
+<div style="font-size:12px;color:#6b7280;">SCONE-bench 模拟环境 · 平均每个合约扫描成本 1.22 美元</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">FlashProve 推理证明的 GPU 时间开销</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">70–95×</div>
+<div style="font-size:12px;color:#6b7280;">400B MoE · 单块 H100 约 110 token/秒 · 每 1,024 token 证明约 19 MB</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">本期检索说明</h2>
+<p style="margin:0 0 12px;">本期是<b>特别版</b>，内容为社区文章而非论文。检索关键词包括 “AI agents crypto payments”“x402”“agentic commerce stablecoin”“decentralized AI compute”“verifiable AI / provable inference”“AI 代理 支付 区块链”“去中心化 AI 算力”等，覆盖下列渠道。所有入选文章都已打开原文完整阅读，摘要中的数字均直接来自原文。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">渠道</th><th style="text-align:left;padding:8px 4px;">查看范围</th><th style="text-align:right;padding:8px 4px;">入选</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">Vitalik Buterin 博客（vitalik.eth.limo）</td><td style="padding:8px 4px;">2025 年以来全部文章目录，精读 AI 相关 5 篇</td><td style="text-align:right;padding:8px 4px;">2</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">a16z crypto（现 a16z Frontier）</td><td style="padding:8px 4px;">代理商业相关文章 2 篇</td><td style="text-align:right;padding:8px 4px;">1</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">链上数据 / 研究机构（TRM Labs、Chainalysis、Galaxy Research）</td><td style="padding:8px 4px;">x402 链上度量 2 篇，去中心化训练 1 篇</td><td style="text-align:right;padding:8px 4px;">2</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">AI 实验室（Anthropic Research / red.anthropic.com）</td><td style="padding:8px 4px;">2025—2026 年安全与可验证推理相关文章目录</td><td style="text-align:right;padding:8px 4px;">2</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">中文媒体（Odaily、深潮 TechFlow、区块周刊）</td><td style="padding:8px 4px;">x402 与去中心化算力专题长文</td><td style="text-align:right;padding:8px 4px;">1</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">Paradigm、Ethereum Foundation、Flashbots、x402 Foundation</td><td style="padding:8px 4px;">博客目录与公告（作为背景，未单独入选）</td><td style="text-align:right;padding:8px 4px;">0</td></tr>
+</table>
+<p style="margin:0 0 12px;">筛选标准：（1）优先 2025—2026 年发布；（2）有可核对的数据或明确论证，排除项目方软文、新闻稿与纯行情文；（3）覆盖五个视角——AI 代理支付、去中心化算力/训练、可验证 AI、AI 对链上安全的冲击、Web3 在 AI 时代的定位；（4）同一主题中优先保留观点相反的两篇，让读者看到分歧。</p>
+<p style="margin:0 0 26px;">未入选说明：x402 Foundation 的成立公告（2026 年 7 月 14 日，宣布 40 家成员加入）和 Paradigm 关于 Tempo 的发布文属于公告性质，仅作为背景引用；Chainalysis 的 x402 报告与 TRM 的分析高度重叠，放在“本期看点”中对照；Foresight News 本期访问失败（HTTP 567），其转载的算力文章改用 Odaily 原文；X/Twitter 长文因无法稳定访问原帖，本期未收录。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">本期精选文章</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. 'Open Agentic Commerce' and the end of ads</div>
+<div style="color:#6b7280;font-size:13px;">Sam Ragsdale ｜ a16z crypto（a16z Frontier）博客 ｜ 2026-03-21 ｜ <a href="https://a16zfrontier.com/posts/article/open-agentic-commerce-end-ads/" style="color:#2563eb;">a16zfrontier.com/posts/article/open-agentic-commerce-end-ads</a></div>
+<p style="margin:6px 0 0;">视角：AI 代理支付 / 定位。作者用 90 年代 AOL 与开放 Web 之争作类比：在 ChatGPT、Gemini 里完成结账只是渐进改良，<b>“ChatGPT 结账是代理商业的 AOL”</b>——一个需要数月商务谈判才能进入的封闭目录；真正改变格局的是“开放代理商业”（Open Agentic Commerce），即让代理能为任何东西付款的一组简单协议，文中点名 Coinbase 的 x402 与 Tempo、Stripe 的 MPP。核心论证是：HTTP 402 状态码早在 1997 年就为“小额付费内容”预留，但当时信用卡有几十美分的固定费用，微支付无法成立，互联网于是转向广告模式；如今 <b>LLM 绕开网页直接汇总内容，广告这一“补丁”正在失效</b>（文中举例 GPT-4 以来 Stack Overflow 访问量下降 75%），而<b>现代区块链上的稳定币把固定费用降到亚美分，恰好解决了当年杀死微支付的问题</b>。作者认为支付与组合已经可行，剩下的缺口是“发现”——代理如何找到可以购买的服务。需注意这是 a16z 个人署名观点，文中提到的部分项目与其投资组合有关。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Who’s Actually Paying? Measuring AI Agent Payments Onchain</div>
+<div style="color:#6b7280;font-size:13px;">Noah Hodge ｜ TRM Labs 技术博客 ｜ 2026-09-09 ｜ <a href="https://www.trmlabs.com/trm-tech-blog/whos-actually-paying-measuring-ai-agent-payments-onchain" style="color:#2563eb;">trmlabs.com/trm-tech-blog/whos-actually-paying-measuring-ai-agent-payments-onchain</a></div>
+<p style="margin:6px 0 0;">视角：AI 代理支付（数据反方）。副标题直接点明结论：<b>x402 是使用最广的代理支付通道，但其大部分交易量并非来自代理，相当一部分也不是商业行为</b>。TRM 统计了 Base、Solana、Polygon 上经已知 x402 facilitator 结算的全部资金：自 2025 年 5 月以来约 5,270 万美元、1.989 亿笔结算交易。依次剔除自付款地址、来自一两个付款方的大额集中流量、买家少于 10 个的卖家之后，约一半交易量消失，剩下约 2,562 万美元“可能的商业流量”。再往下追问“有多少是代理”时，作者强调<b>链上无法区分代理与定时脚本——两者留下完全相同的记录</b>，因此只给出宽松与严格两种口径的上下界（严格口径要求连续数月的行为模式，并在 ERC-8004 代理注册表登记或向多个卖家付款）。其他发现：99.6% 的 x402 金额以 USDC 结算；交易构成从 2025 年底的 meme 代币铸造投机，转为 2026 年上半年集中于单一支付合约，再到年中 AI 服务通过“代理支付路由器”回流；代理每月实际转移金额只有约 5,000—11,000 美元。结论是：<b>通道已经可用，但需要准确的注册与“按笔数而非按金额”的监控，代理商业也需要代理化的合规</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. 2026 去中心化 AI 算力网络的真实进展与投资机会</div>
+<div style="color:#6b7280;font-size:13px;">Go2Mars 研究院（特邀专栏作者）｜ Odaily 星球日报 ｜ 2026-05-25 ｜ <a href="https://www.odaily.news/zh-CN/post/5210953" style="color:#2563eb;">odaily.news/zh-CN/post/5210953</a></div>
+<p style="margin:6px 0 0;">视角：去中心化算力（中文社区）。文章的基本判断是，这条赛道<b>跨过了其他加密叙事从未跨过的门槛——开始从非加密原生客户那里获得真实收入</b>：2026 年初去中心化 GPU 协议年化收入已超 2 亿美元，Aethir 年化收入约 1.5 亿美元，DePIN 板块总市值约 94 亿美元（2025 年 9 月高点约 192 亿美元）。价格对比部分相对克制：Akash 的 H100 时租约 1.33 美元，AWS p5 摊到单卡约 3.93 美元，<b>相对超大规模云便宜约 60%，但与 RunPod、Vast.ai 等专业 GPU 云相比差距缩小到 15%—35%</b>，节点稳定性差、缺乏可执行 SLA 带来的过度预留还会继续侵蚀名义优势。能力边界上，消费级 GPU 的显存和家庭带宽决定了它<b>不适合前沿大模型同步训练，真正的机会在推理、微调、数据预处理和 Agent 持续运行</b>。代币经济学方面，Render 的 BME 和 io.net 的 IDE 都在把代币销毁/铸造与真实算力消费挂钩，避免早期通胀补贴的“死亡螺旋”。作者还认为，传统云的 KYC 和企业账户体系对自主 Agent 不友好，无许可算力市场正好填补这一空缺。需注意文末带有孵化与对接合作的推广内容。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Decentralized AI Training: Architectures, Opportunities, and Challenges</div>
+<div style="color:#6b7280;font-size:13px;">Lucas Tcheyan, Arjun Yenamandra ｜ Galaxy Research ｜ 2025-09-15 ｜ <a href="https://www.galaxy.com/insights/research/decentralized-ai-training" style="color:#2563eb;">galaxy.com/insights/research/decentralized-ai-training</a></div>
+<p style="margin:6px 0 0;">视角：去中心化训练。这是一篇约 30 分钟阅读量的长报告，系统梳理了 Nous Research、Prime Intellect、Pluralis、Templar、Gensyn 等项目的训练架构（带宽感知优化器 DeMo/DisTrO、OpenDiLoCo、Protocol Models、RL Swarm、PRIME-RL 等）。报告认为去中心化训练已经<b>从理论变成在真实环境中运行的网络</b>：2024 到 2025 年，去中心化项目训练的模型规模从个位数十亿参数跃升到 300 亿—400 亿参数，但头部实验室已在发布数万亿参数的系统。最有判断价值的两点是：其一，<b>监督微调、RLHF 和领域强化学习对同步带宽的要求远低于预训练，RL 后训练是去中心化网络最现实的切入点</b>；其二，<b>激励与验证机制落后于技术进展</b>——只有 Templar 等少数网络在实网中测试过实时代币奖励和链上罚没，proof-of-training 等方案仍未经验证。报告列出的风险包括中心化实验室硬件迭代（B200 训练吞吐提升 2.2—2.6 倍）、大厂开源模型模糊了“去中心化”的必要性、人才与分发劣势，以及针对无审查模型的监管压力。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Progress on provable inference for large language models</div>
+<div style="color:#6b7280;font-size:13px;">Roy Rinberg, Alex Allain, Alessandro Chiesa, Miranda Christ, Rahul Dalal, Giacomo Fenzi, Ben Mayer, Guy Weissenberg ｜ Anthropic Research ｜ 2026-11-02 ｜ <a href="https://www.anthropic.com/research/provable-inference" style="color:#2563eb;">anthropic.com/research/provable-inference</a></div>
+<p style="margin:6px 0 0;">视角：可验证 AI（ZKML）。文章要解决的问题是：用户今天<b>无法确认回答真的来自自己选择的模型</b>，而不是被路由服务出于成本考虑偷偷替换，或被攻击者篡改了 token 流。作者用 zkSNARK 实现“可证明推理”：服务方先对模型权重做承诺（权重保持隐藏），之后每次推理附带一份证明，任何持有承诺、提示词和回答的人都能用很少的算力验证“被承诺的权重在这个提示词上确实生成了这些 token”。发布的系统 FlashProve 在 Llama 4 Maverick（400B MoE，4-bit 量化）上，<b>单块 H100 约 110 token/秒生成证明，每 1,024 token 请求证明约 19 MB，GPU 时间约为 vLLM 推理本身的 70—95 倍</b>，比此前开源系统快几个数量级；协议基于哈希构造（文中注明具有后量子安全性），顶层安全声明用 Lean 形式化，代码以 Apache 2.0 开源。应用场景包括第三方路由的模型完整性、监管方确认只部署了获批模型、检测服务器被入侵后被替换的模型，以及“我确实用某模型花了 X token 却没找到漏洞”这类 Proof-of-Failure。文章明确把 TEE 视为互补方案而非替代。<b>对 Web3 而言，这意味着链上验证 AI 输出所依赖的 SNARK 技术栈正在被 AI 实验室自己推向实用</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. My self-sovereign / local / private / secure LLM setup, April 2026</div>
+<div style="color:#6b7280;font-size:13px;">Vitalik Buterin ｜ vitalik.eth.limo ｜ 2026-04-02 ｜ <a href="https://vitalik.eth.limo/general/2026/04/02/secure_llms.html" style="color:#2563eb;">vitalik.eth.limo/general/2026/04/02/secure_llms.html</a></div>
+<p style="margin:6px 0 0;">视角：AI 代理安全 / 隐私基础设施。Vitalik 指出，2026 年初 AI 从“问答”转向“交给代理长时间执行任务”，但主流 AI 生态对隐私和安全极其随意：他引用安全研究者的发现，OpenClaw 代理可被恶意网页接管，<b>约 15% 的社区 skill 含有恶意指令</b>。他给出的方案是本地优先、一切沙箱化，并为通信和钱包加一道“人工确认防火墙”。<b>连接以太坊钱包时，“新的双因素确认”是人和 LLM 的 2-of-2</b>：人和 LLM 都会出错，但出错方式不同；每日 100 美元以下可免人工确认，同时要限制 calldata、金额和交易次数，防止链上交易成为隐私外泄通道。调用远程大模型时，他主张多层防御：用 ZK-API 让每次请求互不关联、用 mixnet 隐藏来源 IP、在 TEE 中推理并在本地验证远程证明（他强调 TEE 经常被攻破，不能视为密码学安全），长期则等待 FHE 足够高效。更进一步，他提出<b>应该让每一个付费 API 都成为 ZK-API</b>，滥用请求可通过链上智能合约执行的罚没规则惩罚——这正是“AI 时代以太坊做什么”的一个具体答案。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. AI agents find $4.6M in blockchain smart contract exploits</div>
+<div style="color:#6b7280;font-size:13px;">Winnie Xiao, Cole Killian, Henry Sleight, Alan Chan, Nicholas Carlini, Alwin Peng ｜ Anthropic Frontier Red Team ｜ 2025-12-01 ｜ <a href="https://www.anthropic.com/research/smart-contracts" style="color:#2563eb;">anthropic.com/research/smart-contracts</a></div>
+<p style="margin:6px 0 0;">视角：AI 对链上安全的冲击。作者构建了 SCONE-bench：405 个在 2020—2025 年间真实被攻击过的合约（来自 DefiHackLabs，覆盖 Ethereum、BSC、Base），以“模拟中盗取的美元金额”而非成功率来度量 AI 的攻击能力，所有实验只在分叉的本地链上进行。10 个前沿模型合计为 207 个问题（51.11%）写出可直接执行的攻击，模拟盗取 5.501 亿美元；为排除数据污染，只看知识截止日之后发生的攻击时，Opus 4.5、Sonnet 4.5 和 GPT-5 仍攻破了 19 个（55.8%），对应 460 万美元。在 2,849 个近期部署、无已知漏洞的 BSC 合约上，代理还找到 2 个全新零日漏洞，模拟收益 3,694 美元，GPT-5 的 API 成本为 3,476 美元——<b>自主盈利性攻击在技术上已经可行</b>。最值得警惕的趋势是：<b>一年内 AI 在该基准上的攻击收益约每 1.3 个月翻一番，平均扫描一个合约只需 1.22 美元</b>，合约部署到被攻击之间的窗口会持续缩短。作者的结论是同样的代理也能用于修补，“现在就该用 AI 做防御”。Anthropic 在 2026 年 5 月的后续文章中用更新版 SCONE-bench 评测了 Mythos Preview，结论是攻击门槛会继续下降。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. AI as the engine, humans as the steering wheel</div>
+<div style="color:#6b7280;font-size:13px;">Vitalik Buterin ｜ vitalik.eth.limo ｜ 2025-02-28 ｜ <a href="https://vitalik.eth.limo/general/2025/02/28/aihumans.html" style="color:#2563eb;">vitalik.eth.limo/general/2025/02/28/aihumans.html</a></div>
+<p style="margin:6px 0 0;">视角：Web3 在 AI 时代的定位。这篇文章回答的是“如果 AI 比人更会做决策，DAO 和链上治理还有什么用”。Vitalik 反对“把一群人的指令塞进系统提示词，再把组织资产交给一个 AI 代理”的做法：<b>按“可信中立”的四条标准衡量，单个 LLM 一条都不满足</b>——它内含训练带来的偏好、无法审计、复杂度远超法律条文，而且每三个月就要更换。他主张<b>让一个简单、公开、可验证的机制充当“游戏规则”，由开放市场中的任意 AI、人机混合体充当“玩家”</b>：人类只提供少量但高质量的信息（方向盘），AI 负责大量决策（引擎）。具体形式包括 futarchy（AI 作为预测市场交易者）、“提炼的人类判断”（陪审团只抽查回答少量问题，各方 AI 给出完整答案，按与陪审团答案的拟合程度获得奖励）以及正在试点的 deep funding。这为 Web3 在 AI 时代提供了一个清晰定位：<b>区块链不必与 AI 比智能，而是充当可信中立的规则层与结算层</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">本期看点：社区讨论的脉络</h2>
+<p style="margin:0 0 10px;"><b>支付结算层是共识最集中的落点，但“代理”成分仍需打折：</b>a16z、Circle、Stripe 等机构都把稳定币微支付视为 AI 代理进入经济活动的入口，x402 也已移交 Linux 基金会治理。但 TRM 的筛选显示约一半结算额不是真实商业流量；<a href="https://www.chainalysis.com/blog/x402-agentic-payments-adoption/" style="color:#2563eb;">Chainalysis 的报告</a>同样承认 Base 上破亿的 x402 交易中，相当一部分由 PING 等 meme 代币“付费铸造”推动。两份数据共同指向：通道已经跑通，需求侧仍在早期。</p>
+<p style="margin:0 0 10px;"><b>去中心化算力找到了位置，但不是原先宣传的那个位置：</b></p>
+<ul style="margin:0 0 10px;padding-left:22px;">
+<li>收入：去中心化 GPU 网络已有超 2 亿美元年化收入，出现了非加密原生企业客户。</li>
+<li>边界：真实优势在推理、微调、RL 后训练和 Agent 持续运行，而不是前沿预训练。</li>
+<li>短板：激励与验证（proof-of-training、SLA）是两篇文章共同指出的最大缺口。</li>
+</ul>
+<p style="margin:0 0 10px;"><b>可验证计算仍在早期，但第一次接近实用：</b>FlashProve 把 400B 模型的零知识推理证明压到约 70—95 倍开销；Vitalik 则把 TEE 推理、ZK-API 和 mixnet 组合成当下可用的隐私方案，同时提醒 TEE 不等于密码学安全。“用 SNARK 证明 AI 输出”正在从加密社区的设想变成 AI 实验室的工程目标。</p>
+<p style="margin:0;"><b>AI 同时是威胁模型的新变量：</b>一边是 AI 代理的智能合约攻击收益约每 1.3 个月翻一番，另一边是被恶意网页或 skill 劫持的代理可能直接动用钱包。社区给出的应对方向相当一致——用 AI 做持续审计，在钱包侧引入“人 + LLM”双重确认和额度限制，在协议侧让链上机制只做可信中立的规则层，把智能留给开放竞争的“玩家”。</p>
+</div>
+
+</div>
+</body></html>
