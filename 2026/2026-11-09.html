@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 9 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 9 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期一 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：激励层安全正在被重新算账——手续费波动、“鲸鱼交易”和贿赂会让 PoW 链的安全门限明显低于经典的 25%，交易能否按时确认也需要靠博弈机制来保证；后量子迁移的成本焦点则从“验证快不快”转向“链上永久存储多少字节”，用归档证明可以把 ML-DSA 签名压缩约 44 倍。</p>
+
+<p style="margin:0 0 18px;">本期发布时，arXiv 11 月 9 日（星期一）批次还没有公开，因此本期以 IACR ePrint 上周末的新公开和修订为主。最新的一篇是 11 月 3 日提交、8 日修订的 ePrint 2026/2739：它为使用 FIPS 204 ML-DSA-87 签名的区块链设计了“归档证书”，对已验证的历史区块，<b>用一个哈希类证明替代原始签名，平均每个签名只占约 104 字节（原始为 4,627 字节）</b>。周末另一组集中修订来自 Ittay Eyal 团队的三篇激励研究：WeRLman（IEEE S&amp;P 2023）用深度强化学习证明，考虑“鲸鱼交易”后，<b>比特币的自私挖矿门限将在 30 年后降到 0.12</b>；Deep Bribe 发现，当其他矿工“小节有亏”时，自私矿工可以靠贿赂把门限从 25% 压到 21%；LedgerHedger（FC 2024）则用对冲协议保证交易在指定时间内上链。证明系统与密码基础方面，Sonata 解决了格基折叠中“规范编码”的可靠性问题，Atlantis 给出首个格基带隐藏元数据位的匿名令牌，另有两篇论文分别刻画了 MPC 中“一致中止”的轮数下界，以及仅凭单向置换即可得到后量子完美零知识论证。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">ML-DSA-87 归档证书的每签名存储</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">104 B</div>
+<div style="font-size:12px;color:#6b7280;">65,536 个签名实测 · 原始 4,627 B，约压缩 44×</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">WeRLman：30 年后比特币的自私挖矿门限</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">0.12</div>
+<div style="font-size:12px;color:#6b7280;">恒定奖励下为 0.25 · 按以太坊近期手续费为 0.17</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Deep Bribe：存在贿赂时的安全门限</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">21%</div>
+<div style="font-size:12px;color:#6b7280;">50% 其他矿工“小节有亏”时 · 75% 时降至 19%</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规公开列表仍为 <b>2026 年 11 月 6 日（星期五）批次</b>，与前两期相同：周末没有新批次，11 月 9 日（星期一）批次在北京时间 9 点左右才公开，晚于本期发布时间。该批次中与区块链相关的新投稿已在 11 月 7、8 日两期覆盖，本期只从替换（修订）列表中补选 1 篇。IACR ePrint 自上期以来新公开了 5 个编号（2026/2775—2779，11 月 8 日批准），都与本日报方向无关；11 月 8 日另有 10 篇旧论文更新，其中 7 篇与区块链或其密码基础相关（本期选入 6 篇）。本期按“不足则放宽到 7 天”的规则，从 11 月 3—8 日新公开或有修订、此前未展开的论文中选出 8 篇。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">22</td><td style="text-align:right;padding:8px 4px;">58</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">15</td><td style="text-align:right;padding:8px 4px;">31</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">8</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月6日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">10</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月6日批次，辅助检索）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">21</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月8日，上期之后）</td><td style="text-align:right;padding:8px 4px;">5</td><td style="text-align:right;padding:8px 4px;">10</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天，11月3日—11月8日有更新）</td><td style="text-align:right;padding:8px 4px;">41</td><td style="text-align:right;padding:8px 4px;">100</td></tr>
+</table>
+<p style="margin:0 0 12px;">各分类之间有交叉，数字不能直接相加；ePrint 11 月 8 日批准的 5 个新编号在网站上显示的更新日期是 11 月 5 日，所以“全部记录数”里的 10 条更新不包含它们。本期 8 篇论文的首次提交日期在 <b>2022 年 1 月 18 日—2026 年 11 月 3 日</b>之间：ePrint 2026/2739 于 11 月 3 日提交、8 日修订；2026/2745 于 11 月 3 日提交、5 日公开；其余 6 篇是较早论文在 11 月 4—8 日的新修订版，文中逐篇注明。</p>
+<p style="margin:0 0 26px;">去重说明：最近 7 天内（11 月 2—8 日）已展开的论文本期不再重复，包括 11 月 6 日批次替换列表中再次出现的 Otter（arXiv 2609.03474，即 11 月 6 日已推荐的 ePrint 2026/1877）和 ContractLens（arXiv 2610.04992，上期已推荐）。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Archive Certificates for ML-DSA-87 Authorizations from an Exact Bounded Relation</div>
+<div style="color:#6b7280;font-size:13px;">Yacine Alloul ｜ IACR ePrint 2026/2739（2026-11-03 首次提交，11-08 修订）｜ <a href="https://eprint.iacr.org/2026/2739" style="color:#2563eb;">eprint.iacr.org/2026/2739</a></div>
+<p style="margin:6px 0 0;">如果区块链每笔交易都用 FIPS 204 ML-DSA-87 签名，每笔交易要永久保存 4,627 字节签名。本文提出“归档证书”：对一段已经验证过的区块，用<b>一个哈希类证明</b>证明“这些消息在链上状态对应的公钥下都有合法签名”，新区块仍走原生验证；其中 SHAKE256 挑战哈希用基于 Keccak-f[1600] 的 GKR 论证在证明内完成，与格关系共用同一个 WHIR 承诺。在 65,536 个签名上实测<b>每签名约 104–127 字节</b>，代价是证明很慢、验证也比原生验证慢；部分引理和账本算术用 Lean 4 做了形式化检查，但作者也说明外部评审尚未完成。这是把“后量子签名太大”问题从共识层转到历史存储层解决的一种具体工程路线。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. WeRLman: To Tackle Whale (Transactions), Go Deep (RL)</div>
+<div style="color:#6b7280;font-size:13px;">Roi Bar-Zur, Ameer Abu-Hanna, Ittay Eyal, Aviv Tamar ｜ IACR ePrint 2022/175 · IEEE S&amp;P 2023（2022-02-20 首次提交，2026-11-08 第 2 次修订）｜ <a href="https://eprint.iacr.org/2022/175" style="color:#2563eb;">eprint.iacr.org/2022/175</a></div>
+<p style="margin:6px 0 0;">以往的自私挖矿分析都假设区块奖励恒定，但真实链上偶尔会出现手续费极高的“鲸鱼”区块，状态空间随之指数膨胀。WeRLman 借鉴 AlphaGo Zero，并针对随机模型加入方差缩减技术，用深度强化学习求解这类模型，<b>首次揭示手续费波动越大，安全门限越低</b>。按比特币历史手续费和未来减半计划，门限将在 10/20/30 年后分别降到 0.2/0.17/0.12；按以太坊近期手续费计算为 0.17，都低于当前大型矿池的算力份额。随着区块补贴下降、收入更依赖手续费，这一结论对比特币长期安全尤其重要。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Deep Bribe: Predicting the Rise of Bribery in Blockchain Mining with Deep RL</div>
+<div style="color:#6b7280;font-size:13px;">Roi Bar-Zur, Danielle Dori, Sharon Vardi, Ittay Eyal, Aviv Tamar ｜ IACR ePrint 2023/472 · IEEE S&amp;P Workshops 2023（2023-03-31 首次提交，2026-11-08 修订）｜ <a href="https://eprint.iacr.org/2023/472" style="color:#2563eb;">eprint.iacr.org/2023/472</a></div>
+<p style="margin:6px 0 0;">“小节有亏”（petty compliant）的矿工平时遵守协议，只在偏离行为无法被外部识别时才偏离，以多赚收益。Carlsten 等人在 2016 年提出“这类矿工会如何影响安全门限”这一开放问题。本文用深度强化学习分析发现，自私矿工可以<b>通过贿赂这类矿工来提高自己的收益</b>：按比特币参数估算，当其他矿工中有 50%（或 75%）属于这一类时，门限从 25% 降到 21%（或 19%）。它和 WeRLman 一起说明，只看“诚实/恶意”二分法会系统性高估 PoW 共识的安全余量。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. LedgerHedger: Gas Reservation for Smart-Contract Security</div>
+<div style="color:#6b7280;font-size:13px;">Itay Tsabary, Alex Manuskin, Roi Bar-Zur, Ittay Eyal ｜ IACR ePrint 2022/056 · Financial Cryptography 2024（2022-01-18 首次提交，2026-11-08 第 4 次修订）｜ <a href="https://eprint.iacr.org/2022/056" style="color:#2563eb;">eprint.iacr.org/2022/056</a></div>
+<p style="margin:6px 0 0;">闪电网络、Rollup 挑战期等机制都依赖“某笔交易必须在时限内上链”，但未来的手续费无法预知，拥堵时这一前提可能失效。LedgerHedger 让交易发起方预付费用、另一方（可以是矿工）缴纳抵押品，并承诺未来无论手续费多高都替其支付；在没有外部执行者的情况下，完全靠激励保证履约。作者证明在较大的参数范围内<b>存在子博弈完美均衡，使双方都按预期行动</b>，并在以太坊测试网上部署，额外开销很小。这为 L2 和支付通道的“活性假设”提供了可落地的经济保障。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Sonata: Certifying Canonical Openings in High-Arity Lattice Folding</div>
+<div style="color:#6b7280;font-size:13px;">Xiang Wang ｜ IACR ePrint 2026/2011（2026-09-14 首次提交，11-08 第 7 次修订）｜ <a href="https://eprint.iacr.org/2026/2011" style="color:#2563eb;">eprint.iacr.org/2026/2011</a></div>
+<p style="margin:6px 0 0;">折叠（folding）是增量可验证计算和 zkVM 递归证明的核心技术。在格基折叠中，域元素的线性组合会改变它们的规范数位表示，验证方必须确认证明方重新编码后的短开启确实对应原始承诺的折叠结果，这一步此前容易出现可靠性漏洞。Sonata 用一个二次 sumcheck 同时证明规范编码和折叠方程，再用递归短开启论证绑定到原始承诺，并给出针对经典可回溯证明者的知识可靠性证明。实测中，16 到 1,024 个输入的五层折叠，<b>通信量只从约 143 KB 增长到约 170 KB</b>，但 1,024 个输入时证明和验证的中位时间分别约为 258 秒和 226 秒，离实用还有距离。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. The Price of Agreement in Secure Multiparty Computation</div>
+<div style="color:#6b7280;font-size:13px;">Ran Cohen, Pouyan Forghani, Juan Garay, Vassilis Zikas ｜ IACR ePrint 2026/2745（2026-11-03 提交，11-05 公开）｜ <a href="https://eprint.iacr.org/2026/2745" style="color:#2563eb;">eprint.iacr.org/2026/2745</a></div>
+<p style="margin:6px 0 0;">在不诚实多数的情形下，MPC 只能退而追求“带中止的安全”；其中“一致中止”（要么全体诚实方都拿到输出，要么全体中止）需要一轮广播，因此其代价取决于“带一致中止的广播”需要多少轮。经典的 GKKO 下界依赖“诚实方都拿到发送者输入”，不能直接套用。本文证明，当 t ≤ n−2 时，这类广播<b>期望轮数至少为 t/(2(n−t))</b>，因此<b>当且仅当诚实方占常数比例时</b>，期望常数轮的一致中止 MPC 才可能实现；对固定轮终止的协议，结合 Dolev–Strong 协议，这个下界是紧的。这给门限签名、分布式密钥生成等链上 MPC 组件的轮数优化划定了理论边界。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Atlantis: Lattice-based Anonymous Tokens with Private Metadata Bit</div>
+<div style="color:#6b7280;font-size:13px;">Foteini Baldimtsi, Aayush Yadav ｜ IACR ePrint 2026/1248 · SCN 2026（2026-06-12 首次提交，11-08 修订）｜ <a href="https://eprint.iacr.org/2026/1248" style="color:#2563eb;">eprint.iacr.org/2026/1248</a></div>
+<p style="margin:6px 0 0;">带隐藏元数据位的匿名令牌（ATPM）允许发行方在令牌中嵌入一个客户端看不到、验证方可读取的“可疑”标记，用于防刷和限流；现有方案都依赖 RSA、配对或椭圆曲线 VRF，不具备后量子安全性。Atlantis 是<b>首个基于格假设的 ATPM</b>：在 Fischlin 盲签名范式上加入格基线性同态加密来携带隐藏位，用 Falcon-512 和 LNP22 格基 NIZK 实例化，客户端与发行方通信 70 KB，令牌 129 KB。对需要抗女巫又要保护隐私的空投、链上身份和匿名投票，这提供了一个后量子候选方案，但令牌体积仍偏大。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Post-Quantum Perfect Zero-Knowledge Arguments for NP From Any One-Way Permutation</div>
+<div style="color:#6b7280;font-size:13px;">Frédéric Dupuis, Rémi Ligez, Khaireddine Medhioub, Louis Salvail, Louis-Charles Thibodeau ｜ arXiv 2610.33185 (cs.CR，2026-10-23 提交，11-04 发布 v2) ｜ <a href="https://arxiv.org/abs/2610.33185" style="color:#2563eb;">arxiv.org/abs/2610.33185</a></div>
+<p style="margin:6px 0 0;">本文首次证明：<b>只要存在后量子单向置换</b>，就能构造对量子敌手安全的、面向全部 NP 的完美零知识经典论证。关键在于证明基于交互哈希的 NOVY 比特承诺在置换后量子单向时同时满足 sum-binding 和 collapse-binding，从而让 Blum 的哈密顿圈完美零知识论证无需修改即可抵抗量子敌手。这是一项基础理论结果，把后量子零知识所需的假设降到了很低的水平，为链上隐私协议的长期安全提供了理论支撑。</p>
+</div>
+
+<h2 style="font-size:20px;margin:22px 0 8px;border-top:1px solid #e5e7eb;padding-top:18px;">今日看点</h2>
+<p style="margin:0 0 10px;">本期最明显的信号是<b>激励层的安全假设正在被逐项量化</b>：WeRLman、Deep Bribe 和 LedgerHedger 在同一天集中修订，三者合在一起说明，手续费波动、贿赂和拥堵都会把“理论上安全”的协议推到门限以下，而深度强化学习已成为分析这类大状态空间博弈的标准工具。第二条主线是<b>后量子迁移的瓶颈正在从签名验证转向数据存储</b>：上周的研究指出以太坊上后量子签名受 calldata 下限约束，本周的归档证书则尝试用事后证明压缩历史签名，两者指向同一结论——“签名太大”需要在共识、数据可用性和归档三层分别处理。底层工具方面，格基折叠、格基匿名令牌和极弱假设下的后量子零知识继续补全后量子隐私工具箱，MPC 广播下界则提醒我们，在不诚实多数的情形下“达成一致”本身就有不可压缩的轮数成本。今天 arXiv 恢复更新后，值得关注新一周是否出现把这些激励分析延伸到 PoS 和 MEV 场景的工作。</p>
+
+</div>
+</body></html>
