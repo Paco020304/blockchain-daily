@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 12 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 12 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期四 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：激励机制正在成为链上系统的主要研究对象——出块提速 10 倍会让租金从出块者流向套利者，池子深度反而下降；手续费主导的 PoW 需要重新分配区块奖励，“有用功”挖矿也可能让总耗电上升。密码学方面，抗 MEV 的加密内存池和“可审计的隐私”都在补上更牢靠的安全基础。</p>
+
+<p style="margin:0 0 18px;">本期覆盖 arXiv 11 月 11 日（星期三）批次和 IACR ePrint 11 月 11 日批准的 23 个新编号（2026/2827—2849）。机制与经济学方向最集中：Jia 与 Yu 用 Base 的 Flashblocks 升级（出块速度提高 10 倍）做自然实验，发现<b>出块越快，套利者之间的优先费竞争越弱，租金从出块者转到套利者</b>，主动做市的流动性提供者获利更多，而被动资金离场、池子变浅；明尼苏达大学团队提出在手续费主导时期<b>把区块奖励分一部分给落败矿工</b>，用来抑制“抢手续费分叉”，且不会加重自私挖矿；Hull 与 Sattath 则证明，在需求有弹性时，<b>有用功证明（PoUW）反而会让总耗电上升</b>，类似杰文斯悖论。密码学方向，Category Labs 等提出<b>首个基于静态假设、具备自适应安全的 batched IBE</b>，可直接用于抗 MEV 的加密内存池；被 CCS 2026 接收的 AuditPay 让监管方在每个周期内只能监控有限数量的地址，而且用户不知道哪些地址被监控。共识方向，a16z 团队的 Reducer++（ICDCS 2026）只用哈希就把异步 MVBA 的容错推到 <b>t &lt; (1/3 − ε)n</b>，同时保持二次消息复杂度。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Base Flashblocks：出块速度提升</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">10×</div>
+<div style="font-size:12px;color:#6b7280;">优先费出价大幅下降、套利者净利润上升 · 池子深度下降、有效价差扩大</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Reducer++：纯哈希异步 MVBA 的容错上限</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">t &lt; (⅓−ε)n</div>
+<div style="font-size:12px;color:#6b7280;">HMVBA 仅 ⅕ → Reducer ¼ · O(n²) 消息、常数轮</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">BLS12-381 目标群离散对数攻击估算成本</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈2<sup>130</sup> 条指令</div>
+<div style="font-size:12px;color:#6b7280;">2<sup>115.72</sup> 次 𝔽<sub>p¹²</sub> 乘法 · 比已发表设计低约 0.8 bit，实际安全性不变</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">arXiv 最新常规列表为 <b>2026 年 11 月 11 日（星期三）批次</b>；11 月 12 日（星期四）批次要到北京时间 9 点左右才公开，晚于本期发布时间。IACR ePrint 在 11 月 11 日批准了 23 个新编号（2026/2827—2849，网站显示的提交日期为 11 月 8—9 日），另有 9 篇旧论文在当天更新。顶会方面，本期只核对了入选论文自己注明的接收信息（CCS 2026 和 ICDCS 2026 各 1 篇）。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月11日批次）</td><td style="text-align:right;padding:8px 4px;">24</td><td style="text-align:right;padding:8px 4px;">50</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月11日批次）</td><td style="text-align:right;padding:8px 4px;">15</td><td style="text-align:right;padding:8px 4px;">29</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月11日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">9</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月11日批次）</td><td style="text-align:right;padding:8px 4px;">6</td><td style="text-align:right;padding:8px 4px;">14</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月11日，上期之后）</td><td style="text-align:right;padding:8px 4px;">23</td><td style="text-align:right;padding:8px 4px;">32</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（近 7 天有更新）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">134</td></tr>
+</table>
+<p style="margin:0 0 12px;color:#4b5563;font-size:14px;">各分类之间有交叉，数字不能直接相加。按关键词初筛，cs.CR 新投稿中有 4 篇与本期主题直接相关（第 7、8 篇，以及 Solana 跑路检测和 Sable，见“今日看点”）；cs.DC 和 cs.ET 本批没有区块链论文；econ.GN 的 1 篇是从 q-fin.TR 交叉列入的（第 2 篇）。本期 8 篇论文的首次提交日期在 <b>2024 年 10 月 16 日—2026 年 11 月 10 日</b> 之间：Reducer（2024 年 10 月首次提交，11 月 10 日发布 ICDCS 版修订）和 AuditPay（2026 年 5 月 31 日首次提交，11 月 11 日发布 CCS 版修订）是近期修订，其余 6 篇都在 11 月 8—10 日提交。</p>
+<p style="margin:0 0 22px;color:#4b5563;font-size:14px;">去重说明：最近 7 天内（11 月 6—11 日）已展开或顺带提及的论文本期不再重复。例如 Pufferfish（2026/796）昨天已经介绍过，11 月 11 日又更新了一版，这里不再展开；同理，异步流水线 PoW 共识（2026/141）、RoKoko（2026/575）、Sonata（2026/2011）和 AirBB（2026/2762）虽然出现在近几天的更新列表中，但也都在近 7 天内出现过。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Adaptively Secure (Threshold) Batched IBE from Static Assumptions</div>
+<div style="color:#6b7280;font-size:13px;">Sourav Das（Category Labs）, Pratish Datta（NTT Research）, Aditi Partap（Stanford）, Swagata Sasmal（ISI）｜ IACR ePrint 2026/2843（2026-11-09 提交，11-11 公开）｜ <a href="https://eprint.iacr.org/2026/2843" style="color:#2563eb;">eprint.iacr.org/2026/2843</a></div>
+<p style="margin:6px 0 0;">Batched IBE 让密钥机构为“一批身份 + 一个周期标签”只发布一把短解密密钥，已被用来构建抗 MEV 的加密内存池：交易在排序确定前保持加密，出块后再整批解密。现有方案要么依赖通用群模型或随机预言机，要么依赖规模随批次上限增长的 q 型假设。本文给出<b>首个只依赖静态假设、具备自适应安全的 batched IBE</b>：支持指数级大小的身份空间和周期空间，密文、摘要和批密钥都只有常数个群元素，与批次大小无关；论文还给出门限版本（静态腐化下的自适应挑战安全），并把方案移植到素数阶双线性群（MDDH 假设）。这让加密内存池的密码学基础不再依赖理想化模型。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Optimal Trading Speed on Blockchain</div>
+<div style="color:#6b7280;font-size:13px;">Ruizhe Jia, Shihao Yu ｜ arXiv 2611.13616 · q-fin.TR / econ.GN（2026-11-10 提交）｜ <a href="https://arxiv.org/abs/2611.13616" style="color:#2563eb;">arxiv.org/abs/2611.13616</a></div>
+<p style="margin:6px 0 0;">论文从理论和实证两方面研究“出块速度如何影响链上交易所”。理论上，出块越快，套利者之间的优先费竞争越弱，<b>租金从出块者流向套利者</b>；均衡流动性在某个中间出块速度达到峰值，超过阈值后，主动流动性提供者会挑走好的订单流，被动资金随之退出。作者用 Base 的 Flashblocks 升级（出块速度提高 10 倍）做检验：优先费出价大幅下降，套利者净利润上升；主动 LP 再平衡更快、避开有毒订单流、获利更高；但<b>池子深度下降、有效价差扩大</b>，尽管池内价格更贴近外部市场。这对 L2 继续压缩出块时间的路线是一个重要的反向证据。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Toward Optimal-Complexity Hash-Based Asynchronous MVBA with Optimal Resilience</div>
+<div style="color:#6b7280;font-size:13px;">Jovan Komatovic（Category Labs）, Joachim Neu, Tim Roughgarden（a16z Crypto Research）｜ IACR ePrint 2024/1682 · ICDCS 2026（2024-10-16 首次提交，2026-11-10 修订）｜ <a href="https://eprint.iacr.org/2024/1682" style="color:#2563eb;">eprint.iacr.org/2024/1682</a></div>
+<p style="margin:6px 0 0;">多值验证拜占庭协议（MVBA）是异步 BFT 共识的核心组件。只用哈希、能抵抗自适应腐化的方案里，HMVBA 的复杂度最优（O(n²) 消息、常数轮），但只能容忍 t &lt; n/5；容错最优的 SQ 则要付出 O(n²ℓ + n³λ) 的比特复杂度。作者提出 Reducer，在保持 HMVBA 最优复杂度的同时<b>把容错提高到 t &lt; n/4</b>，关键是引入一种新原语“强多值拜占庭协议”（SMBA），保证最终决定的值一定由诚实节点提出；进一步的 Reducer++ 借助随机预言机保证终止，<b>容错达到 t &lt; (1/3 − ε)n</b>，仍是常数轮、二次消息、准二次比特复杂度。由于只依赖哈希，这条路线天然具备后量子安全性。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. AuditPay: Anonymous Payments with Controlled Oversight</div>
+<div style="color:#6b7280;font-size:13px;">Elkana Tovey, Yossi Gilad, Aviv Zohar（希伯来大学）｜ IACR ePrint 2026/1118 · ACM CCS 2026（2026-05-31 首次提交，11-11 修订）｜ <a href="https://eprint.iacr.org/2026/1118" style="color:#2563eb;">eprint.iacr.org/2026/1118</a></div>
+<p style="margin:6px 0 0;">AuditPay 为链上混币器引入“审计预算”：审计方每个周期（如一小时或一天）最多可以监控预算数量的地址，而<b>用户不知道哪些地址被选中</b>，未被监控的地址隐私不受影响。与“用户自愿把查看密钥交给可信看门人”的做法不同，AuditPay 用选择性加密加一种高效的审计密钥编码，再配合轻量级零知识证明强制执行：用户把审计相关信息用审计密钥加密，只有付款目标（或来源）恰好是被监控地址时才能解密，且不引入额外信任假设。作者在以太坊上实现了原型，性能和 gas 开销都不大，为“合规与隐私如何兼顾”提供了一个可落地的折中方案。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Undine: Distributed Extendable Merkle Tree Storage with Private Retrieval and Efficient Reconfiguration</div>
+<div style="color:#6b7280;font-size:13px;">Nicolas Alhaddad, Harry Eldridge, Julia Guskind, Eran Tromer, Mayank Varia（波士顿大学）｜ IACR ePrint 2026/2834（2026-11-08 提交，11-11 公开）｜ <a href="https://eprint.iacr.org/2026/2834" style="color:#2563eb;">eprint.iacr.org/2026/2834</a></div>
+<p style="margin:6px 0 0;">屏蔽池（shielded pool）、透明日志和公钥目录的客户端都需要读取一棵不断增长的 Merkle 树上的认证路径，但既不想存全量数据，也不想暴露自己查的是哪条记录。Undine 把 Merkle 树节点做线性编码后分散到多个独立维护者，再<b>直接在编码后的分片上运行私有信息检索（PIR）</b>：维护者可以灵活调整自己存储的分片大小，追加和更新的写入成本只有被修改节点数的两倍，共享路径上的节点不会重复存储和计算；客户端只需对照 Merkle 根校验，任何合谋都无法得知查询内容，并且能抵御“选择性失败”泄露。作者结合 YPIR 实现了只追加版本 UndineLog。对隐私币钱包来说，这是一条不依赖单一全节点、又不泄露查询的同步路径。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Twisted Towers: A Faster and Fully Costed SexTNFS Attack</div>
+<div style="color:#6b7280;font-size:13px;">Gautam Botrel ｜ IACR ePrint 2026/2831（2026-11-08 提交，11-11 公开）｜ <a href="https://eprint.iacr.org/2026/2831" style="color:#2563eb;">eprint.iacr.org/2026/2831</a></div>
+<p style="margin:6px 0 0;">BLS12-381 是以太坊共识层 BLS 签名、KZG 承诺和大量 zkSNARK 使用的配对曲线，其安全性取决于目标群 𝔾<sub>T</sub> 上离散对数的难度。作者（gnark 作者）给出一种 Special exTNFS 攻击设计，并在统一的指令级模型中<b>为每一步都计价</b>，包括关系收集、余因子分解、过滤、线性代数和单个对数计算。借助显式构造的“扭塔”，关系和理想以 4 个为一组出现；作者还指出，以往的产出估计把单位倍数重复计入，对最接近已发表设计的参数，只有 2<sup>−2.81</sup> 的点真正有效。最终估算约为 <b>2<sup>115.72</sup> 次 𝔽<sub>p¹²</sub> 乘法（约 2<sup>130</sup> 条 AArch64 指令）</b>，比已发表设计低约 0.8 bit。作者明确表示没有做全规模实验，<b>BLS12-381 的实际安全性不变</b>，但这为评估“约 120 bit”的安全余量提供了更精确的依据。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Splitting for Stability: a Modified Reward Scheme for Transaction-Fee-Only Regimes</div>
+<div style="color:#6b7280;font-size:13px;">Eric Brigham, Baigang Chen, Nicholas Hopper ｜ arXiv 2611.13252 · cs.CR / cs.GT（2026-11-09 提交）｜ <a href="https://arxiv.org/abs/2611.13252" style="color:#2563eb;">arxiv.org/abs/2611.13252</a></div>
+<p style="margin:6px 0 0;">比特币区块补贴减半后，矿工收入将越来越依赖手续费，而“赢家通吃”的奖励结构会鼓励矿工分叉抢走高手续费区块（undercutting），导致链不稳定、吞吐下降。作者提出<b>奖励拆分机制</b>：出块者只拿 α 比例的区块奖励，其余分给其他矿工，从而鼓励矿工在奖励更高的前序区块上继续挖，同时保留打包高价值区块的动力。论文推导了单步 Function-Fork 偏离的局部盈利条件，模拟显示在合适参数下诚实行为占优；即使分叉占优，学到的策略也是最不激进的一种，而且<b>不会加重自私挖矿激励</b>。这为手续费时代 PoW 的激励设计提供了一个具体方案。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Useful Work Can Increase Energy Use: Demand Elasticity and Proof of Useful Work</div>
+<div style="color:#6b7280;font-size:13px;">Isaiah Hull, Or Sattath ｜ arXiv 2611.13131 · cs.CR / cs.GT（2026-11-09 提交）｜ <a href="https://arxiv.org/abs/2611.13131" style="color:#2563eb;">arxiv.org/abs/2611.13131</a></div>
+<p style="margin:6px 0 0;">有用功证明（PoUW，例如最近以矩阵乘法实例化的方案）常被视为降低 PoW 能耗的替代方案。作者证明，<b>改用 PoUW 反而可能让总耗电上升</b>，类似杰文斯悖论：挖矿奖励相当于对有用计算的补贴，压低了它的有效价格；如果需求是弹性的（降价 x% 带来超过 x% 的需求增长），总耗电就会净增加，只有需求缺乏弹性时才会下降。而且即使如此，PoUW 的耗电也不会归零，因为补贴买来的是原本不会发生的计算。结论在“只有电费成本、PoUW 无额外开销、补贴不变”的简化模型中成立，并可推广到调整阈值后的更一般情形。这提醒我们，评估共识机制的环境成本时必须考虑市场反应。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">今天最明显的趋势是，<b>机制与市场反应成为链上协议设计的主要变量</b>：更快的出块不一定带来更好的流动性（Flashblocks 后池子变浅），补贴减少后的 PoW 需要改写奖励分配才能保持稳定，“有用功”挖矿是否省电取决于需求弹性。这与本周 WeRLman、贿赂与按时确认等研究一致，说明大家越来越倾向于用经济模型和真实数据检验协议参数，而不只做密码学证明。第二条线是<b>把 MEV 防护和合规隐私的密码学基础做扎实</b>：batched IBE 摆脱了理想化模型，AuditPay 把“有限监控”变成可强制执行的密码学约束，Undine 则为屏蔽池客户端提供了不泄露查询的同步方式。第三，<b>底层安全余量正在被更精确地计算</b>：BLS12-381 的 SexTNFS 成本被逐项计价，Reducer++ 只用哈希就接近 1/3 的最优容错，为后量子共识提供了可选路线。另外，arXiv 本批还有两篇值得留意：Sable（2611.14083）在单张 GPU 上 92.5 秒完成 Qwen2.5-32B 全部 64 层、4096 个 token 推理的逐比特证明，每次请求约 6.4 美分（不具备零知识性）；Solana 跑路检测（2611.13342）表明，代币创建后 12.5 分钟内，跑路代币的转账图就已经能和正常代币区分开。</p>
+</div>
+
+</div>
+</body></html>
