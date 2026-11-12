@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 13 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 13 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期五 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：委员会密码学和后量子原语正在被“重新定价”——静默门限签名的聚合成本首次只随活跃委员会规模增长（比 Dyna-hinTS 快 140 倍以上），同源群作用 VRF 的现有参数被证明不安全，新方案只需 320 次群作用；共识理论也开始精确回答“超出最优容错之后，最多会被破坏几次、能否恢复”。</p>
+
+<p style="margin:0 0 18px;">本期以 IACR ePrint 为主：上期之后新增 8 个编号（2026/2850—2857），另有 9 篇旧论文在 11 月 12 日更新；arXiv 本期没有新的常规批次（详见检索说明）。共识与委员会方向最集中：被 CCS 2026 接收的静默门限签名/加密方案，面向以太坊这类“全网 N 个节点、每纪元抽出 n 个委员”的场景，<b>把每纪元聚合时间从 O(N log N) 降到 O(n log² n)</b>，还给出了首个支持动态委员会的静默门限加密；Lewis-Pye 与 Roughgarden 证明，在活性门限为 1/3 的部分同步 SMR 中，<b>5/9 的敌手一定能造成 1 次一致性违背但造不成 2 次</b>，并给出一个可嫁接到任何可问责 SMR 上的恢复流程。后量子方向，ASIACRYPT 2026 的一篇论文指出 Poly 型群作用 PRF 的安全性<b>取决于群阶的最小素因子而非最大素因子</b>，因此 CSIDH-512 和 SCALLOP 上的现有 VRF 参数都不安全；ASCENT 则把格基证明中的精确范数约束压缩到常数通信，证明大小比 LatticeFold+ 小 3—4 倍。扩容方向，DetTreeChain 让最多 N 条“车道”并行出块且永不合并，在相同出块率下比单链少浪费 1.7—3.3 倍算力。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">静默门限签名：每纪元签名聚合提速</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">&gt;140×</div>
+<div style="font-size:12px;color:#6b7280;">N=2<sup>20</sup>、n=2<sup>10</sup> 时聚合 0.145 秒 · 每方 hint 生成 O(N²)→O(N)</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">可恢复容错：活性门限 1/3 的 SMR</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">5/9</div>
+<div style="font-size:12px;color:#6b7280;">5/9 敌手必能造成 1 次一致性违背、不能 2 次 · 2/3 敌手 2 次、不能 3 次</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">群作用 VRF：生成或验证证明所需群作用次数</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">320 次</div>
+<div style="font-size:12px;color:#6b7280;">此前方案约 6.9 万—11 万次 · 约 128 bit 证明可靠性</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">本期检索时（北京时间 11 月 13 日 7 时），arXiv 各分类的 /new 页面仍显示 <b>2026 年 11 月 11 日（星期三）批次</b>，与上期相同；用 arXiv API 按提交时间检索区块链关键词，最新一篇也是 11 月 10 日提交的，因此<b>本期没有新的 arXiv 常规批次</b>，arXiv 部分只补入了近几天尚未介绍过的论文。IACR ePrint 在上期之后新增 8 个编号（2026/2850—2857，网站显示的提交日期为 11 月 10 日），另有 9 篇旧论文在 11 月 12 日更新。顶会方面，本期只核对了入选论文自己注明的接收信息（CCS 2026 1 篇，ASIACRYPT 2026 3 篇）。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月11日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">24</td><td style="text-align:right;padding:8px 4px;">50</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月11日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">15</td><td style="text-align:right;padding:8px 4px;">29</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月11日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">9</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月11日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">6</td><td style="text-align:right;padding:8px 4px;">14</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（上期之后）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">17</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月7—12日有更新）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">100</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文的首次提交日期在 <b>2025 年 1 月 16 日—2026 年 11 月 10 日</b>之间：其中 3 篇是 11 月 10 日新提交的 ePrint 论文（DetTreeChain、ASCENT、群作用 PRF/VRF），BioBind 于 11 月 9 日提交到 arXiv；其余 4 篇是较早提交、在 11 月 11—12 日发布新版本的论文（可恢复容错 2025 年 1 月，静默门限签名 2026 年 8 月 CCS 版，PERSEPHONE 2026 年 7 月，IV-MPC 2026 年 11 月 2 日）。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 6—12 日）已展开或顺带提及的论文本期不再重复。Pufferfish（2026/796）、AuditPay（2026/1118）、Reducer（2024/1682）和异步流水线 PoW 共识（2026/141）虽然又出现在近两天的更新列表中，但都已在近 7 天内介绍过；arXiv 11 月 11 日批次的相关论文（如 2611.13616、2611.13342、2611.14083）上期已经覆盖。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Practical Silent Threshold Signatures and Silent Threshold Encryption for Dynamic Committees</div>
+<div style="color:#6b7280;font-size:13px;">Yifei He, Zheng Zhou, Yu Chen, Zhi Guan, Zhong Chen ｜ IACR ePrint 2026/1820 · ACM CCS 2026（2026-08-27 首次提交，11-12 发布修订版）｜ <a href="https://eprint.iacr.org/2026/1820" style="color:#2563eb;">eprint.iacr.org/2026/1820</a></div>
+<p style="margin:6px 0 0;">静默门限签名（STS）和静默门限加密（STE）不需要交互式分布式密钥生成，N 个参与方各自发布一份 hint 即可得到联合公钥。但以太坊等系统实际依赖的是每个纪元从 N 个节点中抽出的小委员会（n ≪ N），此前唯一支持动态委员会的 STS 方案 Dyna-hinTS 每纪元聚合要 O(N log N)，成本与全网规模绑定。作者用线性配对检验和一种新的“委员会多项式承诺”替换 Plonk 式 SNARK，<b>把聚合时间降到 O(n log² n)</b>，并给出<b>首个支持动态委员会的静默门限加密</b>；每方一次性 hint 生成也从 O(N²) 降到 O(N)。Rust 实现中，N=2<sup>20</sup>、n=2<sup>10</sup> 时 hint 生成 97.5 秒、签名聚合 0.145 秒，比 Dyna-hinTS 快 140 倍以上，签名、验证密钥和验证时间都保持常数。这对 PoS 委员会签名、门限加密内存池都很实用。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Beyond Optimal Fault-Tolerance</div>
+<div style="color:#6b7280;font-size:13px;">Andrew Lewis-Pye, Tim Roughgarden ｜ IACR ePrint 2025/070（2025-01-16 首次提交，2026-11-12 发布第 3 次修订）｜ <a href="https://eprint.iacr.org/2025/070" style="color:#2563eb;">eprint.iacr.org/2025/070</a></div>
+<p style="margin:6px 0 0;">部分同步 SMR 的最优容错是经典结论：要同时对 α 比例敌手保证一致性、对 β 比例敌手保证活性，当且仅当 α + 2β ≤ 1。本文问的是：如果允许最多 r 次一致性违背（每次可能回滚最近已最终确认的交易），能否“超过最优”？作者先证明<b>没有额外时序假设时，回滚无法被限定</b>；再假设攻击前后消息延迟不超过 Δ*（可以远大于 GST 之后的 Δ），对每个 r 给出“可恢复容错”的匹配上下界。例如活性门限为 1/3 时，<b>5/9 的敌手必能造成 1 次违背但不能 2 次，2/3 的敌手能造成 2 次但不能 3 次</b>。正面结果来自一个通用恢复流程，可以嫁接到任何可问责 SMR 上，每次只回滚之前 2Δ* 时间内最终确认的交易。这为“出事后如何恢复”的共识设计提供了理论边界。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. A New Class of PRFs and Efficient VRFs from Isogeny-based Group Actions</div>
+<div style="color:#6b7280;font-size:13px;">Junbo Yang, Willy Susilo, Dung Hoang Duong, Partha Sarathi Roy, Yannan Li, Kazuhide Fukushima, Shinsaku Kiyomoto ｜ IACR ePrint 2026/2856 · ASIACRYPT 2026（2026-11-10 提交，11-12 公开）｜ <a href="https://eprint.iacr.org/2026/2856" style="color:#2563eb;">eprint.iacr.org/2026/2856</a></div>
+<p style="margin:6px 0 0;">VRF 是 PoS 抽签和领导者选举的核心原语，基于同源群作用的 Poly 型 PRF 被视为有前景的后量子方案。作者给出两种通用攻击，证明这类 PRF 的有效安全性<b>由群阶的最小素因子决定，而不是此前认为的最大素因子</b>：增强攻击以 O(√p) 的复杂度取得接近 1 的优势，因此<b>CSIDH-512 和基于 SCALLOP 的现有 VRF 参数都不安全</b>。为此作者提出“先限制、再扩展”的设计范式和多元多项式 PRF（MP-PRF），在带扭的通用群作用模型中对任意合数阶群都可证安全。在接近 128 bit 的证明可靠性下，新 VRF 生成或验证证明只需 <b>320 次群作用</b>，此前方案约需 6.9 万—11 万次。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. DetTreeChain: Parallel Block Production on an N-ary Block Tree with Bounded Lane Divergence</div>
+<div style="color:#6b7280;font-size:13px;">Mahesh Karri, Nikhileswara Rao Sulake ｜ IACR ePrint 2026/2855（2026-11-10 提交，11-12 公开）｜ <a href="https://eprint.iacr.org/2026/2855" style="color:#2563eb;">eprint.iacr.org/2026/2855</a></div>
+<p style="margin:6px 0 0;">中本聪式区块链一次只追加一个区块，提高出块率就会增加分叉、削弱安全性。DetTreeChain 让<b>最多 N 个区块并行产出，并且事后不需要合并或重排</b>：区块组成 N 叉树，每个区块的位置由父块和所属“车道”确定；本地推导的父块队列只允许两个相邻父块接收子块，因此各车道之间最多相差一个父块。交易按所花费锁定脚本的哈希分配到车道，不同车道的区块不会冲突，跨车道付款也不需要额外协议。规则与共识无关；在 PoW 下，掌握超过 1/(N+1) 算力的敌手可以压过一条车道。Rust 原型中 6 个节点运行 25 分钟后得到一致的树；模拟显示在相同出块率下，单链浪费的算力是 2—8 条车道的 1.7—3.3 倍。对可重建脚本的比特币交易，约 95% 的输入都落在同一车道。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. ASCENT: Algebraic Structured Compilation of Exact Norms for Succinct Lattice Proofs</div>
+<div style="color:#6b7280;font-size:13px;">Lizhen Zhang, Shang Gao, Bin Xiao ｜ IACR ePrint 2026/2853 · ASIACRYPT 2026（2026-11-10 提交，11-12 公开）｜ <a href="https://eprint.iacr.org/2026/2853" style="color:#2563eb;">eprint.iacr.org/2026/2853</a></div>
+<p style="margin:6px 0 0;">在格基证明系统中，见证不仅要满足模方程，还必须满足“足够短”的范数界；现有方法要么引入松弛，要么依赖通信量随见证长度增长的 sumcheck 机制。ASCENT 是一个针对<b>精确 ℓ<sub>2</sub> 范数约束的知识归约编译器</b>，把原始范数语言编译成只含承诺打开、张量结构内积和宽松短性界的窄关系，精确范数的可靠性在归约内部保证。编译器只增加与见证长度 N 无关的 O(1) 通信，验证者工作量 O(log N)，还可推广到 R1CS 类电路的折叠。128 bit 安全下，精确范数归约的证明约 27.69 KB、R1CS 折叠约 27.75 KB，<b>比 LatticeFold+ 小 3—4 倍、比 SALSAA 小 2—3 倍</b>。这为后量子 zkRollup 和格基折叠方案提供了更紧凑的构件。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. PERSEPHONE: Zero-Knowledge Multiplicative Non-Negative Proof for Sequential Private Range Verification</div>
+<div style="color:#6b7280;font-size:13px;">Ivan Tjuawinata, Yann Fraboni, Jun Jie Sim, Darian Gunamardi, Zhenghao Wu, Hasventhran Baskaran, Chi-Hung Chi, Yujing Sun, Pu Duan, Kwok-Yan Lam ｜ IACR ePrint 2026/1477（2026-07-20 首次提交，11-12 发布修订版）｜ <a href="https://eprint.iacr.org/2026/1477" style="color:#2563eb;">eprint.iacr.org/2026/1477</a></div>
+<p style="margin:6px 0 0;">隐私支付需要在不暴露余额和金额的前提下证明“付款不超过余额”。常规零知识范围证明（ZKRP）要求范围边界公开，用私有值对比私有边界需要多个 ZKRP 实例，开销大，规模上去后容易引发延迟和连锁失败。作者把这一问题形式化为<b>顺序私有范围验证（SPRV）</b>，利用真实交易前后相连的结构，设计了新的零知识原语 ZK-MultNNP（乘法非负证明）。实验显示，总证明时间比基于 ZKRP 的基线<b>至少减少 3 倍</b>；在数字支付场景中，PERSEPHONE 能让全部交易验证在 400 毫秒（Doherty 阈值）内完成，基线只有 30% 能做到。这对机密转账、隐私稳定币等链上支付方案有直接参考价值。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Authenticated Outsourced Incrementally Verifiable MPC</div>
+<div style="color:#6b7280;font-size:13px;">Anders Dalskov, Anders Kallesøe, Hamidreza Khoshakhlagh ｜ IACR ePrint 2026/2721 · ASIACRYPT 2026（2026-11-02 首次提交，11-11 发布修订版）｜ <a href="https://eprint.iacr.org/2026/2721" style="color:#2563eb;">eprint.iacr.org/2026/2721</a></div>
+<p style="margin:6px 0 0;">长期运行的 MPC（例如在秘密状态上迭代训练模型）需要定期刷新份额、轮换委员会，外部方希望验证这些更新和轮换都做对了，但让 MPC 节点在秘密分享数据上生成证明代价很高。IV-MPC 把证明拆成两部分：私有部分由 MPC 节点完成，公开部分外包给一个外部证明者 P*。框架包括三个组件：<b>私有打开多项式承诺（PoPCS）</b>，让新委员会证明自己收到了正确份额而不泄露数据；基于 sumcheck 和压缩 Σ 协议的分布式证明系统；以及<b>把委员会交接锚定到固定状态承诺的无状态交接</b>，使证明大小不随时间增长。配合 P* 运行的 IVC 证明，审计方每轮验证时间渐近上与总纪元数无关。这与链上可验证门限服务、轮换委员会的设计需求高度契合。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. BioBind: Binding Biometric Deduplication to Zero-Knowledge Authentication</div>
+<div style="color:#6b7280;font-size:13px;">Taotao Wang, Xiaoxiao Wu, Shengli Zhang ｜ arXiv 2611.12636 · cs.CR（2026-11-09 提交）｜ <a href="https://arxiv.org/abs/2611.12636" style="color:#2563eb;">arxiv.org/abs/2611.12636</a></div>
+<p style="margin:6px 0 0;">去中心化应用中的生物特征身份（“人格证明”类系统）需要凭证既防重复注册，又支持隐私、可公开验证的认证。采集和大规模私有去重在链下完成，智能合约负责签发和使用授权，两者跨越不同信任域；作者指出，即使每次去重判定都正确，<b>并发注册仍可能签发重复凭证，替换输入还可能授权无关凭证</b>。BioBind 用四个后端接口条件把去重查询、图库插入和签发的承诺绑定到同一个采集向量上，并让零知识认证同时绑定注册模板和设备新采集的样本。基于 LFW 的原型挡住了测试中的组合攻击，不可关联认证电路有 31,445 个约束、链上约 30.5 万 gas。作者也坦言生物特征精度限制了“一人一份”：在 Bosphorus 数据集上，主动改变外貌的受试者有 1.8% 的再注册尝试能逃过去重。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">今天最明显的趋势是，<b>委员会类密码学正在按“活跃规模”而不是“全网规模”计费</b>：静默门限签名/加密把聚合成本从 N 降到 n，IV-MPC 让委员会轮换的证明大小不再随纪元数增长，这两类工作都直接服务于 PoS 委员会、门限加密内存池和可验证的链下服务。第二条线是<b>后量子原语的安全参数被重新核算</b>：群作用 PRF 的安全性取决于最小素因子，导致现有同源 VRF 参数失效；ASCENT 则把格基证明的范数检查压到常数通信，继续缩小格基与经典 SNARK 的差距。第三，<b>共识研究开始关注“超出门限之后会怎样”</b>：可恢复容错给出了违背次数的精确上界和回滚窗口，DetTreeChain 则用确定性并行车道换取更高出块率而不增加分叉浪费。另外两篇值得留意：Gligoroski 的 Keccak“桥”研究（ePrint 2026/2671）把降低容量后的 Keccak 桥成本当作可调难度，提出可自适应难度的工作量证明等协议，并在 Lean 4 中机器验证了相关定理（作者注明端到端安全性仍待研究）；以太坊钓鱼检测的对照实验（arXiv 2611.11263）表明，只加入 12 个局部交互统计量，就能让 6 类模型的 Macro-F1 提高 1.0—9.1 个百分点。</p>
+</div>
+
+</div>
+</body></html>
