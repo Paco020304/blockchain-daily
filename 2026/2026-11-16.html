@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 16 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 16 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期一 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：底层“信任地基”正在被重新丈量——39 步 SHA-256 的碰撞攻击首次低于生日界（首个碰撞的期望代价上界约 2<sup>124.6</sup>），zkSNARK 的通用 UC 组合编译器被指出存在漏洞并得到修补；可验证计算开始覆盖外部预言机、浮点运算和同态加密，而把零知识门限直接接到激励合约上反而让敌手拿到约 2 倍奖励，说明“加上 ZK”并不等于机制安全。</p>
+
+<p style="margin:0 0 18px;">本期是周一早刊，距上期周日补发只有约 7 小时：arXiv 周一批次尚未公布，ePrint 也没有新编号，因此本期按规则把检索窗口放宽到 7 天，从 11 月 8—12 日提交、近 7 天未介绍过的论文中挑选。密码分析方面，Gong 等人用“联合消息字钉定”把 <b>39 步 SHA-256 的碰撞代价压到生日界以下</b>，38 步的代价从 2<sup>104.3</sup> 降到 2<sup>90.9</sup>；完整的 64 步 SHA-256 仍然安全，但比特币工作量证明、Merkle 树和各类哈希基后量子方案所依赖的安全余量又少了一步。证明系统方面，Li Calsi 等人指出 EUROCRYPT 2023 的见证简洁 UC 编译器存在<b>“重排已公开开放值即可伪造新证明”的漏洞</b>，并给出第一个证明者开销拟线性、证明大小与验证开销只增加常数的通用 UC 提升方案；Goldwasser 与 Kalai 则在 LWE 假设下<b>为依赖外部预言机的计算构造了增量可验证计算（IVC）</b>，对“预言机为答案签名”的情形做到公开可验证。应用层，VRMaaS 让奖励模型的每次打分都成为可审计的证明产物，部分上链证明约 <b>21.7 万 gas</b>；联邦学习代币奖励的对比实验则表明，用 ZK 隐藏质量分后<b>敌手的平均奖励约翻倍</b>。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">39 步 SHA-256：首个碰撞期望代价上界</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">2<sup>124.6</sup></div>
+<div style="font-size:12px;color:#6b7280;">低于 2<sup>128</sup> 生日界 · 每个期望碰撞约 2<sup>108.8</sup></div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">VRMaaS：部分链上证明成本</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈217K gas</div>
+<div style="font-size:12px;color:#6b7280;">审计方验证 1.94–5.11 秒 · 奖励模型 1B–8B</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">联邦学习 ZK 门限奖励：敌手平均奖励</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈2×</div>
+<div style="font-size:12px;color:#6b7280;">对比公开质量分的合约 · 后期可垄断奖励池</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 16 日（星期一）7 时左右。arXiv 各分类 /new 页面仍显示 <b>2026 年 11 月 13 日（星期五）批次</b>，与前两期相同；<b>周末没有新批次</b>，周一批次要到北京时间 9 时左右（美东周日 20 时）才公布，将在下期覆盖。IACR ePrint 在上期之后<b>没有新增编号</b>（最新仍为 2026/2877），11 月 13—15 日共有 18 条记录更新。因此本期把窗口放宽到 7 天：arXiv 部分用 arXiv API 按提交时间检索区块链、零知识证明、可验证计算等关键词，ePrint 部分回查 11 月 9—12 日收到、此前未介绍的编号。顶会方面，本期有 1 篇注明被 ASIACRYPT 2026 接收、1 篇注明被 BCI 2026 接收（获最佳论文奖）。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">44</td><td style="text-align:right;padding:8px 4px;">104</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">23</td><td style="text-align:right;padding:8px 4px;">56</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">15</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">7</td><td style="text-align:right;padding:8px 4px;">24</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（上期之后新增编号）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">—</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月13—15日有更新）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">18</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文的首次提交日期在 <b>2026 年 10 月 12 日—11 月 12 日</b>之间：其中 7 篇是 11 月 8—12 日提交的（SHA-256 碰撞、预言机辅助 IVC、CKKS 可验证计算、VRMaaS、联邦学习代币奖励、近似算术交互式证明、可委托 KVAC），UC 提升编译器（2026/2453）于 10 月 12 日首次提交，11 月 12 日发布修订版。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 9—15 日）已展开或顺带提及的论文本期不再重复。后量子比特币桥（2026/2877）、ECLIPSE（2026/2312）、仿射组合器（2026/2863）、FROST2+（2026/075）、可否认预签名的适配器签名（2026/873）等虽然仍在 ePrint 最近更新列表中，本期都不再展开。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Collision Attacks on SHA-2: 39-Step SHA-256 below the Birthday Bound</div>
+<div style="color:#6b7280;font-size:13px;">Jiaying Gong, Yongzhuang Wei, Fengrong Zhang, Bohua Wei ｜ IACR ePrint 2026/2867（2026-11-11 提交，11-13 公开）｜ <a href="https://eprint.iacr.org/2026/2867" style="color:#2563eb;">eprint.iacr.org/2026/2867</a></div>
+<p style="margin:6px 0 0;">SHA-2 的安全余量通常用碰撞攻击能覆盖的步数来衡量。此前 Li 等人给出了第一个 38 步 SHA-256 的经典碰撞攻击（估计复杂度 2<sup>104.3</sup>）。本文沿用已发表的 39 步差分特征，但改变满足条件的方式：提出<b>“联合消息字钉定”</b>，把扩展消息字 W<sub>16</sub> 和 W<sub>17</sub> 同时固定为特征要求的值。只钉定 W<sub>16</sub> 时每个期望碰撞的代价为 2<sup>123.4</sup>，两个都钉定后再降 14.6 bit，达到 <b>2<sup>108.8</sup></b>；即使考虑最坏的聚集情况，找到第一个碰撞的期望代价上界也约为 2<sup>124.6</sup>，<b>首次低于 2<sup>128</sup> 生日界</b>。38 步 SHA-256 的代价则从 2<sup>104.3</sup> 降到 2<sup>90.9</sup>，SHA-512 的 38/39 步攻击也有大幅改进（39 步从 2<sup>178</sup> 降到 2<sup>131.3</sup>）。完整 SHA-256 有 64 步，目前不受威胁；但比特币的工作量证明、交易 ID 和 Merkle 树，以及各类哈希基 STARK 与后量子签名，都直接依赖这一安全余量。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Incrementally Verifiable Oracle Aided Computation</div>
+<div style="color:#6b7280;font-size:13px;">Shafi Goldwasser, Yael Kalai ｜ arXiv 2611.14698（cs.CR，2026-11-10 提交）｜ <a href="https://arxiv.org/abs/2611.14698" style="color:#2563eb;">arxiv.org/abs/2611.14698</a></div>
+<p style="margin:6px 0 0;">增量可验证计算（IVC）让证明者每执行一步就更新一份短证明，是递归 zkRollup 和 zkVM 的理论基础，但标准 IVC 不处理计算对外部信息的依赖。作者在 <b>LWE 假设</b>下，先构造 SNARG，再推广到 IVC，覆盖两种预言机辅助计算：其一是“鲁棒”计算，即任何在错误输入上被接受的执行都至少含 ε 比例的错误预言机答案，此时得到私密可验证的 SNARG/IVC，参数与证明长度为 poly(k, S, log T, 1/ε)，验证需要 O(k/ε) 次预言机调用，并给出了公开可验证方案的下界；其二是<b>预言机对每个问答对签名</b>的情形，此时无需鲁棒性假设即可得到公开可验证的 SNARG/IVC，且建立与验证都不需要访问预言机，确定性计算的证明长度可降到 poly(k, log T)。“签名预言机”模型与链上价格预言机、数据馈送的工作方式高度吻合，为证明“用了哪些外部数据”提供了理论工具。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Revisiting Witness-Succinct UC-lifting Compilers</div>
+<div style="color:#6b7280;font-size:13px;">Davide Li Calsi, Luigi Russo, Dominique Schröder, Federico Valbusa ｜ IACR ePrint 2026/2453（2026-10-12 首次提交，11-12 修订）｜ <a href="https://eprint.iacr.org/2026/2453" style="color:#2563eb;">eprint.iacr.org/2026/2453</a></div>
+<p style="margin:6px 0 0;">zkSNARK 越来越多地被嵌入更大的协议（rollup、跨链桥、隐私支付），因此需要在通用可组合（UC）框架下仍然安全，而通用 UC 编译要求直线式黑盒提取，同时还要保持简洁。作者提出“可验证可重构直线码”（VRSC）这一抽象，并借此发现 <b>Ganesh 等人（EUROCRYPT 2023）的见证简洁 UC 编译器存在缺失的安全要求</b>：把此前已公开的求值开放值重新排列，就能以不可忽略的概率得到一个新的被接受证明，原有的模拟论证因此不成立。作者用“证明不可重随机化”刻画这一攻击，通过让验证方强制各次重复使用不相交的求值域来防止转移，并给出基于配对的实例化：结构化 Reed–Solomon 编码配合联合计算的 KZG 开放，把证书生成从平方复杂度降到 <b>O(n log n)</b>，SNARK 电路中只增加一个线性时间的编码检查。作者称这是<b>第一个同时做到证明者开销拟线性、额外证明大小和验证开销为常数</b>的通用 UC 提升编译器。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Batch, Pack, and Prove: More Efficient Verifiable Computation for CKKS</div>
+<div style="color:#6b7280;font-size:13px;">Ignacio Cascudo, Anamaria Costache, Daniele Cozzo, Dario Fiore, Antonio Guimarães, Eduardo Soria-Vazquez ｜ arXiv 2611.16922（cs.CR，2026-11-12 提交；ASIACRYPT 2026 完整版）｜ <a href="https://arxiv.org/abs/2611.16922" style="color:#2563eb;">arxiv.org/abs/2611.16922</a></div>
+<p style="margin:6px 0 0;">同态加密只能保证数据保密，不能保证外包计算被正确执行。Cascudo 等人在 CRYPTO 2025 上给出了针对 CKKS 的简洁论证，但多项式承诺的证明偏大，范围证明有 O(N) 的额外开销，也缺少亚线性验证的明确方法。本文逐一消除这些瓶颈：更高效的 CKKS 计算算术化；支持批量求值、证明更短的环 R<sub>q</sub> 上多项式承诺 <b>BatchFold</b>；一种新的“打包”代数技巧，避免对巨大多项式做承诺，并<b>消除范围证明中的 O(N) 开销</b>；以及利用打包与批量求值高效证明稀疏、依赖电路的多项式求值的 <b>SparsePack</b>。在通用神经网络结构上，证明大小和速度都比此前方法好几个数量级。基于 FHE 的链上机密合约和协处理器（如 fhEVM 一类设计）同样面临“密文计算是否被正确执行”的问题，这类可验证 FHE 是其关键缺口之一（此关联为编者推断）。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. VRMaaS: Verifiable Reward-Model-as-a-Service for Trustworthy LLM Alignment</div>
+<div style="color:#6b7280;font-size:13px;">Guofu Liao, Hailang Xi, Taotao Wang, Shengli Zhang, Rongcheng Tu, Hao Liao ｜ arXiv 2611.14984（cs.CR，2026-11-11 提交）｜ <a href="https://arxiv.org/abs/2611.14984" style="color:#2563eb;">arxiv.org/abs/2611.14984</a></div>
+<p style="margin:6px 0 0;">奖励模型的打分越来越多地驱动支付、审计和治理流程，但“推理证明”本身并不能说明分数属于哪个请求、哪个模型检查点和哪套数值配置。作者在对照实验中发现，<b>一个包装后可上链检查的通用推理证明，在 6 类服务字段被替换后仍然验证通过</b>。VRMaaS 把每次返回的奖励做成携带证明的产物：链下接受规则绑定请求身份、已承诺的权重、验证器与配置标识、证明任务顺序和导出包摘要，审计方无需重跑私有模型、也无需暴露输入或权重即可核查；可选的链上零知识包装让合约获得部分一致性检查的证明。GPU 原型在 1B/3B/8B 奖励模型、128–1024 token 上与基线的成对一致率为 93.5%–99%，拒绝了所有测试过的字段替换；生成完整产物需 49.8–206.1 秒，审计验证 <b>1.94–5.11 秒</b>，部分链上证明约 <b>21.7 万 gas</b>，适合延迟审计、结算和治理场景。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Tokenized Reward Systems for Federated Learning: The Privacy vs. Fairness Tradeoff</div>
+<div style="color:#6b7280;font-size:13px;">Andreas Sendros, Nikolaos Pavlidis, Vasilios Perifanis, Pavlos S. Efraimidis ｜ arXiv 2611.16065（cs.LG，2026-11-11 提交；BCI 2026 接收，获最佳论文奖）｜ <a href="https://arxiv.org/abs/2611.16065" style="color:#2563eb;">arxiv.org/abs/2611.16065</a></div>
+<p style="margin:6px 0 0;">作者设计并实测了两个用于联邦学习奖励分配的 Solidity 合约：一个按公开的质量分按比例分配，另一个用<b>零知识证明只证明“质量分超过门限”</b>而隐藏具体分数，两者都铸造不可转让、用后即焚的代币。在含女巫攻击、零梯度和随机噪声的 MNIST 实验中，隐私版本反而<b>让敌手的平均奖励约翻倍</b>，结果方差也明显增大。原因在于余弦相似度打分的“自包含偏差”：模型收敛后诚实更新变小，与有界噪声难以区分，敌手得以持续越过 ZK 门限，最终在训练后期<b>垄断整个奖励池</b>，诚实参与者被完全排除。作者给出刻画这一隐私与抗女巫之间权衡的闭式定理，并结合 Fusaka 升级后 EIP-7825 的单笔交易 gas 上限，给出主网部署的边界。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Delegating Computation with Approximate Arithmetic: Interactive Proofs for Wizards</div>
+<div style="color:#6b7280;font-size:13px;">Aritra Das, Debayan Gupta, Arup Mondal, Mihir More ｜ arXiv 2611.11618（cs.CR，2026-11-08 提交）｜ <a href="https://arxiv.org/abs/2611.11618" style="color:#2563eb;">arxiv.org/abs/2611.11618</a></div>
+<p style="margin:6px 0 0;">现有面向实数数据的证明系统（包括多数 zkML 方案）都是先把计算舍入到有限域再证明。本文研究复数域上的算术电路、且证明方和验证方都只做近似（浮点）计算的交互式证明：输出与精确值足够接近时诚实证明者被接受，误差超过阈值时任何证明者都会被高概率拒绝。作者把 GKR 协议推广到复数域上的对数空间一致分层电路，验证者时间为 (n+1)·poly(L, log S, b)，诚实证明者只需 O(S log S) 次复数运算，据作者所知这是<b>第一个双方都近似计算的“双重高效”交互式证明</b>。关键技巧是 GKR 在随机直线上合并两个声明时会离开单位圆、破坏误差界，因此改用单位根标记门并以随机单位根作系数；误差阈值从输入层反向选取。文中还由此得到基于单向函数的零知识证明、基于 PIR 的单轮论证和交互式 PCP。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Delegatable Keyed-Verification Anonymous Credentials</div>
+<div style="color:#6b7280;font-size:13px;">Omid Mirzamohammadi, Varesh Mishra, Jan Bobolz, Emad Heydari Beni, Aysajan Abidin, Dave Singelée, Bart Preneel ｜ IACR ePrint 2026/2860（2026-11-10 提交，11-13 公开）｜ <a href="https://eprint.iacr.org/2026/2860" style="color:#2563eb;">eprint.iacr.org/2026/2860</a></div>
+<p style="margin:6px 0 0;">密钥验证型匿名凭证（KVAC）假设签发方与验证方相同或互信，因此可以不用双线性配对，在实际部署中比公开可验证的匿名凭证更轻量。凭证委托则允许持有者把受限版本的凭证转交他人，适用于代理授权等场景。本文提出<b>第一个可委托的 KVAC（DKVAC）</b>，给出形式化定义和两个<b>无需配对</b>的构造，证明其安全性并给出实现基准，两个构造分别侧重表达能力和性能。对于链上身份、隐私访问控制以及 AI 代理代为执行操作的授权，这提供了一种不依赖配对友好曲线的匿名委托方案。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期没有新的 arXiv 批次和 ePrint 编号，但放宽窗口后可以看到三条清晰的线索。第一，<b>底层原语的安全余量在被持续重估</b>：SHA-256 的碰撞攻击推进到 39 步且低于生日界，zkSNARK 的 UC 组合编译器被找出可重排开放值的漏洞并修补，提醒链上系统在“哈希与证明都够安全”这一默认假设上要保留余量。第二，<b>可验证计算的边界在向外扩展</b>：从依赖外部预言机的 IVC（Goldwasser–Kalai）、浮点近似的 GKR，到 CKKS 密文计算的简洁论证和奖励模型服务的证明产物，研究焦点从“证明一段确定的有限域计算”转向“证明真实系统里带外部输入、带误差、带加密的计算”。第三，<b>ZK 不能替代机制设计</b>：联邦学习奖励合约的实验表明，用 ZK 门限隐藏质量分会让敌手奖励翻倍，VRMaaS 也发现裸推理证明挡不住服务字段替换，证明“什么”比“能否证明”更关键。另外值得留意：arXiv 2611.11567 首次在 RISC Zero zkVM 上运行 NSGA-II 多目标优化并在链上验证每代证明；ePrint 2026/236（匿名秘密共享签名，ASIACRYPT 2026）于 11 月 12 日发布第 5 次修订。</p>
+</div>
+
+</div>
+</body></html>
