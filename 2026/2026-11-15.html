@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 15 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 15 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期日 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：后量子迁移的成本开始被摆上台面——把 BitVM 桥换成纯哈希的 STARK 验证器后，一次争议要在比特币上发布约 426 万虚拟字节的数据、3.49 GB 的混淆表；新的后量子签名候选也在快速经受检验，立方型 UOV 变体 CML 在 5 分钟内被恢复等价密钥，而同源签名 ECLIPSE 用 206 字节做到了强不可伪造。在应用层，LLM 代理开始直接参与许可链的调参与交易调度，有效吞吐最高提升 6 倍。</p>
+
+<p style="margin:0 0 18px;">本期为周末刊（补发）。arXiv 周末没有新批次，本期 arXiv 部分只补入 11 月 8—12 日提交、尚未介绍过的论文；IACR ePrint 在上期之后新增 6 个编号（2026/2872—2877）。最受关注的是 Ziren 团队的后量子比特币桥研究：BitVM 类协议现有的设计混淆的是椭圆曲线 SNARK 验证器，量子敌手可以攻破；作者改为混淆基于 WHIR 的哈希 STARK 验证器，并配合 Winternitz 一次性密钥，<b>整个验证器不依赖任何数论假设</b>，代价是最终递归验证电路需要 2.18 亿个非免费门，<b>发布输入的交易共约 4.26 MvB</b>。后量子签名方面，<b>立方型多变量签名 CML 被完全攻破</b>：即使是面向 256 bit 安全的参数，等价密钥也能在 5 分钟内恢复；ECLIPSE 则首次实现了 PRISM 的素数次数变体，签名 206 字节，与 SQIsign 相差不到 15 字节，并且<b>证明了 SQIsign 做不到的强不可伪造性</b>。共识与系统方面，Auriga 用受“harness”约束的多个 LLM 代理同时搜索 Hyperledger Fabric 的配置参数、预测交易读写集，在冲突率最高 70% 的负载下把<b>有效吞吐提高到默认 Fabric 的 6.0 倍</b>；一个带预测的 Phase King 协议在 t&lt;n/3 时能容忍任意多的预测错误，轮数与实际错误量成正比。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">后量子比特币桥：争议时上链数据量</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">4.26 MvB</div>
+<div style="font-size:12px;color:#6b7280;">一套密钥 · 2.18 亿非免费门 · 混淆表 3.49 GB</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">CML 立方 UOV 签名：恢复等价密钥用时</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">&lt;5 分钟</div>
+<div style="font-size:12px;color:#6b7280;">所有测试参数集，包括面向 256 bit 安全的参数</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Auriga：Fabric 有效吞吐提升</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">6.0×</div>
+<div style="font-size:12px;color:#6b7280;">对比默认 Fabric · 对比最强基线 2.0× · 冲突率最高 70%</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">本期为补发，检索时间为北京时间 11 月 16 日（星期一）0 时左右，数据截至 11 月 15 日。arXiv 各分类 /new 页面仍显示 <b>2026 年 11 月 13 日（星期五）批次</b>，与上期相同；<b>周末 arXiv 没有新批次</b>。因此本期 arXiv 部分改用 arXiv API 按提交时间检索区块链相关关键词，补入 11 月 8—12 日提交、近 7 天未介绍过的论文，其中包括 cs.DB、physics.soc-ph 等四个常规分类以外的论文。IACR ePrint 在上期之后新增 6 个编号（2026/2872—2877，均于 11 月 12 日提交、11 月 14 日公开），另有 8 条记录在 11 月 14—15 日更新。顶会方面，本期入选论文都没有注明会议接收信息。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">44</td><td style="text-align:right;padding:8px 4px;">104</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">23</td><td style="text-align:right;padding:8px 4px;">56</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">15</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月13日批次，与上期相同）</td><td style="text-align:right;padding:8px 4px;">7</td><td style="text-align:right;padding:8px 4px;">24</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（上期之后新增编号）</td><td style="text-align:right;padding:8px 4px;">6</td><td style="text-align:right;padding:8px 4px;">—</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月14—15日有更新）</td><td style="text-align:right;padding:8px 4px;">—</td><td style="text-align:right;padding:8px 4px;">8</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。本期 8 篇论文的首次提交日期在 <b>2026 年 10 月 2 日—11 月 12 日</b>之间：其中 7 篇是 11 月 8—12 日提交的（后量子比特币桥、CML 攻击、Auriga、带预测的 Phase King、本地能源市场、比特币交易结构、可验证 AI 基础设施），ECLIPSE 于 10 月 2 日首次提交，11 月 13 日发布第 3 次修订版。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 8—14 日）已展开或顺带提及的论文本期不再重复。上期的 CuEVM、Omakase、闪电网络强制关闭和 Tendermint 综述，以及 FROST2+（2026/075）、仿射组合器（2026/2863）等，虽然仍在最近的列表或更新中，本期都不再展开。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Toward Efficient Post-Quantum Bitcoin Bridges</div>
+<div style="color:#6b7280;font-size:13px;">Stephen Duan, Vanhger Pham, Blake Hou, Ethan Zhu, Jingping Yin ｜ IACR ePrint 2026/2877（2026-11-12 提交）｜ <a href="https://eprint.iacr.org/2026/2877" style="color:#2563eb;">eprint.iacr.org/2026/2877</a></div>
+<p style="margin:6px 0 0;">BitVM 类协议在链下把证明验证器做成混淆电路，从而在比特币上验证简洁证明；发生争议时，真正上链的是证明本身：用一次性密钥编码的各个比特、认证它们的脚本，以及把它们绑定到交易上的签名。现有设计混淆的是椭圆曲线 SNARK 验证器，量子敌手可以攻破。作者改为<b>混淆一个基于 WHIR 的纯哈希 STARK 验证器</b>，并用哈希一次性密钥输入数据，整个验证器不依赖任何数论假设。他们用 free-XOR 小工具实现二进制塔域运算和 Blake3，把 Ziren 的完整 WHIR 验证器编译成布尔电路：最终递归验证电路有 2.18 亿个非免费门、564,552 个输入比特，混淆表合计 3.49 GB；用转换后的 Winternitz 密钥发布这些输入，一套密钥的交易总虚拟大小为 4.26 MvB。这是第一份给后量子 BitVM 桥“算账”的工作，也明确了上链数据量是主要瓶颈。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. On the Security of the Cubic UOV Variant CML</div>
+<div style="color:#6b7280;font-size:13px;">Manit Gupta ｜ IACR ePrint 2026/2872（2026-11-12 提交）｜ <a href="https://eprint.iacr.org/2026/2872" style="color:#2563eb;">eprint.iacr.org/2026/2872</a></div>
+<p style="margin:6px 0 0;">CML 是 F<sub>2<sup>8</sup></sub> 上的立方型多变量签名，为了避开此前 CUOV、CSSv 等立方 Oil–Vinegar 变体被差分攻击和高秩攻击攻破的命运，加入了 ℓ 可逆循环系统和秘密的位置隐藏映射来隐藏立方项。作者发现，<b>公钥中的立方齐次部分张成的空间维数至多为 2</b>，因此可以公开构造出一个次数不超过 2 的输出组合；限制到 oil 方向子空间后，这些二次分量的极化矩阵张成的是与一条路径各边对应的秩 2 矩阵。利用这一结构可以恢复等价密钥，实现中<b>每个测试参数集（包括面向 256 bit 安全的参数）都在 5 分钟内被攻破</b>。对考虑在链上采用多变量签名的项目来说，这提醒新变体要经过充分的公开分析。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Auriga: Harness-Governed LLM Agents for Effective Throughput Optimization in Execute-Order-Validate Permissioned Blockchains</div>
+<div style="color:#6b7280;font-size:13px;">Xiao Zhang, Tianyang Wang, Fangtao Gu, Haoxiang Sun, Puwei Wang, Jinchuan Chen ｜ arXiv 2611.14945（cs.DB，2026-11-11 提交）｜ <a href="https://arxiv.org/abs/2611.14945" style="color:#2563eb;">arxiv.org/abs/2611.14945</a></div>
+<p style="margin:6px 0 0;">在 Hyperledger Fabric 这类“执行—排序—验证”（EOV）许可链里，真正有用的容量是“有效吞吐”，即原始吞吐乘以交易成功率。以往的工作要么调配置提高原始吞吐（需要反复重新部署），要么在执行后修复冲突（需要改内核）。Auriga 不改内核，同时优化两者：一组受 harness 约束的 LLM 代理负责参数探索、饱和感知评估和经验沉淀，harness 控制工具和记忆的访问，并保留终止权；在交易调度上，LLM 离线从智能合约中提取符号化的 AST 模板，运行时<b>不执行交易就能预测读写集</b>，再把交易划分成无冲突的组。在三个基准、冲突率最高 70% 的负载下，有效吞吐最高是默认 Fabric 的 6.0 倍、最强基线的 2.0 倍；调参代理还发现了文档中没有记载的参数依赖关系。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. ECLIPSE: Strongly Unforgeable Isogeny Signatures from the Prime-Degree Variant of PRISM</div>
+<div style="color:#6b7280;font-size:13px;">Dustin Ray ｜ IACR ePrint 2026/2312（2026-10-02 首次提交，11-13 第 3 次修订）｜ <a href="https://eprint.iacr.org/2026/2312" style="color:#2563eb;">eprint.iacr.org/2026/2312</a></div>
+<p style="margin:6px 0 0;">二维同源签名带有一条哈希没有绑定的辅助同源，SQIsign 第 3 轮规范因此明确说明它<b>不可能是强不可伪造的</b>，这对依赖交易 ID 不可篡改的链上应用是个隐患。PRISM 的素数次数变体没有辅助同源，但发表时没有参数、代码和可运行的验证器。ECLIPSE 是它的第一个实现：基于 SQIsign 第 3 轮的素数，给出了规范的线格式和严格解码器，以及可随机化的密钥；两套独立实现可以互相验证对方的签名，而且一把 MIKE 密钥对可以直接用作 ECLIPSE 密钥对，这是 SQIsign 家族第一次实现密钥共用。NIST 一级下签名 206 字节，与 SQIsign 相差不到 15 字节；签名速度是 SQIsign 参考实现的 2.6 倍，验证代价是其 2 倍（预处理公钥后为 1.6 倍）。强不可伪造性在随机预言机模型下归约到 PRISM 作者的 Problem 4。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. A Simple Phase-King Protocol with Predictions</div>
+<div style="color:#6b7280;font-size:13px;">Antonia Giannoulea, George Papadoulis, Nikos Leonardos, Aris Pagourtzis ｜ arXiv 2611.11370（cs.DC，2026-11-08 提交）｜ <a href="https://arxiv.org/abs/2611.11370" style="color:#2563eb;">arxiv.org/abs/2611.11370</a></div>
+<p style="margin:6px 0 0;">“学习增强”的拜占庭协议假设每个进程都会收到一份关于“谁诚实、谁是拜占庭”的预测。本文在无认证的同步二值拜占庭协议中给出一个确定性的 Phase King 协议，结合提前终止和<b>感知预测的国王选择</b>：在 t&lt;n/3 时可以容忍任意多的预测错误（Ben-David 等人在 PODC 2025 给出的界是 O(n<sup>3/2</sup>)），在 O(P) 轮内终止，其中 P=1+min{B/n, f}，B 是诚实进程持有的错误预测比特总数，f 是实际的拜占庭进程数。消息复杂度为 O(n²P)，比特复杂度为 O(n²P log n)，避免了交换完整预测向量的立方级开销。与 DISC 2026 的同类工作相比，它的通信界稍差，但完全不需要复杂的预处理，更容易落地；对能拿到验证者信誉数据的 PoS 链来说，这条路线很有吸引力。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Verifiable Settlement and Pricing for Local Energy Markets: Architecture and Deployment on Hyperledger Besu</div>
+<div style="color:#6b7280;font-size:13px;">Michele Fabi, Baptiste Leloup ｜ arXiv 2611.16495（cs.CR，2026-11-12 提交）｜ <a href="https://arxiv.org/abs/2611.16495" style="color:#2563eb;">arxiv.org/abs/2611.16495</a></div>
+<p style="margin:6px 0 0;">作者在 QBFT 共识的 Hyperledger Besu 网络上，用自动做市商实现了一个保护隐私的社区电力交易所：运营方在链下收集各户的电力头寸，只把总供需上链，由智能合约每 15 分钟计算一次市场价格。个人头寸始终留在链下，<b>用 Poseidon2 承诺和 Noir 电路生成的 UltraHonk 零知识证明</b>验证聚合、支付和每日余额更新；签名回执和成员可触发的申诉机制防止未经验证或部分完成的结算。在 10 户、使用模拟美国住宅负荷的实验中，每日结算约耗 1,900 万 gas，8 名成员的证明 2.4 秒生成；四个模拟日内本地交易覆盖了 34.4% 的需求，在假设电价下比纯电网用电节省 30.5% 成本，数值求得的近似纳什均衡能拿到社会规划者剩余的 83%—88%。这是一个“链下隐私 + 链上可审计结算”的完整落地样例。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Persistent structural regimes in Bitcoin transactions relate to market cycles</div>
+<div style="color:#6b7280;font-size:13px;">Bruno Araujo dos Santos, Gabriele Di Antonio, Marco Alberto Javarone ｜ arXiv 2611.16585（physics.soc-ph，2026-11-12 提交）｜ <a href="https://arxiv.org/abs/2611.16585" style="color:#2563eb;">arxiv.org/abs/2611.16585</a></div>
+<p style="margin:6px 0 0;">作者想回答：<b>只看链上活动，能否识别出与市场涨跌对应的“状态”？</b>他们用四个交易结构指标概括 2012—2026 年每一周的比特币链上活动，在完全不使用价格数据的情况下拟合两状态隐半马尔可夫模型，唯一来自市场的约束是“上涨期通常比下跌期持续更久”这一持续时间不对称。在以往的市场周期中，推断出的状态有明显不同的交易结构，与价格涨跌期的对应程度显著高于持续时间分布相同的随机序列；但<b>当前这轮下跌打破了这种对应</b>：链上仍停留在持续较久的那个状态，交易结构既不像以往的下跌期，也不像以往的上涨期。这说明链上活动与市场的关系存在，但可能随时间变化，用链上指标预测行情需要格外谨慎。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help</div>
+<div style="color:#6b7280;font-size:13px;">Yihan Xia, Wenxin Xu, Taotao Wang ｜ arXiv 2611.17042（cs.AR，交叉列入 cs.CR，2026-11-12 提交）｜ <a href="https://arxiv.org/abs/2611.17042" style="color:#2563eb;">arxiv.org/abs/2611.17042</a></div>
+<p style="margin:6px 0 0;">zkML 是链上 AI 代理和可验证推理的基础，但证明生成仍然很贵，而硬件加速研究通常只报告单个密码学算子的提速，看不出对 Transformer 端到端证明成本的影响。作者提出一个“工作负载—证明系统—密码学内核—硬件平台”四层框架来梳理文献，并<b>实测了 6 个证明器和 7 个内核</b>。结论是：主要成本会随证明系统和输入长度而变化；在 LoRA 微调中，打开固定模型权重承诺的成本在输入长度 64 到 2048 之间几乎不变，而中间值相关的工作量持续增长；130 亿参数的微调配置超出 40 GB 显卡的容量，但能在 80 GB 显卡上完成，说明<b>显存容量和执行时间必须一起评估</b>；内核剖析还发现了只看带宽的模型会漏掉的指令发射和同步瓶颈。文章据此评估了 GPU、FPGA、ASIC 和现有 AI 加速器，并提出复用固定权重承诺等研究议程。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期最明显的趋势是，<b>后量子化正在从“能不能做”转向“要付多少代价”</b>：BitVM 桥换成哈希 STARK 后，上链数据达到数百万虚拟字节，下一步的优化重点会是证明大小和一次性密钥的编码；签名侧则一面在淘汰不安全的新变体（CML 5 分钟被攻破），一面在补齐 SQIsign 家族缺失的强不可伪造性（ECLIPSE）。ePrint 同期的另一篇论文（2026/2873）用 190 条完美侧信道提示，在 7 分钟内恢复了 Kyber-512 实例的密钥（此前的方法需要 1.6 小时），说明后量子方案的实现安全同样需要重新评估。第二条线是<b>“学习”开始进入共识与执行层</b>：Auriga 让 LLM 代理调参并预测读写集，Phase King 协议则把节点诚实度预测作为输入，两者都用外部信息换取效率，同时保持最坏情况下的安全性。第三，<b>零知识证明正在走出“链上资产”场景</b>：本地能源市场用 Noir/UltraHonk 证明链下结算，可验证 AI 的成本剖析把瓶颈定位到权重承诺和显存容量。另外值得留意：ePrint 2026/2858 证明，用加盐种子树生成随机数的 Fiat–Shamir 证明在经典随机预言机模型下可以直线提取，这对基于 MPC-in-the-head 的后量子签名是一个安全性上的好消息；arXiv 2611.11477 用零知识准入证明加 Tendermint 式 BFT 聚合来防御群体学习中的投毒攻击。</p>
+</div>
+
+</div>
+</body></html>
