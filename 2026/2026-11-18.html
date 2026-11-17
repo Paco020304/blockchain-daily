@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 18 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 18 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期三 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：共识与扩容研究的重点正从“跑得更快”转向“算得清、改得动”——Pipes 模型（IEEE S&amp;P 2026）把单节点带宽和交易到达率写进 SMR 协议的延迟与吞吐解析式，DAG-BFT 首次在完全异步网络中做到不停机的成员变更；L2 手续费被当作控制问题求出闭式最优解，在 Arbitrum 当前参数对应的费率波动下跟踪误差约降 1/3；隐私证明委托让 2<sup>20</sup> 约束的 zkSNARK 客户端耗时从 10 分钟降到数秒。</p>
+
+<p style="margin:0 0 18px;">本期覆盖 arXiv 周二批次（11 月 17 日）；ePrint 自上期以来没有新编号，只有旧记录更新，因此本期部分论文是带有会议发表信息的重要修订版。共识方面，Lewis-Pye、Nayak 与 Shrestha 的 <b>Pipes 模型</b>把处理器带宽 S、交易到达率 D 和网络延迟同时纳入分析，对 DispersedSimplex、Sailfish、Tendermint、HotStuff 给出延迟表达式和吞吐瓶颈，并证明了<b>紧的 Best-effort Broadcast 延迟下界</b>；Hu 等人的 DAG-BFT 重配置协议（OPODIS 26）让 DAG <b>在成员和法定人数门限变化时继续增长</b>。扩容方面，Pavloff 与 Oshitani 把 L2 的“收费—付 L1 数据费”建模为一个金库控制系统，最优规则只有一个参数“费率记忆比例”，在 Arbitrum 参数下把<b>跟踪误差降低约三分之一</b>。证明系统方面，Blind zkSNARKs 在同态密文上生成证明，<b>2<sup>20</sup> 个 R1CS 约束的客户端时间从 10 分钟降到数秒</b>；Chiesa、Fenzi 与 Weissenberg 为约束交错码的邻近测试补上零知识，<b>额外开销可忽略</b>。智能合约安全方面，Myers 团队把重入、混淆代理等攻击统一为“类型混淆”，并用 Lean 机械化证明。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">L2 金库费率：最优规则相对 Arbitrum 式控制器</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈ −1/3</div>
+<div style="font-size:12px;color:#6b7280;">基准跟踪误差降幅 · 相同费率波动幅度下</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Blind zkSNARKs：2<sup>20</sup> 约束的客户端耗时</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">10 分钟 → 数秒</div>
+<div style="font-size:12px;color:#6b7280;">服务器端约 20 分钟 · 证明在同态密文上生成</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Pipes 模型：给出解析延迟与吞吐瓶颈的 SMR 协议</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">4 个</div>
+<div style="font-size:12px;color:#6b7280;">DispersedSimplex · Sailfish · Tendermint · HotStuff</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 18 日（星期三）7 时左右。arXiv 各分类 /new 页面显示 <b>2026 年 11 月 17 日（星期二）批次</b>（覆盖美东 11 月 16 日周一的投稿）；周三批次要到北京时间今天 9 时左右才公布，将在下期覆盖。IACR ePrint 自上期以来<b>没有新编号</b>（最新编号仍为上期已覆盖的 2026/2891），“最近 3 天”列表中是 21 条在 11 月 15—17 日更新的旧记录，本期从中选取了 3 篇有实质修订或会议发表信息的论文。arXiv 部分另用 arXiv API 按提交时间回查了近 7 天区块链、以太坊、零知识证明、拜占庭容错、MEV、DeFi 等关键词，未发现上期之后新增且更合适的论文。顶会方面，本期有 1 篇注明为 IEEE S&amp;P 2026 论文、1 篇已被 OPODIS 26 接收、1 篇为 IACR CIC 2025 论文的修订版。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月17日批次）</td><td style="text-align:right;padding:8px 4px;">61</td><td style="text-align:right;padding:8px 4px;">116</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月17日批次）</td><td style="text-align:right;padding:8px 4px;">16</td><td style="text-align:right;padding:8px 4px;">44</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月17日批次）</td><td style="text-align:right;padding:8px 4px;">5</td><td style="text-align:right;padding:8px 4px;">24</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月17日批次）</td><td style="text-align:right;padding:8px 4px;">7</td><td style="text-align:right;padding:8px 4px;">17</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月15—17日）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">21</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。arXiv 部分的 4 篇论文首次提交日期为 <b>2026 年 11 月 15—16 日</b>（DAG-BFT 重配置一篇于 2026 年 10 月首次提交，v3 于 11 月 15 日更新）；ePrint 部分的 3 篇首次提交于 2024 年 10 月—2026 年 2 月，均在 11 月 16—17 日发布修订版。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 11—17 日）已展开或顺带提及的论文本期不再重复。ePrint 更新列表中的 Twisted Towers（2026/2831，11 月 12 日已介绍）、后量子比特币桥（2026/2877）、Falcon 单迹攻击（2025/2159）等本期不再展开。arXiv 新批次中电力数据激励、联邦学习上链等应用型论文与本日报聚焦方向关系较弱，未入选。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. The Pipes Model for Latency and Throughput Analysis</div>
+<div style="color:#6b7280;font-size:13px;">Andrew Lewis-Pye, Kartik Nayak, Nibesh Shrestha ｜ IACR ePrint 2025/1116 · IEEE S&amp;P 2026（2025-06-13 首次提交，2026-11-16 重大修订）｜ <a href="https://eprint.iacr.org/2025/1116" style="color:#2563eb;">eprint.iacr.org/2025/1116</a></div>
+<p style="margin:6px 0 0;">分布式计算文献通常用通信轮数衡量延迟、用实验衡量吞吐，无法解析地比较协议在给定带宽和负载下的真实表现。Pipes 模型把<b>处理器带宽 S、交易到达率 D 和网络延迟</b>同时纳入，推出 Best-effort / Consistent / Reliable Broadcast（含纠删码与流水线）以及 DispersedSimplex、Sailfish、Tendermint、HotStuff 的 good-case 延迟和吞吐瓶颈，结论是：单发送者协议靠流水线和纠删码拿到更低延迟，多发送者 DAG 协议吞吐瓶颈更高，并量化了 HotStuff 多出的通信阶段何时优于 Tendermint 的固定等待。作者还证明了单 / 多发送者下<b>紧的 Best-effort Broadcast 延迟下界</b>和 AVID 式纠删码的延迟下界，并用 DispersedSimplex、Sailfish 的实现验证模型预测。这为“选单领导者还是 DAG 共识”提供了可计算的依据。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Seamless Reconfiguration for DAG-BFT (Technical Report)</div>
+<div style="color:#6b7280;font-size:13px;">Michael Yiqing Hu, Leander Jehl, Paul Franke-Bergmann, Jialin Li, Christian Berger ｜ arXiv 2610.00896（cs.DC，OPODIS 26 接收；2026 年 10 月首次提交，v3 于 2026-11-15 更新）｜ <a href="https://arxiv.org/abs/2610.00896" style="color:#2563eb;">arxiv.org/abs/2610.00896</a></div>
+<p style="margin:6px 0 0;">DAG-Rider 以来，Narwhal/Bullshark、Mysticeti 等 DAG 共识把“传播”和“排序”分开，大幅提高吞吐，但几乎都假设节点集合固定；现有的成员变更方案要么暂停系统，要么只能等到预定的 epoch 边界。难点在于：等各节点得知一个约定的切换轮次时，传播层可能早已越过了它。作者提出异步 DAG 拜占庭原子广播的重配置协议，<b>在成员与法定人数门限变化期间 DAG 照常增长、系统不停机</b>，并称这是<b>完全异步网络下首个无缝重配置的 DAG-BFT 协议</b>。对需要轮换验证者集合的 PoS 链，这直接关系到可用性。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Optimal Dynamic Fees for L2s: A Vault Approach</div>
+<div style="color:#6b7280;font-size:13px;">Ulysse Pavloff, Lin Oshitani ｜ arXiv 2611.20838（cs.CR，2026-11-16 提交）｜ <a href="https://arxiv.org/abs/2611.20838" style="color:#2563eb;">arxiv.org/abs/2611.20838</a></div>
+<p style="margin:6px 0 0;">L2 向用户收费，再用这笔钱支付向 L1 发布数据的成本。作者把这一机制建模为<b>金库</b>：用户费用增加余额，L1 发布成本减少余额，盈亏随时间累积；基于预测的收费会让预测误差在金库里堆积，必须对累计误差做反馈才能回到目标余额。把金库视为离散时间控制系统后，作者在理想化基准下<b>闭式推出跟踪精度与费率平滑之间的最优权衡</b>：最优规则保留上一期费率的一部分，并按当前金库误差成比例修正，这个“费率记忆比例”单一参数就刻画了整条权衡前沿。在历史以太坊费用数据上与 P、PI 和 Arbitrum 式控制器比较，在 Arbitrum 当前参数对应的费率波动幅度下，最优规则把<b>基准跟踪误差降低约三分之一</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Blind zkSNARKs for Private Proof Delegation and Verifiable Computation over Encrypted Data</div>
+<div style="color:#6b7280;font-size:13px;">Mariana Gama, Emad Heydari Beni, Jiayi Kang, Jannik Spiessens, Frederik Vercauteren ｜ IACR ePrint 2024/1684 · IACR CIC 2025（2024-10-16 首次提交，2026-11-17 第 4 次修订）｜ <a href="https://eprint.iacr.org/2024/1684" style="color:#2563eb;">eprint.iacr.org/2024/1684</a></div>
+<p style="margin:6px 0 0;">证明生成外包给证明服务（prover market）时，通常要把见证交给服务器，隐私就保不住。本文在同态密文上计算 zkSNARK 证明（称为 blind zkSNARKs），<b>首次证明把多达 2<sup>20</sup> 个 R1CS 约束的证明私密地委托给单个服务器是可行的</b>：客户端时间从 10 分钟降到数秒，服务器端约 20 分钟；作者形式化了“盲证明”，证明经 BCS 编译后仍然可靠，并在 Garg 等（Crypto'24）框架上改进了只实现 FRI 子协议的 Aranha 等（Asiacrypt'24）方案。具体做法是针对 GBFV 同态方案优化 Fractal，并提出二维计算同态 NTT 的打包友好方法；同一构造支持的可验证同态计算（vCOED）约束规模比现有方案<b>大四个数量级</b>，再附加零知识解密证明即可公开验证。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Zero-Knowledge IOPPs for Constrained Interleaved Codes</div>
+<div style="color:#6b7280;font-size:13px;">Alessandro Chiesa, Giacomo Fenzi, Guy Weissenberg ｜ IACR ePrint 2026/391（2026-02-25 首次提交，2026-11-16 修订）｜ <a href="https://eprint.iacr.org/2026/391" style="color:#2563eb;">eprint.iacr.org/2026/391</a></div>
+<p style="margin:6px 0 0;">当前最高效的 IOP 类简洁论证（以 WHIR、STIR 等为代表的哈希基路线，广泛用于 zkVM 和 Rollup 证明）依赖对“约束交错线性码”的邻近测试，参数已接近最优，但不提供隐私。本文给出该邻近测试的<b>诚实验证者零知识版本</b>，相对非零知识的最优方案<b>额外开销可忽略</b>，并满足逐轮知识可靠性、直线提取器和可忽略误差。作者提出一个可与组合兼容的交互式 Oracle 归约（IOR）零知识定义，核心组件是零知识 sumcheck IOR 和零知识码切换 IOR；还指出用 disperser 构造的高距离码有效率优势。这让高效哈希基证明系统在需要隐私的场景中不必再为零知识付出明显代价。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Type-Confusion Security</div>
+<div style="color:#6b7280;font-size:13px;">Silei Ren, Hanxi Chen, Suraaj Kanniwadi, Andrew C. Myers ｜ arXiv 2611.20298（cs.PL / cs.CR，2026-11-15 提交）｜ <a href="https://arxiv.org/abs/2611.20298" style="color:#2563eb;">arxiv.org/abs/2611.20298</a></div>
+<p style="margin:6px 0 0;">在智能合约和 MCP 等去中心化系统里，受信任代码无法约束外部不可信代码，攻击者可以传入“表现与其声明类型不符”的值来迷惑受信任代码，作者称之为<b>类型混淆</b>，并指出<b>混淆代理、重入攻击和控制流劫持都是它的特例</b>。论文把“类型混淆安全”定义为一个真实—理想模拟性质：不遵守类型系统的任意攻击者，能力不超过完全遵守类型系统的受限攻击者；在一个静态信息流类型的核心演算中，作者证明其运行时检查在面对类型不良攻击者时依然保证安全，并<b>用 Lean 机械化了证明</b>。这意味着合约开发者只需针对“守规矩”的攻击者推理，类型系统给出的安全保证依然成立。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Baryonic Keys and the Inheritance of Crypto-Assets: Revisiting the Tales From the Crypt Protocol</div>
+<div style="color:#6b7280;font-size:13px;">Frédéric Prost ｜ arXiv 2611.20782（cs.CR，2026-11-16 提交）｜ <a href="https://arxiv.org/abs/2611.20782" style="color:#2563eb;">arxiv.org/abs/2611.20782</a></div>
+<p style="margin:6px 0 0;">加密资产的所有权就是对私钥的知识，所以私钥要么随持有人一起消失，要么必须事先分享出去，这是链上资产继承的结构性难题。作者在 Tales From the Crypt Protocol（TFCP，由区块链以分布式、隐私保护方式确认死亡）基础上引入新原语<b>“重子密钥”</b>：一种物理对象，比特只能通过测量获得、从不以数字形式存储、且恰好存在 n 份（候选实现为复制的微裂纹浮雕），并据此提出 TFCP-B——解密遗嘱同时需要登记员共享的秘密和重子密钥的响应，继承人通过哈希承诺认领份额，<b>无需事先持有密钥或钱包</b>。TFCP-B 消除了登记员合谋造成的匿名性损失，挡住了多种误报攻击；作者也明确写出其局限：浅账户攻击仍在，商议期内仍可能遭交易审查，安全论证为非形式化，物理参数只是设计估计。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的共同点是<b>把“系统怎么运行”变成可以计算、可以证明的对象</b>。共识层，Pipes 用带宽和负载解析地比较单领导者与 DAG 协议，DAG-BFT 补上了长期缺失的在线重配置；扩容层，L2 收费从经验调参变成有闭式最优解的控制问题。证明系统继续解决“证明谁来算、算的时候泄露什么”：同态密文上的证明委托已到 2<sup>20</sup> 约束规模，哈希基 IOPP 的零知识几乎不再增加开销。安全层面，重入等合约攻击被纳入统一的类型混淆框架并获机械化证明，资产继承这类长期被忽视的用户侧问题也开始有协议化方案。整体来看，<b>研究重点正从提出更快的新协议，转向为现有协议的性能、费用和安全性给出可量化的保证</b>。</p>
+</div>
+
+</div>
+</body></html>
