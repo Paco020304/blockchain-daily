@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 20 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 20 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期五 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：共识与签名研究开始正视“没有诚实多数、没有离散对数”的现实——全员理性或拜占庭的 SMR 仍可做到永远安全，并把审查上限精确定为敌手签名份额；DispersedBFT 用信息分散消除 PBFT 主节点瓶颈，43 个副本达到每秒 340 万笔；后量子哈希签名 SLH-DSA 首次实现实用的两方门限签名（在线签名 2.09 秒）。</p>
+
+<p style="margin:0 0 18px;">本期覆盖 arXiv 周四批次（11 月 19 日）和 ePrint 11 月 17—19 日的更新。共识方面，Avarikioti 等人的 <b>“存在性诚实”SMR 博弈</b>不再假设诚实超多数：所有验证者要么理性、要么拜占庭，只要存在一个身份未知、始终在线的诚实全节点，客户端转发证书并等待即可<b>对任何验证者策略都保持安全</b>；他们还证明，敌手若只用奖励行贿，每个高度能审查的手续费比例<b>低于其签名份额</b>，超出部分必须自掏腰包。性能方面，<b>DispersedBFT</b> 把请求复制任务从主节点分散到备份节点，比 PBFT 快至多 6.2 倍、比 HotStuff 快 2.6 倍。后量子方面，<b>Aker</b> 让 SLH-DSA 门限签名从“代价过高”变为可用，LEASH 则指出格基简洁论证 LaBRADOR 的参数选择会破坏完备性。应用与工程方面，Pectra/Fusaka 升级后的以太坊实测显示 <b>secp256k1 ECDSA 加批处理仍是最便宜的数据认证方式</b>（每条 8,963 gas）；Reclaim 给 zkTLS 预言机提出首个与传输层无关的安全模型；libsecp256k1 的完全加法公式十年来首次再降一次乘法。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">DispersedBFT：共识吞吐</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">340 万笔/秒</div>
+<div style="font-size:12px;color:#6b7280;">43 个副本 · 比 PBFT 快至多 6.2 倍</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Aker：两方 SLH-DSA-128f 在线签名</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">2.09 秒</div>
+<div style="font-size:12px;color:#6b7280;">跨云公网 · 降低签名上限后 0.76 秒</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">以太坊上认证一条 IoT 记录</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">8,963 gas</div>
+<div style="font-size:12px;color:#6b7280;">ECDSA + 批处理 + Merkle 锚定 · 降至 1/6</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 20 日（星期五）7 时左右。arXiv 各分类 /new 页面显示 <b>2026 年 11 月 19 日（星期四）批次</b>，周五批次将在下期覆盖。按区块链、共识、拜占庭、零知识、以太坊、比特币、MEV、DeFi、后量子等关键词筛选，并排除近 7 天已推荐的论文。IACR ePrint 自上期以来新增编号 2026/2894—2026/2902 共 9 个，其中 Aker（2026/2899）、LEASH（2026/2898）、BMuSig-L（2026/2894）与本日报方向相关；“最近 3 天”列表共 35 条记录，其中 9 条在 11 月 19 日更新。顶会方面，本期入选论文均未在页面注明接收会议。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">39</td><td style="text-align:right;padding:8px 4px;">69</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">11</td><td style="text-align:right;padding:8px 4px;">31</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">1</td><td style="text-align:right;padding:8px 4px;">9</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">1</td><td style="text-align:right;padding:8px 4px;">7</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">5</td><td style="text-align:right;padding:8px 4px;">13</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv q-fin.TR（11月19日批次）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">4</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月17—19日）</td><td style="text-align:right;padding:8px 4px;">9</td><td style="text-align:right;padding:8px 4px;">35</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。arXiv 部分入选的 3 篇均首次提交于 <b>2026 年 11 月 18 日</b>；ePrint 部分的 4 篇首次提交于 <b>2026 年 9 月 23 日—11 月 15 日</b>，均在 11 月 18—19 日公开或发布修订版。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 13—19 日）已展开或顺带提及的论文本期不再重复，如 Merces（2026/850）、Prop RFQ（2026/1739）、早停 BA（2026/2284）、QUASI 等。Twisted Towers（2026/2831，BN254 完整攻击代价 2^103.2 条指令）11 月 12 日已介绍，本期仅提及其 11 月 17 日修订版。顺带提及：Shor 算法在猫比特上的端到端资源估计（2026/2665，22,593 个物理比特、3.14 天分解 RSA-2048，也覆盖 ECDLP）；格基两轮盲多签名 BMuSig-L（2026/2894）；ABBA 交换子承诺（2026/148）把格基折叠方案 Neo 的承诺缩小 25%。ChainIT 稳定币控制平面（2611.24659）偏工程架构描述，未入选。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Playing the SMR Game with Existential Honesty</div>
+<div style="color:#6b7280;font-size:13px;">Zeta Avarikioti, Odysseas Sofikitis, Christos Stefo ｜ arXiv 2611.24586（cs.CR，2026-11-18 提交）｜ <a href="https://arxiv.org/abs/2611.24586" style="color:#2563eb;">arxiv.org/abs/2611.24586</a></div>
+<p style="margin:6px 0 0;">现实中的验证者为利益参与，并不保证存在诚实超多数。本文假设<b>每个验证者都是理性或拜占庭的，没有一个诚实</b>，理性者可相互勾结或被拜占庭方贿赂。已有结论表明，仅凭非交互证书确认交易的客户端在这种设定下无法保证安全；作者让客户端把证书转发给全节点并等待一段时间，只假设存在一个身份未知、始终在线的诚实全节点，在同步网络中为任意可认证的法定人数协议加上一层最终性层，<b>对验证者的任何策略都“永远安全”</b>。他们还精确刻画了审查：敌手只用协议奖励行贿时，每个高度能审查的手续费比例低于其签名的法定人数份额，<b>超出部分必须用自有资金支付</b>。这为 PoS 链的激励安全提供了比“诚实 2/3”更贴近现实的分析框架。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. DispersedBFT: Bottleneck-Free Primary-Backup Consensus using Dispersed Replication</div>
+<div style="color:#6b7280;font-size:13px;">Nancy Kansal, Celine Sana, Jelle Hellings ｜ arXiv 2611.24833（cs.DC，2026-11-18 提交）｜ <a href="https://arxiv.org/abs/2611.24833" style="color:#2563eb;">arxiv.org/abs/2611.24833</a></div>
+<p style="margin:6px 0 0;">PBFT 类主备共识中，主节点要把每个请求发给所有副本，成为吞吐瓶颈。DispersedBFT 用<b>信息分散（information dispersal）把请求复制任务从主节点分摊到备份节点</b>，并给出两类变体：用 MAC 加 Merkle 证明降低 CPU 开销，或用数字签名降低通信开销。实验中 43 个副本达到<b>每秒 340 万笔交易，比 PBFT 快至多 6.2 倍、比 HotStuff 快 2.6 倍</b>。这表明在不改变 PBFT 安全模型的前提下，单领导者的带宽瓶颈可以通过纠删编码式复制基本消除。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Aker: Efficient Two-Party SLH-DSA</div>
+<div style="color:#6b7280;font-size:13px;">Yaron Salman, Ben Riva, Dmitry Kogan ｜ IACR ePrint 2026/2899（2026-11-15 首次提交，2026-11-19 修订）｜ <a href="https://eprint.iacr.org/2026/2899" style="color:#2563eb;">eprint.iacr.org/2026/2899</a></div>
+<p style="margin:6px 0 0;">门限签名是托管钱包和链上多方密钥管理的常用手段，但 NIST 哈希基签名标准 SLH-DSA（FIPS 205）缺少代数结构，分布式签名一直被认为代价过高。Aker 是<b>恶意安全的两方签名协议，生成的签名可被未修改的 FIPS 205 验证器直接验证</b>：它并行计算超树的各活跃层、缓存公钥以便本地计算认证路径（只在 MPC 中计算签名叶子）、固定路径前缀以复用上层签名，并用一次性子树在本地采样下层签名分量，代价是签名方需要保存状态、每个密钥可签次数有上限。在两个不同云服务商的单 GPU 服务器之间经公网实测，<b>SLH-DSA-128f 在线签名 2.09 秒，降低签名上限后 0.76 秒</b>；客户端—服务器场景下预处理一批签名后，在线阶段只需 4 轮低带宽通信。这为后量子钱包的 MPC 托管提供了格基之外的保守选项。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Authenticating IoT Data on Ethereum after Pectra and Fusaka: A Cost Study of Signature Schemes, Batching and Anchoring for Agricultural Supply Chain Finance</div>
+<div style="color:#6b7280;font-size:13px;">Ming-Fong Sie, Jian-Hong Chen, Gwan-yen Lin, Yen-Shuo Chen, Shih-wei Liao ｜ arXiv 2611.23764（cs.CR，2026-11-18 提交，代码与数据公开）｜ <a href="https://arxiv.org/abs/2611.23764" style="color:#2563eb;">arxiv.org/abs/2611.23764</a></div>
+<p style="margin:6px 0 0;">以太坊 2025 年的 Pectra 与 Fusaka 升级新增了 BLS12-381 和 P-256 预编译，重新定价了 calldata 和 MODEXP，并把单笔交易 gas 上限定为 2^24。本文实现了四种防重放签名方案（secp256k1 / P-256 ECDSA、链上哈希到曲线的 BLS 聚合签名、支持批验证的基于身份签名），在升级前后的规则下以真实签名交易测量成本。结论是<b>升级主要改变了哪些方案可行，而不是成本</b>：批处理加 Merkle 锚定把 ECDSA 认证成本降为 1/6，<b>每条记录 8,963 gas，仍是最便宜的方案</b>；P-256 为其 1.6 倍，基于身份签名 2.7 倍，BLS 聚合 3.9 倍（主要花在链上哈希到曲线）。单笔交易最多可装 1,754 条 ECDSA 认证记录，BLS 聚合只有 411 条。这份数据对评估新预编译的实际收益很有参考价值。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Rethinking Zero-Knowledge TLS: Proof of Protocol Execution and the Reclaim Protocol</div>
+<div style="color:#6b7280;font-size:13px;">Andrey Bozhko, Kirill Kutsenok ｜ IACR ePrint 2026/2187（2026-09-23 首次提交，2026-11-19 修订）｜ <a href="https://eprint.iacr.org/2026/2187" style="color:#2563eb;">eprint.iacr.org/2026/2187</a></div>
+<p style="margin:6px 0 0;">zkTLS 让用户向第三方（如智能合约）证明从某网站经 TLS 获得的数据满足某性质，是链下数据预言机的重要路线，但现有方案各自定义安全模型，无法放在同一标准下比较。本文提出<b>首个与传输层无关、在应用层表述的 zkTLS 安全模型 zkPoPE</b>，并形式化为 UC 理想功能：它不仅要求零知识地证明输入和回复满足性质，还要求证明回复确实来自与对方的真实执行，而非伪造的输入—回复对。作者据此提出已在生产中使用的 Reclaim 协议及新的三方认证加密原语 Distributed-AEAD，<b>中低端手机上 7.28 秒即可为 1,200 kB 的响应生成证明</b>，比此前 zkTLS 测试过的数据规模高两个数量级。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Faster complete formulas and their application to curves with efficient endomorphisms</div>
+<div style="color:#6b7280;font-size:13px;">Diego F. Aranha, Paulo L. Barreto ｜ IACR ePrint 2026/2667（2026-10-28 首次提交，2026-11-18 修订）｜ <a href="https://eprint.iacr.org/2026/2667" style="color:#2563eb;">eprint.iacr.org/2026/2667</a></div>
+<p style="margin:6px 0 0;">本文研究 y² = x³ + b 形式的素域曲线，这一族包括比特币和以太坊使用的 secp256k1 以及 BN、BLS 配对曲线。作者把最好的完全加法公式从 12 次乘法降到 11 次（混合坐标 10 次），是<b>十年来首次改进</b>，其关键是最后一步可写成只需 5 次乘法的三维叉积；在 <b>libsecp256k1 中，常数时间固定基标量乘因此快 5.2%</b>。他们还给出与非完全 Jacobian 三倍点同价的完全三倍点公式，组合成无例外的 τ-NAF，在 BLS12-381 等曲线的 G1 上比同等条件的 GLV 快 5–10%。对签名验证和 ZK 证明中大量使用的椭圆曲线运算，这是可直接落地的底层加速。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. LEASH: When LaBRADOR’s Guarantees Go Astray</div>
+<div style="color:#6b7280;font-size:13px;">Xiang Wang, Ji Xiang ｜ IACR ePrint 2026/2898（2026-11-15 首次提交，2026-11-19 公开）｜ <a href="https://eprint.iacr.org/2026/2898" style="color:#2563eb;">eprint.iacr.org/2026/2898</a></div>
+<p style="margin:6px 0 0;">LaBRADOR 是代表性的格基后量子简洁论证，通过递归知识归约得到很小的证明，也是多种格基 zkSNARK 和聚合签名方案的基础。本文重新检查其正确性与安全分析，<b>构造了显式反例，表明其具体参数选择策略即使对合法的二值 R1CS 见证也可能无法保持完备性</b>，并指出递归关系变换中的不一致以及知识抽取概率界的不准确之处。作者给出针对性修复，并分析调整范数界、分解参数和挑战分布对安全性与效率的影响。这提醒格基证明系统在投入链上使用前，参数化与组合推理需要更严格的审查。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的共同点是<b>拿掉理想假设之后重新确认保证</b>。共识层面，SMR 博弈论文用“一个诚实全节点”替代“诚实超多数”，并把审查成本精确地和敌手的签名份额挂钩；DispersedBFT 则说明单领导者的带宽瓶颈并非 PBFT 安全模型的必然代价。密码学层面，后量子迁移继续从“能不能用”推进到“能不能托管、能不能信”：SLH-DSA 第一次有了实用的两方签名，而 LaBRADOR 的参数问题说明格基证明系统还需要更多审查。工程层面，以太坊新预编译的实测、zkTLS 的统一安全模型和 secp256k1 公式的改进，都在把链上认证与预言机的成本和安全性落实到具体数字。整体来看，<b>研究重点正从提出更强的协议，转向在更弱、更现实的假设下证明协议仍然成立</b>。</p>
+</div>
+
+</div>
+</body></html>
