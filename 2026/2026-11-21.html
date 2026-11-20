@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 21 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 21 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期六 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：链上安全的焦点正在从“签名对不对”转向“签名授权了什么、换成后量子后还能不能用”——以太坊 54.6% 的执行层 ETH 所在账户已暴露公钥，一份约 190 KB 的哈希基 STARK 种子证明就能在一笔交易里完成迁移纠错；Base 上 98.7% 的 USDC 授权可被任何持有签名的人兑付，AI 代理支付的授权缺口第一次被量化；ZK 底层则同时迎来加速（非原生 Poseidon2 快 24 倍）和对 Poseidon 的更强代数攻击。</p>
+
+<p style="margin:0 0 18px;">本期覆盖 arXiv 周五批次（11 月 20 日）和 ePrint 11 月 18—20 日的更新。最受关注的是<b>以太坊后量子迁移方案</b>：作者让持有者在 ECDSA 退役前用旧签名低成本登记后量子公钥，退役后再允许用 BIP-39 种子的零知识证明纠正被抢注的登记，并在 go-ethereum 与 Lean 共识客户端中实现，<b>迁移时长受区块空间而非证明生成限制</b>。支付方面，同一团队的两篇论文指出，<b>AI 代理用稳定币付款时，钱包签下的对象往往授权了比订单更多的转账</b>，并给出链上合约 MandateLock 和钱包侧检查器 Closure。ZK 方面，Bünz 团队的 <b>Limber</b> 让整数与非原生运算的 SNARK 几乎无额外承诺开销，而针对 Poseidon CICO-2 的<b>二元结式攻击</b>把复杂度进一步压低，直接关系到以太坊基金会的 Poseidon 悬赏。托管与后量子实现方面，比特币提款授权方案 RBWA 处理了“暂停后旧签名仍可花费、重组后重新可花费”的问题，Falcon 定点采样器得到机器证明的安全位数，LLM 代理生成的 ML-KEM/ML-DSA 硬件则暴露出测试与评审覆盖不足。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">以太坊后量子迁移：种子证明大小</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">约 190 KB</div>
+<div style="font-size:12px;color:#6b7280;">单笔交易可容纳 · 验证 38 ms · 笔记本生成中位 111 秒</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Base 上 USDC 授权可被任意持有者兑付</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">98.7%</div>
+<div style="font-size:12px;color:#6b7280;">抽样 26,653 笔 · MandateLock 仅多耗 25% gas</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Limber：非原生 Poseidon2 哈希证明</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">快 24 倍</div>
+<div style="font-size:12px;color:#6b7280;">RSA 累加器比电路方案快 15–30 倍</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 21 日（星期六）7 时左右。arXiv 各分类 /new 页面显示 <b>2026 年 11 月 20 日（星期五）批次</b>，这是本周最后一个常规批次；周末 arXiv 不发布新批次，下一批为 11 月 23 日（周一）。按区块链、共识、拜占庭、零知识、以太坊、比特币、稳定币、DeFi、后量子等关键词筛选，并排除近 7 天已推荐的论文。IACR ePrint 自上期以来新增编号 2026/2900—2026/2902 共 3 个，其中只有 Falcon 定点采样器（2026/2902）与本日报方向相关；“最近 3 天”列表共 37 条记录，其中 11 条在 11 月 20 日更新。顶会方面，本期入选论文均未在页面注明接收会议。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">43</td><td style="text-align:right;padding:8px 4px;">77</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">12</td><td style="text-align:right;padding:8px 4px;">27</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">12</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">10</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">13</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv q-fin.TR（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">1</td><td style="text-align:right;padding:8px 4px;">3</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月18—20日）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">37</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加（如 RBWA 同时列于 cs.CR 与 cs.DC）。cs.ET、econ.GN、cs.GT 和 q-fin.TR 本批次没有区块链论文。arXiv 部分入选的 4 篇首次提交于 <b>2026 年 11 月 18—19 日</b>；ePrint 部分的 3 篇中，Falcon 定点采样器于 11 月 19 日公开，Limber（2026/1635）和 Poseidon 结式攻击（2026/1905）按编号推断约首次提交于 <b>2026 年 8—9 月</b>（ePrint 页面只显示最近一次修订），均在 11 月 20 日发布修订版。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 14—20 日）已展开或顺带提及的论文本期不再重复，如 Aker（2026/2899）、Reclaim zkTLS（2026/2187）、Merces（2026/850）、Prop RFQ（2026/1739）等。顺带提及：同一团队的姊妹篇 <b>Closure</b>（arXiv 2611.24989）从钱包侧检查“签名对象可能触发的全部转账序列”，在 2,130 个生成对象中拒绝了全部 1,680 个违规对象，单族判定中位耗时不超过 12 微秒，本期并入第 2 篇介绍；QUASI（arXiv 2611.10403 / ePrint 2026/2810）11 月 11 日已介绍，11 月 19 日发布了篇幅大幅扩充的 v2，本期不再展开；SLH-DSA 的 SHA-2 实现相关功耗分析（2026/2753）同期更新。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Correctable Enrollment and One-Transaction Seed Proofs for Ethereum's Post-Quantum Transition</div>
+<div style="color:#6b7280;font-size:13px;">Xin Jin, Maximillian Liao, Handong Chen, Yi Nancy Li, Junyu Liu ｜ arXiv 2611.25663（cs.CR，2026-11-19 提交）｜ <a href="https://arxiv.org/abs/2611.25663" style="color:#2563eb;">arxiv.org/abs/2611.25663</a></div>
+<p style="margin:6px 0 0;">运行 Shor 算法的量子计算机能提取所有已公开公钥的以太坊账户私钥，作者统计这类账户持有<b>执行层 54.6% 的 ETH</b>；而第一台这样的机器可能秘密存在，一旦私钥可被提取，旧签名就无法区分主人与攻击者。方案让持有者在<b>预定时间退役 ECDSA 之前用现有签名低成本登记后量子公钥</b>，此后到统一截止日之前，可用钱包 BIP-39 种子的零知识证明纠正被抢注的登记；无人登记的账户被冻结，可随时凭种子证明恢复。每份证明绑定新公钥、nonce 和手续费上限，代付者和重排交易的出块者都无法挪用或重放；验证者先在最终化检查点切换到哈希基密钥。三层递归哈希基 STARK 生成的种子证明<b>约 190 KB，可放进一笔交易，验证 38 ms</b>，笔记本生成中位 111 秒，4 份证明可聚合为 1 份。基于主网数据的十节点模拟显示，持有至少 0.1 ETH 的 445 万个账户若全部在退役前登记需 29.4 天，若全部在退役后按每批 4 个恢复则需 235 天。这是把“量子日”应急预案落到客户端实现和具体时长的一次完整尝试。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Signed but Unbound: The Authority Gap Between Agent Commerce Mandates and Crypto Wallet Signatures</div>
+<div style="color:#6b7280;font-size:13px;">Shengwei You, Aditya Joshi, Andrey Kuehlkamp, Jarek Nabrzyski ｜ arXiv 2611.25821（cs.CR，2026-11-19 提交；姊妹篇 arXiv 2611.24989，11-18 提交）｜ <a href="https://arxiv.org/abs/2611.25821" style="color:#2563eb;">arxiv.org/abs/2611.25821</a></div>
+<p style="margin:6px 0 0;">AI 代理用稳定币付款时，商务协议规定了商户、订单、金额和代付方，但代币合约只执行钱包实际签名的字段。作者把两者之差称为<b>“授权缺口”</b>，定义 9 类约束，并为包括 Coinbase 已部署的 Commerce Payments Protocol 在内的 12 种授权配置逐一推导，在已部署合约代码的本地副本上做的 31,800 次试验全部与推导一致。实测发现，Base 链上抽样的 26,653 笔 USDC 授权中，<b>98.7% 走的是任何持有签名者都能兑付的路径</b>。作者证明了接收合约能强制执行签名授权的充分条件，并实现 MandateLock：它拒绝了全部 10,800 个被篡改的授权，gas 只比“仅接收方可提交”的转账多 25%。姊妹篇 Closure 则从钱包侧在签名前拦截越权请求。随着 x402 等代理支付协议落地，这两篇工作给出了钱包与合约各自该补的那一层校验。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Limber: Low Overhead SNARKs for Integers from Any PCS</div>
+<div style="color:#6b7280;font-size:13px;">Jessica Chen, Lucas Xia, Wilson Nguyen, Benedikt Bünz ｜ IACR ePrint 2026/1635（2026-11-20 第 4 次修订）｜ <a href="https://eprint.iacr.org/2026/1635" style="color:#2563eb;">eprint.iacr.org/2026/1635</a></div>
+<p style="margin:6px 0 0;">非原生运算（在 SNARK 域之外模拟计算）是实际 ZK 系统的主要瓶颈，也是常见的出错来源：0xPARC zkbugtracker 收录的 27 个严重漏洞中有 9 个与非原生算术化有关。本文沿用 Zaratan（PKC 26）的思路，把整数关系 a·b = c + u·m 通过“指纹”约化到随机选取的素数域上验证，核心贡献是 <b>Limber——第一个实用的整数 mod-PCS</b>：承诺整数多项式，并在承诺之后才选定的随机素数下打开求值，渐近承诺开销为 o(1) 倍，且可用任意标准域多项式承诺（包括小域）实例化。结合整数 R1CS 的 PIOP 后，<b>RSA 累加器证明比电路方案快 15–30 倍，非原生 Poseidon2 哈希快 24 倍</b>。对需要验证外链签名、RSA 或跨域哈希的 zkRollup 与跨链桥，这能同时降低成本和实现风险。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. A Better Bivariate Resultant Attack on Round-Reduced Poseidon</div>
+<div style="color:#6b7280;font-size:13px;">Antoine Bak, Maël Hostettler ｜ IACR ePrint 2026/1905（2026-11-20 修订）｜ <a href="https://eprint.iacr.org/2026/1905" style="color:#2563eb;">eprint.iacr.org/2026/1905</a></div>
+<p style="margin:6px 0 0;">Poseidon 是最常用的算术化友好哈希之一，Plonky3 等库在用，也曾被考虑引入以太坊协议；以太坊基金会的悬赏项目专门针对其 CICO-2 问题（同时控制置换输入和输出的 2 个坐标）。CICO-2 可写成总次数 δ = d^(R_F+R_P) 的二元方程组，而 Poseidon 的结构使结式次数只有 D_I = d^(2R_F+R_P)，远低于随机系统。此前工作利用这一点得到关于 d^(3R_F+2R_P) 拟线性的求解时间；本文改造另一种实用的二元结式算法，在启发式假设下<b>把复杂度降到关于 D_I·δ^(1−1/ω) 拟线性</b>（ω 为矩阵乘法指数，2 ≤ ω &lt; 2.38），并在缩减轮数的 Poseidon 上实现，取得相对已有方法的实际加速。这类结果直接影响 ZK 系统对 Poseidon 轮数与安全余量的取舍。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Release-Bound Withdrawal Authorization for Bitcoin Custody</div>
+<div style="color:#6b7280;font-size:13px;">Jian Cui（UIUC）, Rui Zhu（Yale）, Haixu Tang（Indiana University） ｜ arXiv 2611.25231（cs.CR / cs.DC，2026-11-18 提交）｜ <a href="https://arxiv.org/abs/2611.25231" style="color:#2563eb;">arxiv.org/abs/2611.25231</a></div>
+<p style="margin:6px 0 0;">交易所或托管方的提款后端一旦被攻破，就能请求为未授权付款签名；更隐蔽的是，已签好的交易在“暂停”后仍可能被花费，或在链重组后重新变得可花费。RBWA 在复制日志中<b>把提款许可与暂停操作排定先后</b>，并在许可的关闭证据从比特币主链消失时恢复其风险敞口；可选路径会延迟大额提款，并允许独立的冷钱包恢复。在 regtest 上直接付款 1 个区块确认，分级付款在 2 或 6 个块的延迟下分别 3 或 7 个块确认；带认证的回执可以吊销共享钱包中的单个签名租约。在匹配的合成调度中，主动探测把<b>经由被攻破租约发出的许可从 33 个中的 20 个降到 9 个</b>，仅有 1 次误隔离。这把“签名权限的生命周期”与链上重组语义结合起来，对托管安全有直接参考价值。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Bounds of Falcon's Fast Fourier Sampler with Fixed-Point Arithmetic</div>
+<div style="color:#6b7280;font-size:13px;">Vincent Hwang ｜ IACR ePrint 2026/2902（2026-11-19 公开）｜ <a href="https://eprint.iacr.org/2026/2902" style="color:#2563eb;">eprint.iacr.org/2026/2902</a></div>
+<p style="margin:6px 0 0;">Falcon 已被 NIST 选为 FN-DSA（即将发布的 FIPS 206），签名生成依赖定义在复数上的快速傅里叶采样器，而实际实现用定点或浮点运算。本文在“所有样本落在中心若干标准差之内”的事件上，界定了实数采样器与定点实现之间的 Rényi 散度：在 2^64 次签名下，<b>n=512（参考 128 位）保留 126.28 位，n=1024（参考 256 位）保留 248.78 位</b>（分数中心分别为 126.70 和 253.53 位），对密钥生成接受的每把密钥都成立。作者提出 4 处实现修改，其中采样器在移位饱和时拒绝候选、密钥生成增加 3 项树检查是证明成立的必要条件；采样器内核与递归在 CryptoLine 中针对 -O3 编译的 aarch64 目标码证明，并在 Lean 中组合。浮点签名器的分析仍未完成。Falcon 是区块链后量子签名迁移的热门候选，这给出了定点实现的可验证安全基线。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. From FIPS to FPGA with LLM Agents: Measuring What Tests and Reviews Miss in Post-Quantum Cryptographic Hardware</div>
+<div style="color:#6b7280;font-size:13px;">Jungmin Park, Eunha Kim, Wooseop Kim, Seongjoon Cho, Byungho Cha ｜ arXiv 2611.25339（cs.CR，2026-11-19 提交）｜ <a href="https://arxiv.org/abs/2611.25339" style="color:#2563eb;">arxiv.org/abs/2611.25339</a></div>
+<p style="margin:6px 0 0;">作者用 LLM 代理按七阶段、带验证门的流程，把 ML-KEM-768/ML-DSA-65 加速器移植到 300 MHz Zynq UltraScale+ <b>密钥托管卡</b>上：6 项运算在板上逐字节正确，通过全部 85 个适用的 NIST ACVP 用例和 484 个 ML-DSA 已知答案。但审计显示模块测试高估了验证强度：在 3 个 RTL 模块上，现有仿真门<b>只杀死 399 个网表变异体中的 76%</b>；对已知答案测试看不到的缺陷，全设计评审在 6 次中只发现 3 次和 1 次，模块级评审 54 次全部发现，而植入的密钥托管缺陷模块级评审 20 次只发现 3 次，形式化检查则全部标出。对正在规划后量子 HSM 和硬件钱包的团队，这说明“测试全过”远不足以证明托管不变量成立。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的主线是<b>授权语义与后量子落地</b>。以太坊迁移方案和 Falcon 定点证明说明，后量子迁移已从选算法推进到“如何在量子日前后区分真正的主人”“定点实现还剩多少安全位”这类工程问题，而 LLM 生成的后量子硬件则提醒验证证据本身也需要被审计。授权缺口和 RBWA 从两端指出同一个问题：<b>签名是否有效，不等于它只授权了用户想要的那件事</b>——无论是 AI 代理的稳定币付款，还是托管系统在暂停与重组后的旧签名。ZK 底层则一边在加速（Limber 让非原生运算几乎免费），一边在被更强的代数攻击逼近（Poseidon CICO-2）。整体来看，<b>研究重点正在从“密码原语是否安全”转向“签名和证明在真实部署中究竟约束了什么”</b>。</p>
+</div>
+
+</div>
+</body></html>
