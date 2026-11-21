@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 22 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 22 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期日 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：共识与密钥基础设施研究正在给“更弱的网络假设”算账——比特币客户端在完全异步、可能没有诚实对等节点的连接下仍能安全确认，代价是丢弃链尾 ρ² 比例的区块；异步高门限 DKG 的运行时间最多减少 99.4%；早停拜占庭广播首次在任意 t&lt;n 下以多项式通信做到 O(f+1) 轮；而比特币链上可检测的混币交易长期不足全网 1%。</p>
+
+<p style="margin:0 0 18px;">本期以 IACR ePrint 11 月 21 日集中公开的 24 个新编号为主，辅以 arXiv 周五批次中尚未介绍的会议论文。最值得关注的是 FC 2027 论文 <b>Intergalactic Consensus</b>：作者证明比特币客户端<b>既不需要同步网络，也不需要至少一个诚实对等节点</b>，只靠一个时钟和“按当前轮次与链高动态决定确认深度”的规则即可安全且有活性，并证明这一延迟代价是紧的。门限基础设施方面，CCS 2026 论文 <b>Kairos</b> 用哈希基异步完全秘密共享替代同态承诺，让高门限异步 DKG 运行时间比基线<b>减少 63.7%–99.4%</b>；Bacho 与 Shi 则解决了一个公开问题：<b>在普通 PKI 下、对所有 t&lt;n，早停广播能否以多项式通信达到 O(f+1) 轮</b>，答案是可以。证明系统方面，ASIACRYPT 2026 论文 <b>Symphony</b> 把格基折叠当黑盒使用，<b>不再把哈希函数嵌入递归电路</b>，给出可能抗量子的可扩展 SNARK。隐私与身份方面，比特币匿名化协议的纵向测量、CCS 2026 去中心化身份系统 Braid 和哈希基动态群签名 PC-DGS 分别从使用现状、抗女巫与后量子三个角度推进；智能合约模糊测试的预算分配研究则给出一个反直觉结论：<b>8 种在线反馈策略全部不如均匀分配</b>。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">异步比特币客户端：链尾丢弃比例</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">ρ²</div>
+<div style="font-size:12px;color:#6b7280;">同步客户端只丢常数个块 · 异步需丢 Θ(r) 个，且已证明是紧的</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Kairos 高门限异步 DKG 运行时间降幅</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">最高 99.4%</div>
+<div style="font-size:12px;color:#6b7280;">t=2f，对比 DXKR23 与 HARTS · n=16 时每分钟 3k 把密钥</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">比特币第二代匿名化协议交易占比</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">&lt; 1%</div>
+<div style="font-size:12px;color:#6b7280;">识别约 500 万笔 CoinJoin、2330 万笔 CoinSwap 候选</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 22 日（星期日）7 时左右。arXiv 各分类 /new 页面仍显示 <b>2026 年 11 月 20 日（星期五）批次</b>：<b>周末 arXiv 没有新批次</b>，下一批为 11 月 23 日（周一），因此 arXiv 部分放宽到 7 天内的新投稿与本批次中的修订版，并用 arXiv API 按区块链、比特币、以太坊、智能合约、DeFi、拜占庭等关键词补充检索。IACR ePrint 自上期以来新增编号 <b>2026/2903—2026/2926 共 24 个</b>，页面所列投稿日期为 11 月 16—17 日，但均于 <b>11 月 21 日获批公开</b>，其中 Kairos、Intergalactic Consensus、早停广播和 PC-DGS 与本日报方向相关；另有 11 篇旧论文于 11 月 21 日发布修订版。顶会方面，本期入选论文中有 FC 2027（1 篇）、ACM CCS 2026（2 篇）、ASIACRYPT 2026（1 篇），以及 ICDLT 2026、MSN 2026 各 1 篇。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">43</td><td style="text-align:right;padding:8px 4px;">77</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">12</td><td style="text-align:right;padding:8px 4px;">27</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">12</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">10</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">13</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv q-fin.TR（11月20日批次）</td><td style="text-align:right;padding:8px 4px;">1</td><td style="text-align:right;padding:8px 4px;">3</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月21日公开或修订）</td><td style="text-align:right;padding:8px 4px;">24</td><td style="text-align:right;padding:8px 4px;">35</td></tr>
+</table>
+<p style="margin:0 0 12px;font-size:14px;color:#4b5563;">各分类之间有交叉，数字不能直接相加。arXiv 表格与上期相同（同一周五批次），其中区块链相关新投稿已在上期全部介绍，本期 arXiv 部分选用 7 天内首次提交的 1 篇和本批次中的 2 篇会议版修订。入选论文的首次提交日期跨度较大：ePrint 4 篇新编号投稿于 <b>2026 年 11 月 16—17 日</b>；arXiv 智能合约模糊测试一文提交于 <b>11 月 17 日</b>；Symphony（ePrint 2025/1905）按编号推断约首次提交于 <b>2025 年 10 月</b>，11 月 21 日发布第 8 版；比特币匿名化测量首次提交于 <b>2026 年 7 月 1 日</b>（v3 于 11 月 19 日更新）；Braid 首次提交于 <b>2023 年 7 月 27 日</b>（v4 于 11 月 18 日更新为 CCS 2026 扩展版）。</p>
+<p style="margin:0 0 22px;font-size:14px;color:#4b5563;">去重说明：最近 7 天内（11 月 15—21 日）已展开或顺带提及的论文本期不再重复，如以太坊后量子迁移（arXiv 2611.25663）、Limber（2026/1635）、Poseidon 结式攻击（2026/1905）、Aker（2026/2899）等。顺带提及：Optimized G+G（ePrint 2026/943，PKC 2026 修订版）通过非球面高斯响应把格签名再缩小 9.61% 和 5.53%；Sparse-zkVC（2026/2907）针对稀疏 LLM 推理优化 R1CS 合成；arXiv 2611.23201 用 OECD、巴塞尔委员会与 FINMA 框架评估 DAO 治理对持牌金融机构的风险。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Intergalactic Consensus: Asynchronous Bitcoin Clients</div>
+<div style="color:#6b7280;font-size:13px;">Odysseas Sofikitis, Dionysis Zindros ｜ IACR ePrint 2026/2912（Financial Cryptography 2027，11-21 公开）｜ <a href="https://eprint.iacr.org/2026/2912" style="color:#2563eb;">eprint.iacr.org/2026/2912</a></div>
+<p style="margin:6px 0 0;">现有比特币客户端（包括 SPV 轻客户端）都假设消息按时到达、且至少连到一个诚实节点。作者保持矿工之间同步，但让客户端与矿工之间的连接<b>完全异步</b>：敌手可以延迟、丢弃任意消息，甚至自己冒充所有对等节点，客户端只有一个时钟。新的确认规则不再用固定的 k 个块深度，而是<b>根据当前轮次和收到的链高决定确认深度</b>，在比特币骨干模型中被证明安全且有活性。代价是：在第 r 轮收到诚实链时需丢弃 ρ² 比例的链尾（ρ 为敌手相对诚实矿工的算力比），即 Θ(r) 个块；作者证明面对私挖敌手这一代价是紧的，<b>任何常数深度规则都不安全</b>。这为在审查严重或网络不可靠环境下运行比特币客户端提供了理论依据。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Kairos: Efficient High-Threshold Asynchronous Distributed Key Generation from Lightweight Cryptography</div>
+<div style="color:#6b7280;font-size:13px;">Xinxin Xing, Yizhong Liu, Zifan Li, Jianwei Liu, Yudi Yang, Yuan Lu, Song Bian, Zhenyu Guan, Tianwei Zhang ｜ IACR ePrint 2026/2909（ACM CCS 2026，11-21 公开）｜ <a href="https://eprint.iacr.org/2026/2909" style="color:#2563eb;">eprint.iacr.org/2026/2909</a></div>
+<p style="margin:6px 0 0;">异步分布式密钥生成（ADKG）是随机信标、门限签名、门限解密等链上基础设施的起点，但现有方案依赖同态承诺的可验证秘密共享，高门限重构计算开销大。Kairos 改用<b>轻量的哈希基异步完全秘密共享</b>派生离散对数密钥分片，每把密钥通信为渐近最优的二次方；在 n=3f+1 中容忍 f 个恶意节点，产生无偏公钥分片，重构门限 t≥f。核心技术是私钥分片的非交互门限提升，以及“先锁定后验证”的高门限公钥验证聚合器。AWS 分布式实验中，t=2f 时运行时间比 DXKR23（USENIX Security '23）和 HARTS（ASIACRYPT '24）<b>减少 63.7%–99.4%</b>，n=16 时每分钟生成 3k 把密钥；用于异步动态主动秘密共享时，比 LongLive 减少 91.0%–98.7%。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Early-Stopping Dishonest Majority Broadcast with Linear Rounds and Polynomial Communication</div>
+<div style="color:#6b7280;font-size:13px;">Renas Bacho, Kecheng Shi ｜ IACR ePrint 2026/2923（预印本，11-21 公开）｜ <a href="https://eprint.iacr.org/2026/2923" style="color:#2563eb;">eprint.iacr.org/2026/2923</a></div>
+<p style="margin:6px 0 0;">早停广播的轮数随实际作恶人数 f 而非门限 t 变化。此前 Loss 与 Nielsen（Eurocrypt 2024）对任意 t&lt;n 只做到 O(min{f²+1, t+1}) 轮，而达到 O(f+1) 轮的方案需要指数通信。本文给出一个对<b>强自适应、抢先发送的敌手安全的确定性协议</b>，在普通 PKI 下对所有 f≤t&lt;n 在 <b>O(f+1) 轮内终止且只用多项式通信与计算</b>，与经典下界 min{f+2, t+1} 只差常数因子，解决了这一公开问题。基础版 14f+9 轮、通信 O(κn⁷) 比特，两个优化版本分别降到约 5f+2⌈log₂(f+1)⌉+10 轮 / O(κn⁵) 比特和 5f+2⌊√f⌋+11 轮 / O(κn⁴+n^{9/2}) 比特。对不能假设诚实多数的委员会与跨链中继，这是重要的理论基础。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Symphony: Scalable SNARKs in the Random Oracle Model from Lattice-Based High-Arity Folding</div>
+<div style="color:#6b7280;font-size:13px;">Binyi Chen ｜ IACR ePrint 2025/1905（ASIACRYPT 2026，11-21 发布第 8 版）｜ <a href="https://eprint.iacr.org/2025/1905" style="color:#2563eb;">eprint.iacr.org/2025/1905</a></div>
+<p style="margin:6px 0 0;">IVC/PCD 等基于折叠的证明系统通常要把哈希函数（作为随机预言机）嵌入递归电路，既带来安全性上的疑虑，也是证明开销的大头——这正是 zkVM 和 zkRollup 递归证明的痛点。Symphony 是<b>第一个把折叠方案当黑盒使用、不在 SNARK 电路中嵌入哈希</b>的证明范式：省内存、可并行、可能抗量子，证明大小与验证时间为多对数；低内存证明者只需对输入数据扫描 O(log log n) 遍，计算以承诺见证为主。核心是一个<b>一次性把大量 NP 完全陈述压缩为一个的格基高元折叠方案</b>，以及把折叠方案转为 SNARK、且不必把 Fiat–Shamir 电路放进被证明陈述的通用编译器。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. No Country for Old Privacy: The Evolving Challenges of Anonymity in Bitcoin</div>
+<div style="color:#6b7280;font-size:13px;">Ben Hawkins, Joshua Levett, Siamak F. Shahandashti ｜ arXiv 2607.00772 v3（cs.CR，IEEE ICDLT 2026，11-19 更新）｜ <a href="https://arxiv.org/abs/2607.00772" style="color:#2563eb;">arxiv.org/abs/2607.00772</a></div>
+<p style="margin:6px 0 0;">作者对比特币网络中可检测的第二代匿名化协议——CoinJoin、CoinSwap、CoinShuffle 和隐身地址——做了纵向测量，通过改进的启发式过滤识别出<b>约 500 万笔 CoinJoin 和 2330 万笔 CoinSwap 候选交易</b>。结果显示这些协议长期<b>不到全网交易的 1%</b>，且在关键监管事件后可检测使用量急剧下降；CoinShuffle 的使用与 Wasabi、Whirlpool 等有协调者的 CoinJoin 服务高度吻合，标准化隐身地址则没有任何被采用的证据。作者据此推断隐私用户正迁移到更不透明、更难检测的方式，这对链上分析与合规研究都是重要的基线数据。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Braid: Sybil-Resistant Decentralized Identity with Trustless Key Recovery and Non-Transferable Anonymous Credentials</div>
+<div style="color:#6b7280;font-size:13px;">Rui Song, Tianyu Zheng, Shang Gao, Guyue Li, Xue Liu, Bin Xiao ｜ arXiv 2307.14679 v4（cs.CR，ACM CCS 2026 扩展版，11-18 更新）｜ <a href="https://arxiv.org/abs/2307.14679" style="color:#2563eb;">arxiv.org/abs/2307.14679</a></div>
+<p style="margin:6px 0 0;">Web3 去中心化身份允许任意创建标识符，因而易受女巫攻击，私钥丢失时资产也难以找回；现有方案依赖可信中介做实名绑定。Braid 在链上建立标识符之间的绑定，<b>把同一持有者的标识符逐步合并成一个关联标识符</b>：关联中的标识符被视为属于同一人，任何欺诈都可被发现，关联随交互增长，女巫攻击成功率显著下降。持有者可通过证明知道特定关联结构来<b>无需信任地恢复丢失或部分泄露的密钥</b>；基于链上标识符-密钥绑定与凭证所有权证明，匿名凭证也无法被转让。与只提供单次活动女巫防护的方案相比，它把抗女巫、密钥恢复和不可转让凭证统一在一个系统里。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. PC-DGS: A Pool-Certified Dynamic Group Signature Scheme Based on XMSS</div>
+<div style="color:#6b7280;font-size:13px;">Qiyan Sang, Lin Zhou, Huiyan Chen ｜ IACR ePrint 2026/2922（预印本，11-21 公开）｜ <a href="https://eprint.iacr.org/2026/2922" style="color:#2563eb;">eprint.iacr.org/2026/2922</a></div>
+<p style="margin:6px 0 0;">哈希基群签名是最保守的后量子匿名认证路线，但很难同时做到无状态签名、短签名和动态成员管理。PC-DGS 把离线凭证认证与在线签名分开：管理员用 XMSS 认证用户自生成的 WOTS+ 公钥，用户随后用一次性 WOTS+ 凭证签名，<b>签名者有状态、公开验证者无状态</b>，避免了 SPHINCS+ 式构造的通信开销。洗牌索引池随机分配 XMSS 叶子以减弱批次可链接性，用户注册的 Merkle 授权根防止恶意管理员诬陷。方案证明了匿名性、可追踪性、不可诬陷性等性质，代表性参数下<b>签名约 1.5–5.4 KB</b>，可用于许可链成员的后量子匿名认证。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Adaptive Budget Allocation for Smart-Contract Fuzzing: Why Online Feedback Fails to Improve Vulnerability Triage</div>
+<div style="color:#6b7280;font-size:13px;">Yanzi Liu, Jiachi Tong ｜ arXiv 2611.22430（cs.SE，MSN 2026，2026-11-17 提交）｜ <a href="https://arxiv.org/abs/2611.22430" style="color:#2563eb;">arxiv.org/abs/2611.22430</a></div>
+<p style="margin:6px 0 0;">多个智能合约模糊测试任务共享有限预算时，该把执行次数分给谁？作者在 143 个人工标注和 350 个注入漏洞的合约上做轨迹回放：平均每个合约 100 次执行时，<b>均匀分配就能达到“全知最优”的 72% 和 70%</b>，而 <b>8 种在线反馈策略在总体分诊上全部不如均匀分配</b>，5 种在线信号预测“即将报出漏洞”的 AUC 仅 0.32–0.51。合成预言机实验表明，准确估计检测成本比排序可检测性更有用，作者据此提出离线概率曲线分配器，在新种子上的检测-预算 AUC 比均匀分配提高 5.38% 和 4.81%，在另外 3 个公开基准子集上提高 1.99%–6.54%。对审计团队而言，这提示“自适应调度”并不天然优于简单基线。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的主线是<b>在更弱的假设下重建信任基础设施</b>。Intergalactic Consensus 去掉了客户端对同步网络和诚实对等节点的依赖，早停广播去掉了对诚实多数的依赖，Kairos 去掉了 ADKG 对同态承诺的依赖，Symphony 去掉了递归证明对“电路内哈希”的依赖——每一项都明确给出了代价（更长的确认延迟、更多轮数或更大通信），而且多篇证明了代价是紧的。隐私方向则呈现分化：链上可检测的比特币混币持续萎缩，而身份与认证研究转向抗女巫的关联身份（Braid）和后量子群签名（PC-DGS）。工具方向的模糊测试研究提醒，<b>复杂的自适应策略需要先打败简单基线</b>。整体来看，<b>研究重点正从“在理想假设下更快”转向“在最坏网络和最少信任下仍然正确，并把代价算清楚”</b>。</p>
+</div>
+
+</div>
+</body></html>
