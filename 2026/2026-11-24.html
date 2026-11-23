@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 24 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 24 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期二 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：链上资产的“控制权”和“证明”都在被重新设计——稳定币冻结被证明在逐利出块者下无法同时做到撤销优先、即时生效与中立；储备和持仓证明改用增量可验证计算，每个区块只需几秒更新；门限钱包的硬化派生在 10 ms 往返时延下从 91 秒降到 1.9 秒；后量子格签名 Pretzel 比 ML-DSA 小 52–59%。</p>
+
+<p style="margin:0 0 18px;">本期以 IACR ePrint 11 月 21—23 日公开的新编号为主，并加入 arXiv 11 月 23 日（周一）批次中的两篇共识论文。最有现实意义的是<b>稳定币冻结的“撤销三难”</b>：冻结本身也是一笔普通交易，作者证明在追求收益的出块者面前，<b>撤销优先、即时生效、排序中立三者不可兼得</b>，并用 2017—2026 年以太坊上 USDT/USDC 的冻结记录说明发行方与被冻结方的排序竞争已从竞价升级到私有提交和意图订单。证明方面出现一组“增量化”工作：Pethoa 让托管方<b>隐藏储备地址</b>并按区块增量更新资产证明，SPAN 在 UTXO 隐私池中证明一段时间内的<b>持续持仓下限</b>，PCC 用 NIVC 把可委托匿名凭证的出示成本做成<b>与委托深度无关</b>。钱包方面，基于 Hydra PRF 的 BIP32 门限硬化派生把 MPC 轮数<b>从 15226 降到 243</b>。共识方面，Danezis、Kokoris-Kogias、Sonnino 的 Dugong 用一个参数化协议统一了 8 种无证书 DAG 共识，并在 Lean 4 中证明；Loss、Nayak 等人给出了首个能容忍“移动遗漏故障”的随机化拜占庭协议。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">门限 BIP32 硬化派生（10 ms RTT，5 方）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">91 s → 1.9 s</div>
+<div style="font-size:12px;color:#6b7280;">Hydra 替代 HMAC-SHA512 · 轮数 15226 → 243</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Pretzel 签名大小（对比 ML-DSA）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">小 52–59%</div>
+<div style="font-size:12px;color:#6b7280;">类别 3 仅 1361 字节 · 签名与验证都更快</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">PCC 凭证证明（Halo2，任意委托深度）</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">7.344 KB</div>
+<div style="font-size:12px;color:#6b7280;">验证 35–36 ms · Plonky2 后量子版 157.9 KB / 3.8 ms</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 24 日（星期二）7 时左右。arXiv 各分类 /new 页面为 <b>2026 年 11 月 23 日（星期一）批次</b>，即上周五至周日的投稿；周二批次要到北京时间约 9 时才发布。该批次中与区块链直接相关的只有 cs.DC 的 2 篇共识论文和 cs.CR 的 1 篇凭证论文（与 ePrint 2026/2992 为同一篇），econ.GN 与 cs.ET 本批次没有相关论文。IACR ePrint 自上期以来新增编号 <b>2026/2961—2026/3000 共 40 个</b>，其中 2026/2969—3000 的 32 个于 11 月 21—23 日公开，约 8 篇与本日报方向直接相关。入选论文均为预印本；仅 arXiv 2611.27663 标注已被 OPODIS 2026 接收（未入选正文）。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月23日批次）</td><td style="text-align:right;padding:8px 4px;">27</td><td style="text-align:right;padding:8px 4px;">58</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月23日批次）</td><td style="text-align:right;padding:8px 4px;">12</td><td style="text-align:right;padding:8px 4px;">23</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月23日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">8</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月23日批次）</td><td style="text-align:right;padding:8px 4px;">2</td><td style="text-align:right;padding:8px 4px;">8</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（上期以来的新编号 2961—3000）</td><td style="text-align:right;padding:8px 4px;">40</td><td style="text-align:right;padding:8px 4px;">—</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月21—23日新增或修订）</td><td style="text-align:right;padding:8px 4px;">32</td><td style="text-align:right;padding:8px 4px;">62</td></tr>
+</table>
+<p style="margin:0 0 18px;color:#6b7280;font-size:13px;">注：arXiv 各分类之间存在交叉列表（如 Dugong 同时出现在 cs.DC 与 cs.CR），数字不能相加。入选论文的首次提交日期为 <b>2026 年 11 月 20—23 日</b>（arXiv 首次提交 11 月 20 日；ePrint 首次提交 11 月 21—23 日）。</p>
+
+<h2 style="font-size:20px;margin:0 0 10px;">与往期去重说明</h2>
+<p style="margin:0 0 18px;">本期与最近 7 天（11 月 17—23 日）的日报去重，不重复展开已推荐过的论文。11 月 23 日介绍的 ML-FVS（2026/2952）讨论的是“移动崩溃”，本期 2026/2990 讨论的是“移动遗漏 + 拜占庭”混合模型，两者不同。另外值得一提但未展开的有：ePrint 2026/2991 首次给出 <b>36 步 SHA-512 的实际碰撞</b>（三块 GPU 约 8.9 GPU 小时）；2026/2996 给出 Brakedown 多项式承诺的可移植优化基线，编码比 LCPC 快 8.14–9.06 倍；2026/2961 用 ML-DSA 构造后量子匿名凭证与盲签名；arXiv 2611.27663（OPODIS 2026）在 n&gt;3f 下以 O(log f) 时间实现无需认证的异步拜占庭格协议。本期没有采用未经核实的引用量或社交热度来排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Authority Without Priority: The Revocation Trilemma and the Price of Stablecoin Freezes</div>
+<div style="color:#6b7280;font-size:13px;">Di Wu, Yuman Bai, Shoupeng Ren, Xinyu Zhang, Yiyue Cao, Yuheng Wang, Xuechao Wang, Huan Huo, Wu Wen, Jian Liu ｜ IACR ePrint 2026/2976（预印本，11-21 提交）｜ <a href="https://eprint.iacr.org/2026/2976" style="color:#2563eb;">eprint.iacr.org/2026/2976</a></div>
+<p style="margin:6px 0 0;">稳定币合约允许发行方冻结地址，但冻结只是一笔普通交易，出块者照常排序，<b>之后提交的转账仍可能先执行</b>。作者定义了“撤销优先”（限制一旦提交，之后提交的被禁操作都不能先生效），并证明在追求收益的出块者下，<b>任何区块链都无法同时提供撤销优先、即时生效和排序中立</b>；以太坊选择了后两者。基于 2017—2026 年以太坊上 USDT/USDC 的冻结数据，作者发现确有冻结长期挂起、后提交的转账先执行的案例，双方竞争已从加价升级到私有提交和意图订单委托；Tullock 竞赛模型显示发行方会出价更高但买不到确定性，<b>更严格的冻结义务反而促使发行方接入排序基础设施、牺牲中立性</b>。这是 MEV 与合规交叉处少见的形式化 + 实证工作。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Pethoa: Dynamic Proofs of Assets for Hidden Address Sets on Account-Based Blockchains</div>
+<div style="color:#6b7280;font-size:13px;">Yangrui Zhou, Dongliang Cai, Yuxuan Chen, Liang Zhang, Haibin Kan ｜ IACR ePrint 2026/2982（预印本，11-22 提交）｜ <a href="https://eprint.iacr.org/2026/2982" style="color:#2563eb;">eprint.iacr.org/2026/2982</a></div>
+<p style="margin:6px 0 0;">交易所的储备证明通常要公开储备地址，导致资金动向被长期追踪；用零知识证明隐藏地址又要对不断变化的链上状态反复重算，在以太坊这类“证明不友好”的状态结构上代价很高。作者提出<b>动态隐私资产证明（DPoA）</b>：一次性初始化证明地址所有权和状态成员关系，之后每个纪元只根据新确认的区块在本地更新证明状态，并用零知识证明说明更新正确。实验中，为数千个地址生成静态证明在 RTX 5090 上需要几分钟，而<b>动态更新每个区块只需几秒、且只用 14 核 CPU</b>，让“持续、隐私的储备证明”变得可行。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. SPAN: Privacy-Preserving Proofs of Sustained Aggregate Holdings in UTXO Privacy Pools</div>
+<div style="color:#6b7280;font-size:13px;">Zonglun Li, Xue Liu ｜ IACR ePrint 2026/2978（预印本，11-21 提交）｜ <a href="https://eprint.iacr.org/2026/2978" style="color:#2563eb;">eprint.iacr.org/2026/2978</a></div>
+<p style="margin:6px 0 0;">隐私池正从私密转账扩展到代币化现实资产（RWA）和按持仓发放奖励，这需要证明“某段时间内一直持有至少多少资产”，而 UTXO 票据会不断被替换。作者定义了<b>隐私区间持仓证明（PP-IPoH）</b>并给出 SPAN：两条增量可验证计算（IVC）分别认证选中的记录和花费完整性，在每笔确认交易后给出余额下界；再用独立的 zk 简洁论证证明该下界在整个区间内都高于门限，同一段已认证历史还能支持后续查询。实验中证明时间随交易数线性增长，<b>每多一笔交易约增加 2.9 秒，峰值内存基本恒定在约 3.8 GB</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. PCC: Proof-Carrying Credentials for Enhanced Anonymity and Post-Quantum Delegation</div>
+<div style="color:#6b7280;font-size:13px;">Zixuan Wang, Tianyu Zheng, Yuan Lu, Bin Xiao ｜ IACR ePrint 2026/2992 · arXiv 2611.27250（cs.CR，预印本，11-20 首次提交）｜ <a href="https://eprint.iacr.org/2026/2992" style="color:#2563eb;">eprint.iacr.org/2026/2992</a> · <a href="https://arxiv.org/abs/2611.27250" style="color:#2563eb;">arxiv.org/abs/2611.27250</a></div>
+<p style="margin:6px 0 0;">可委托匿名凭证（DAC）可用于 DeFi 信用委托等场景，但现有方案要求持有者保存并处理整条委托链，出示成本随深度增长，链的形状还会暴露给持有者，可能被用来按“上游是谁”实施审查。作者提出“增强委托匿名性”（EDA），并用<b>非均匀增量可验证计算（NIVC）把显式委托链替换成一个递归更新的证明状态</b>，使出示成本与委托深度无关、同时隐藏拓扑。PCC 不依赖配对，可在 QROM 下用 FRI 递归和哈希签名做后量子实例化：<b>Halo2 版证明恒为 7.344 KB、验证 35–36 ms</b>；128 位 Plonky2 版证明 157.9 KB、验证 3.8 ms，每步委托 1.03 秒。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Threshold Hardened Derivation for BIP32-Style Wallets from the Hydra PRF</div>
+<div style="color:#6b7280;font-size:13px;">Cemre Özdoğan, Oğuz Yayla ｜ IACR ePrint 2026/2986（预印本，11-22 提交）｜ <a href="https://eprint.iacr.org/2026/2986" style="color:#2563eb;">eprint.iacr.org/2026/2986</a></div>
+<p style="margin:6px 0 0;">BIP32 硬化派生要对父私钥和链码计算 HMAC-SHA512，在门限钱包里这些秘密是分片保存的，只能在 MPC 中算哈希，非常慢。作者<b>用面向算术化的 PRF Hydra 替换 HMAC-SHA512</b>，其余步骤完全沿用 BIP32（因此是 BIP32 的“兄弟方案”，派生出的密钥与 BIP32 不兼容），子密钥全程保持分片并可继续派生。论文用一条路径混合证明了父子隐藏、兄弟独立和硬化子密钥不可链接性，并指出需要一个 Hydra 原有安全声明不能推出的“偏移 PRF”假设。五方 MP-SPDZ 恶意 Shamir 协议下，<b>一次派生 243 轮、0.33 秒，而 HMAC-SHA512 需 15226 轮、3.3 秒；在 10 ms 往返时延下为 1.9 秒对 91 秒</b>（作者注明该实测协议不在其证明覆盖范围内）。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Dugong: Composing Uncertified DAG Consensus</div>
+<div style="color:#6b7280;font-size:13px;">George Danezis, Lefteris Kokoris-Kogias, Alberto Sonnino ｜ arXiv 2611.27473（cs.DC，交叉列表 cs.CR，预印本，11-20 提交）｜ <a href="https://arxiv.org/abs/2611.27473" style="color:#2563eb;">arxiv.org/abs/2611.27473</a></div>
+<p style="margin:6px 0 0;">无证书 DAG 共识（Mysticeti 一类）覆盖部分同步与异步、崩溃与拜占庭等多种模型，但每个协议都是从头设计、证明和实现的。Dugong 提出一个参数化核心算法 Decider，<b>只调参数就能实现 8 种已有协议，并得到 4 种新协议</b>；由于 DAG 将吞吐与延迟解耦，运营者可以逐个纪元在延迟与容错之间切换，而不影响吞吐。外围的自适应领导者调度、检查点、响应式活性和崩溃恢复被证明可以相互组合。作者<b>在 Lean 4 中形式化证明了拜占庭原子广播的安全性与活性，并发现、修补了已发表证明中的漏洞</b>，同时提供 Rust 库和离散事件网络模拟器。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Probabilistic Polynomial Time is a healer: Consensus with Mobile-Omission Faults</div>
+<div style="color:#6b7280;font-size:13px;">Julian Loss, Kartik Nayak, Kecheng Shi ｜ IACR ePrint 2026/2990（预印本，11-22 提交）｜ <a href="https://eprint.iacr.org/2026/2990" style="color:#2563eb;">eprint.iacr.org/2026/2990</a></div>
+<p style="margin:6px 0 0;">Santoro 与 Widmayer（STACS 1989）证明：只要存在一个“移动故障”（每轮可换节点丢弃消息），任何 c 轮确定性协议都必然出错，即“时间本身不能治愈”；但此前连随机化协议都没有。作者研究 t 个自适应拜占庭节点再叠加每轮 s 个发送遗漏、r 个接收遗漏（可任意重叠、每轮更换）的混合模型，在 <b>2t+s+r&lt;n 下给出首批协议和清晰的形式化模型</b>，容错与非移动遗漏模型的已有结果一致；在 2t+s+r≤(1−ε)n 下还给出了<b>通信次二次、支持“玩家可替换”的 BA</b>，适合委员会轮换型的大规模 PoS 共识。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">8. Pretzel: Compact Lattice Signatures from Module-LWE and Module-SIS</div>
+<div style="color:#6b7280;font-size:13px;">Alberto Centelles Hidalgo, Justin Thaler, Markos Georghiades ｜ IACR ePrint 2026/2970（预印本，11-21 提交）｜ <a href="https://eprint.iacr.org/2026/2970" style="color:#2563eb;">eprint.iacr.org/2026/2970</a></div>
+<p style="margin:6px 0 0;">后量子迁移中，签名大小直接决定交易和区块证书的开销。Pretzel 是 ML-DSA 风格的格签名，在 NIST 安全类别 2、3、5 下<b>签名比 ML-DSA 小 52–59%，签名和验证都更快</b>，也小于 ASIACRYPT 2026 的 SHUTTLE（类别 3 为 1361 字节对 1589 字节）。它基于 Gartner 的迭代拒绝采样（CRYPTO 2025），采样器每次更新后响应都严格保持目标分布，因此可以用更窄的掩码；验证者额外约束响应系数，使 QROM 下的安全证明<b>不需要 self-target 假设，只依赖 Module-LWE 和 Module-SIS</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的主线是<b>“谁能控制链上资产”与“如何持续证明资产状态”</b>。稳定币冻结三难把合规权力和交易排序直接联系起来：只要出块者逐利，发行方的冻结就只能靠排序基础设施来保证，这会削弱中立性，是 MEV 研究在合规层面的新延伸。Pethoa、SPAN、PCC 三篇都用 IVC/NIVC 把一次性证明改成<b>可增量更新、成本与历史长度或委托深度脱钩的证明状态</b>，分别对应储备证明、RWA 持仓证明和 DeFi 信用委托。门限 BIP32 派生和 Pretzel 则在钱包与签名层降低 MPC 和后量子的实际成本。共识方面，Dugong 用“一个参数化协议 + Lean 4 证明”取代逐个协议重新证明，2026/2990 把敌手模型扩展到移动遗漏故障。整体来看，<b>研究正从单点方案转向可组合、可增量、可形式化验证的基础设施</b>。</p>
+</div>
+
+</div>
+</body></html>
