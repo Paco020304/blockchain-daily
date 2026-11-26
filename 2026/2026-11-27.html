@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>区块链前沿论文日报｜2026 年 11 月 27 日</title></head>
+<body style="margin:0;padding:24px;background:#ffffff;font-family:-apple-system,'PingFang SC','Microsoft YaHei',Helvetica,Arial,sans-serif;color:#1f2328;line-height:1.75;font-size:15px;">
+<div style="max-width:820px;margin:0 auto;">
+
+<h1 style="font-size:26px;margin:0 0 4px;font-weight:700;">区块链前沿论文日报｜2026 年 11 月 27 日</h1>
+<div style="color:#6b7280;font-size:13px;margin-bottom:20px;">星期五 · 北京时间 · 最新研究精选</div>
+
+<p style="font-weight:700;margin:0 0 14px;">今日核心判断：链上协议的“公平”与“后量子”都开始按真实成本结账——Neon-HTLC 用指数增长的惩罚让抗贿赂 HTLC 不再需要抵押，10 万美元支付只需 26 个区块（He-HTLC 需 496 个区块加 5,000 美元抵押）；Pompē-SRO 用秘密随机预言机把三明治攻击者的期望收益从 800 美元压到 67 美元；后量子侧，Falcon-512 验签已与 ECDSA 相当，但账本会膨胀 79–229%，格基加密多资产 ERC-20 则把每资产链上验证压到约 2 万 gas。</p>
+
+<p style="margin:0 0 18px;">本期以 arXiv 11 月 26 日（周四）批次和 IACR ePrint 本周新增的 2026/3008–3015 为主。跨链与支付通道方面，ACM CCS 2026 论文 Neon-HTLC 证明了现有激励相容 HTLC 的“两阶段”结构必然要求线性抵押或超线性超时，并用随时间指数增长的惩罚打破这一下界，<b>超时只随支付额对数增长，即便锁定全部比特币也最多 51 个区块</b>。排序公平方面，OSDI 2026 论文 Equal Opportunity 指出，现有有序共识条件挡不住依靠更快网络的抢跑，提出“机会均等”正确性条件，并基于 TEE 或门限 VRF 构造秘密随机预言机，<b>吞吐与 Pompē 持平，延迟只增加 1.12–1.42 倍</b>。后量子方面，一篇实测论文在比特币、以太坊、Solana、BNB 链和 TRON 上投影了 13 种签名配置，结论是<b>存储而非验签才是迁移的主要障碍</b>；FC 2027 论文 Northstar 则让格基负循环多项式运算在 STARK 中原生可证，构造出首个可由智能合约高效验证、约 1000 种资产的加密 ERC-20。理论侧，Merkle 树被证明在随机预言机模型下已是验证方复杂度最优的向量承诺；另有一篇工作把“网络无关”共识推广到同时不知道网络时序和故障类型的情形。</p>
+
+<table role="presentation" cellspacing="0" cellpadding="0" style="width:100%;border-collapse:separate;border-spacing:8px 0;margin:0 -8px 26px;">
+<tr>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Neon-HTLC：10 万美元支付所需超时</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">26 个区块</div>
+<div style="font-size:12px;color:#6b7280;">零抵押 · He-HTLC 需 496 个区块加 5,000 美元抵押</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Falcon-512 替换后历史账本增长</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">+79% – 229%</div>
+<div style="font-size:12px;color:#6b7280;">Solana 最低、TRON 最高 · 验签 30.1 μs 对 ECDSA 32.8 μs</div></td>
+<td style="width:33%;border:1px solid #e5e7eb;border-radius:10px;padding:12px 14px;vertical-align:top;">
+<div style="font-size:12px;color:#6b7280;">Northstar 加密多资产代币每资产链上成本</div>
+<div style="font-size:24px;font-weight:700;margin:2px 0;">≈ 2 万 gas</div>
+<div style="font-size:12px;color:#6b7280;">1022 种资产一次转账约 1,811 万 gas · Zether 每资产 719 万 gas</div></td>
+</tr></table>
+
+<h2 style="font-size:20px;margin:0 0 10px;">今日检索说明</h2>
+<p style="margin:0 0 12px;">检索时间为北京时间 11 月 27 日（星期五）7 时左右。arXiv 各分类 /new 页面为 <b>2026 年 11 月 26 日（星期四）批次</b>（主要是 11 月 24—25 日的投稿），周五批次要到北京时间约 9 时才发布。这一批中与区块链直接相关的新论文约 5 篇，集中在 cs.CR、cs.DC 和 cs.SE；cs.ET 本批次没有新投稿，econ.GN 与 cs.GT 本批次没有区块链相关论文。IACR ePrint 自上期以来新增 <b>7 篇（2026/3008—3015，2026/3010 未出现在列表中）</b>，均于 11 月 26 日审核公开，其中 Neon-HTLC、Fault- and Network-Agnostic Agreement 和 Merkle 树下界三篇与本日报方向相关；11 月 26 日另有 14 篇修订。</p>
+
+<table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;font-size:14px;margin-bottom:12px;">
+<tr style="border-bottom:1px solid #d1d5db;">
+<th style="text-align:left;padding:8px 4px;">来源 / 分类</th><th style="text-align:right;padding:8px 4px;">新投稿数</th><th style="text-align:right;padding:8px 4px;">全部记录数（含交叉列表及更新）</th></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.CR（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">31</td><td style="text-align:right;padding:8px 4px;">72</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.DC（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">10</td><td style="text-align:right;padding:8px 4px;">30</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.ET（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">12</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv econ.GN（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">3</td><td style="text-align:right;padding:8px 4px;">7</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.SE（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">27</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">arXiv cs.GT（11月26日批次）</td><td style="text-align:right;padding:8px 4px;">8</td><td style="text-align:right;padding:8px 4px;">21</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（上期以来的新编号）</td><td style="text-align:right;padding:8px 4px;">7</td><td style="text-align:right;padding:8px 4px;">—</td></tr>
+<tr style="border-bottom:1px solid #eef0f2;"><td style="padding:8px 4px;">IACR ePrint（11月26日修订）</td><td style="text-align:right;padding:8px 4px;">0</td><td style="text-align:right;padding:8px 4px;">14</td></tr>
+</table>
+<p style="margin:0 0 18px;color:#6b7280;font-size:13px;">注：arXiv 各分类之间存在交叉列表，数字不能相加；Merkle 树下界一文同时出现在 arXiv（2611.33508）和 ePrint（2026/3015）。入选论文的首次提交日期为 <b>2025 年 9 月 11 日—2026 年 11 月 25 日</b>：Equal Opportunity 于 2025 年 9 月 11 日首次提交、2026 年 11 月 24 日更新为 OSDI 2026 扩展版；其余六篇均于 2026 年 11 月 23—25 日首次提交。</p>
+
+<h2 style="font-size:20px;margin:0 0 10px;">与往期去重说明</h2>
+<p style="margin:0 0 18px;">本期与最近 7 天（11 月 20—26 日）的日报去重，入选的 7 篇此前均未介绍过。顺带提及但未展开的有：arXiv 2611.34534（DéjàVu）分析了“采样到同一观点两次即采纳”的多数共识动力学，在偏差足够时以 O(√(n/M₀)·log(eM₀/Δ₀)+log log n) 轮收敛；ePrint 2025/592 第 7 次修订了“确定性状态机”模型，把双花防护表述为状态性质并附 Lean 4 与 TLA+ 证明；ePrint 2026/2962 修订了基于连续 SIS/LWE 的实数值哈希与承诺；arXiv 2611.33741（FlashProve-Next）为闭源大模型 API 的单次响应生成零知识掩码证明。arXiv 本批次还有 ACE 系列（2603.07974、2603.10242 等）的例行更新，不再展开。没有可靠的热度数据，因此不按热度排序。</p>
+
+<h2 style="font-size:20px;margin:0 0 6px;">今日精选论文</h2>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">1. Neon-HTLC: Collateral-Free HTLCs with Logarithmic Timeout</div>
+<div style="color:#6b7280;font-size:13px;">Sebastian Faust, Noemi Glaeser, Marius Hagemann, Ziyan Qu ｜ IACR ePrint 2026/3008（ACM CCS 2026，11-26 公开）｜ <a href="https://eprint.iacr.org/2026/3008" style="color:#2563eb;">eprint.iacr.org/2026/3008</a></div>
+<p style="margin:6px 0 0;">哈希时间锁合约（HTLC）是原子跨链交换和闪电网络等支付通道的基础，但会受贿赂攻击：恶意方可以收买矿工审查诚实交易。作者把现有激励相容 HTLC 归纳为“两阶段”类，证明这类协议要保护一笔支付，<b>必须付出与金额成线性的抵押或超线性的超时</b>，并顺带给出比 He-HTLC（NDSS'23）更优的参数。Neon-HTLC 改用随时间指数增长的惩罚，<b>无需抵押、超时只随金额对数增长</b>：即使锁定全部比特币也最多 51 个区块（约 8.5 小时）；10 万美元支付只需 26 个区块，而 He-HTLC 需 496 个区块和 5,000 美元抵押。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">2. Equal Opportunity: A Correctness Condition for Ordered Consensus</div>
+<div style="color:#6b7280;font-size:13px;">Yunhao Zhang, Haobin Ni, Soumya Basu, Shir Cohen, Maofan Yin, Lorenzo Alvisi, Robbert van Renesse, Qi Chen, Lidong Zhou ｜ arXiv 2509.09868（cs.CR / cs.DC，OSDI 2026 扩展版，2025-09-11 首次提交，2026-11-24 更新）｜ <a href="https://arxiv.org/abs/2509.09868" style="color:#2563eb;">arxiv.org/abs/2509.09868</a></div>
+<p style="margin:6px 0 0;">基于 SMR 的权益证明链中，交易顺序直接决定用户的财务结果。作者指出，即使满足现有有序共识的正确性条件（限制拜占庭节点影响），攻击者仍能借助更快的网络或更近的地理位置系统性地抢跑。论文借用法律中的“机会均等”概念提出新的正确性条件，用受控随机性限定排序偏差，并给出基于 SGX 和门限 VRF 的两种“秘密随机预言机”（SRO）构造。由此得到的 Pompē-SRO 在 12 城市部署中<b>吞吐与 Pompē 相同、延迟增加 1.12–1.42 倍</b>；在论文的三明治攻击示例中，攻击者期望收益从 800 美元降到 67 美元，受害者从亏损 500 美元变为期望获益 233 美元。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">3. Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE</div>
+<div style="color:#6b7280;font-size:13px;">Yeoh Wei Zhu, Shaltiel Eloul, Yash Satsangi, Rob Otter ｜ arXiv 2611.34417（cs.CR，FC 2027 扩展版，11-25 首次提交）｜ <a href="https://arxiv.org/abs/2611.34417" style="color:#2563eb;">arxiv.org/abs/2611.34417</a></div>
+<p style="margin:6px 0 0;">格基密码学可提供后量子签名、加密乃至全同态加密，但在智能合约中验证格运算（负循环多项式乘法）非常昂贵，此前的格基保密代币方案在约 6 种资产时就会超出单笔交易 gas 上限。Northstar 让负循环运算在 STARK 中原生可证，在可验证 FHE 上的证明时间、验证时间和证明大小综合优于现有方案。基于它的加密多资产代币（类 ERC-1155）在以太坊 Hoodi 测试网上<b>一次处理 1022 种资产约 1,811 万 gas，摊到每种资产约 2 万 gas</b>；Zether（基于离散对数、不抗量子）每资产需 719 万 gas，资产数不少于 3 时 Northstar 每资产更省 gas。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">4. Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth</div>
+<div style="color:#6b7280;font-size:13px;">Anthony Mikhaiel, Essam Ghadafi ｜ arXiv 2611.34229（cs.CR，预印本，11-25 首次提交）｜ <a href="https://arxiv.org/abs/2611.34229" style="color:#2563eb;">arxiv.org/abs/2611.34229</a></div>
+<p style="margin:6px 0 0;">作者在统一的模拟区块链框架中测量了 13 种签名配置：ECDSA、ML-DSA-44/65/87、Falcon-512/1024、SLH-DSA-SHA2-128s，以及六种 ECDSA 与后量子签名的混合方案，并把开销投影到比特币、以太坊、Solana、BNB 链和 TRON 的真实交易历史上。格基方案验签都不贵，<b>Falcon-512 为 30.1 μs，与 ECDSA 的 32.8 μs 相当</b>；但即使用最紧凑的 Falcon-512，历史账本也会大 79%（Solana）到 229%（TRON），且每块签名负载超过比特币、以太坊和 TRON 的平均区块大小。Solana 1,232 字节的交易上限和比特币 520 字节的脚本栈元素上限还会直接阻碍迁移，结论是<b>存储而非验签才是后量子迁移的主要瓶颈</b>。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">5. Merkle Trees Minimize Verifier Complexity in the ROM</div>
+<div style="color:#6b7280;font-size:13px;">Miranda Christ, Oliver Korten, Tal Malkin, Noam Mazor, Shyamal Patel ｜ arXiv 2611.33508 / IACR ePrint 2026/3015（预印本，11-24 首次提交）｜ <a href="https://eprint.iacr.org/2026/3015" style="color:#2563eb;">eprint.iacr.org/2026/3015</a></div>
+<p style="margin:6px 0 0;">Merkle 树打开一位需要 log n 次哈希，这是哈希型 SNARK、凭证和认证字典中验证方的主要开销。一个长期悬而未决的问题是，能否构造验证方只需次对数次哈希的哈希型向量承诺。作者证明这在黑盒使用哈希函数时不可能，<b>即使在随机预言机模型下，确定性验证方的查询复杂度也至少是 Ω(log n)</b>，而高叉 Merkle 树在常数因子内达到这一下界。这意味着 STARK 等哈希型证明系统想继续降低验证成本，只能在常数、叉数或非黑盒技术上寻找空间。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">6. Fault- and Network-Agnostic Agreement</div>
+<div style="color:#6b7280;font-size:13px;">Erica Blum, Evan Hart, Vivek Malik, Aidan Mokalla ｜ IACR ePrint 2026/3013（预印本，11-24 首次提交）｜ <a href="https://eprint.iacr.org/2026/3013" style="color:#2563eb;">eprint.iacr.org/2026/3013</a></div>
+<p style="margin:6px 0 0;">经典容错共识通常针对一种时序假设（同步、部分同步或异步）和一种故障模型（崩溃或拜占庭）设计。此前的“网络无关”协议只需不确定网络时序，本文进一步要求协议同时<b>不知道网络时序和故障类型</b>，在 2×3 种经典模型两两组合的 15 种情形下给出一类自然一致性问题可行的紧条件，并与经典及混合故障协议比较成本和收益。对需要在不同部署环境下保持安全的区块链共识来说，这为“一套协议覆盖多种假设”划定了理论边界。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:14px 0;">
+<div style="font-weight:700;font-size:16px;">7. Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain</div>
+<div style="color:#6b7280;font-size:13px;">Siyuan Chen, Ebru Turanoglu Bekar, Anders Skoogh ｜ arXiv 2611.34662（cs.SE，投稿 IFAC AMEST / IMS 2027，11-25 首次提交）｜ <a href="https://arxiv.org/abs/2611.34662" style="color:#2563eb;">arxiv.org/abs/2611.34662</a></div>
+<p style="margin:6px 0 0;">在工业预测性维护中，设备供应商的模型给出维护建议，工厂排期、承包商执行、质量或安全部门审批。共享账本只能记录谁提交了建议，却无法验证建议是否真由约定的模型和决策规则算出。作者要求 Hyperledger Fabric 的背书节点在放行工单前先验证该计算的简洁证明；在四组织测试网和公开发动机数据集上，<b>该方案拦下了全部 9 条有争议或被误操作的建议</b>，而仅做哈希校验会放行其中 4 条（它们会提高模拟维护成本或重新引入后期故障）。这是可验证计算进入许可链业务流程的一个具体案例。</p>
+</div>
+
+<div style="border-top:1px solid #e5e7eb;padding:16px 0 0;">
+<h2 style="font-size:20px;margin:0 0 8px;">今日看点</h2>
+<p style="margin:0;">本期的主线是<b>“把公平和安全折算成可计量的成本”</b>。Neon-HTLC 和 Pompē-SRO 都在用机制设计对抗逐利的出块者和网络优势者：前者把抗贿赂的代价从抵押和长超时换成指数增长的惩罚，后者用秘密随机性把排序偏差变成可证明的上界，延迟代价不到 1.5 倍。后量子迁移的讨论正从“哪种签名更安全”转向<b>“链能否装得下”</b>：验签已不是瓶颈，账本膨胀和交易大小上限才是；Northstar 则说明，借助 STARK 原生证明格运算，后量子保密代币的 gas 成本可以低于现有经典方案。理论上，Merkle 树最优性下界和故障/网络双重无关共识，分别给哈希型证明系统和共识协议划出了继续优化的边界。</p>
+</div>
+
+</div>
+</body></html>
